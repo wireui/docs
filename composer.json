@@ -58,7 +58,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "WireUI\\Docs\\WireUIDocsServiceProvider"
+                "WireUI\\Docs\\ServiceProvider"
             ]
         }
     },
