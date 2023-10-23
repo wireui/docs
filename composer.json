@@ -1,0 +1,70 @@
+{
+    "name": "wireui/docs",
+    "description": "WireUI Documentation",
+    "type": "library",
+    "keywords": [
+        "livewire components",
+        "livewire-ui",
+        "wireui",
+        "laravel components",
+        "blade components",
+        "docs",
+        "documentation"
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.18",
+        "wireui/wireui": "2.x-dev",
+        "torchlight/torchlight-laravel": "^0.5.13",
+        "livewire/livewire": "^3.0",
+        "livewire/volt": "^1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "orchestra/testbench": "^8.6",
+        "pestphp/pest": "^2.13",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-livewire": "^2.1"
+    },
+    "repositories": {
+        "wireui/wireui": {
+            "type": "path",
+            "url": "../wireui"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Oliveira",
+            "email": "pedrolivertwd@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "WireUI\\Docs\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "vendor/orchestra/testbench-core/laravel/app",
+            "WireUI\\Docs\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WireUI\\Docs\\WireUIDocsServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
