@@ -1,6 +1,6 @@
 <?php
 
-namespace WireUI\Docs\Middleware;
+namespace WireUi\Docs\Middleware;
 
 use Closure;
 use Illuminate\Http\RedirectResponse;

@@ -1,6 +1,6 @@
 {
     "name": "wireui/docs",
-    "description": "WireUI Documentation",
+    "description": "WireUi Documentation",
     "type": "library",
     "keywords": [
         "livewire components",
@@ -43,7 +43,7 @@
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
-            "WireUI\\Docs\\": "src/"
+            "WireUi\\Docs\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -52,13 +52,13 @@
     "autoload-dev": {
         "psr-4": {
             "App\\": "vendor/orchestra/testbench-core/laravel/app",
-            "WireUI\\Docs\\Tests\\": "tests/"
+            "WireUi\\Docs\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "WireUI\\Docs\\ServiceProvider"
+                "WireUi\\Docs\\ServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace WireUI\Docs\View\Components;
+namespace WireUi\Docs\View\Components;
 
 use Illuminate\Support\Str;
 use Torchlight\Blade\BladeManager;

@@ -1,11 +1,11 @@
 <?php
 
-namespace WireUI\Docs;
+namespace WireUi\Docs;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support;
-use WireUI\Docs\Middleware\CheckPage;
-use WireUI\Docs\View\Components\Code;
+use WireUi\Docs\Middleware\CheckPage;
+use WireUi\Docs\View\Components\Code;
 
 class ServiceProvider extends Support\ServiceProvider
 {

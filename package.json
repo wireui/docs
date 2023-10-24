@@ -1,7 +1,7 @@
 {
     "name": "wireui-docs",
     "version": "1.0.0",
-    "description": "WireUI Documentation",
+    "description": "WireUi Documentation",
     "repository": "git@github.com:wireui/new-docs.git",
     "author": "PH7-Jack <pedrolivertwd@gmail.com>",
     "license": "MIT",

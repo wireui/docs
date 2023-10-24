@@ -7,12 +7,13 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: colors.teal,
+                primary: colors.indigo,
                 secondary: colors.zinc,
                 positive: colors.emerald,
                 negative: colors.red,
                 warning: colors.amber,
                 info: colors.blue,
+                docs: colors.teal,
             },
         },
     },
