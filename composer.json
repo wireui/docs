@@ -13,11 +13,11 @@
     ],
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^10.18",
+        "laravel/framework": "^10.28",
         "wireui/wireui": "2.x-dev",
-        "torchlight/torchlight-laravel": "^0.5.13",
+        "torchlight/torchlight-laravel": "^0.5.14",
         "livewire/livewire": "^3.0",
-        "livewire/volt": "^1.0"
+        "livewire/volt": "^1.3"
     },
     "require-dev": {
         "laravel/pint": "^1.10",
