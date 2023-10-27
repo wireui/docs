@@ -14,7 +14,7 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^10.28",
-        "wireui/wireui": "2.x-dev",
+        "wireui/wireui": "dev-feature-refactor-traits",
         "torchlight/torchlight-laravel": "^0.5.14",
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.3"
