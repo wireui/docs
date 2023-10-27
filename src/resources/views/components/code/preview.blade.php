@@ -7,7 +7,7 @@
     ]) }}>
     <div x-show="!code" @class([
         'bg-gray-100 dark:bg-secondary-700' => $color && !$clean,
-        'bg-white dark:bg-secondary-900' => !$color && !$clean,
+        'bg-white dark:bg-secondary-950' => !$color && !$clean,
         'p-6 rounded-lg' => !$clean,
     ])>
         @if (check_slot($slot))
@@ -19,7 +19,7 @@
         @endif
     </div>
 
-    <div x-ref="code" x-show="code" class="level3" wire:ignore>
+    <div x-ref="code" x-show="code" wire:ignore>
         <x-docs-code :language="$language" :contents="serialize_slot($slot)" :line-numbers="$lineNumbers" />
     </div>
 

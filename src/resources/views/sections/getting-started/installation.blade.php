@@ -14,40 +14,40 @@
     <x-docs::title id="meet-wireui" title="Meet WireUI" />
 
     <x-docs::text>
-        The WireUI is a library of components and resources to empower your application development with Laravel and
-        Livewire. Starting a new project with Livewire can be time-consuming when you have to create all the components
-        from scratch. Wire UI helps to skip this step and get you straight to the development phase.
+        WireUI is a robust library that offers a comprehensive range of components and resources, designed to
+        supercharge your application development when working with Laravel and Livewire. Launching a new project with
+        Livewire can often entail a time-consuming process, especially when you need to build all the necessary
+        components from the ground up. However, WireUI streamlines this initial phase, allowing you to dive straight
+        into development.
         <br><br>
-        <b>Installing WireUI enriches your project with:</b>
+        <b>By incorporating WireUI into your project, you'll enjoy the following benefits:</b>
     </x-docs::text>
 
     <x-docs::list>
+        <x-docs::list.item text="All Heroicons" />
+
         <x-docs::list.item text="Form and UI components" />
 
-        <x-docs::list.item text="Notifications" />
+        <x-docs::list.item text="Dialogs and Notifications" />
 
         <x-docs::list.item text="Confirmation notifications" />
 
-        <x-docs::list.item text="All Heroicons" href="#" />
+        <x-docs::list.item text="Advanced Customization" />
     </x-docs::list>
 
     <x-docs::title id="requirements" title="Requirements" />
 
     <x-docs::list>
         <x-docs::list.item>
-            <x-link href="https://www.php.net" label="PHP 7.4.x | 8.x" target="_blank" underline="none" teal />
+            <x-link href="https://www.php.net" label="PHP 8.2" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://getcomposer.org" label="Composer" target="_blank" underline="none" teal />
+            <x-link href="https://laravel.com" label="Laravel 10.x" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://laravel.com" label="Laravel 8.x" target="_blank" underline="none" teal />
-        </x-docs::list.item>
-
-        <x-docs::list.item>
-            <x-link href="https://laravel-livewire.com" label="Livewire 2.5 or above" target="_blank" underline="none"
+            <x-link href="https://laravel-livewire.com" label="Livewire 3" target="_blank" underline="none"
                 teal />
         </x-docs::list.item>
 
@@ -58,27 +58,12 @@
         <x-docs::list.item>
             <x-link href="https://tailwindcss.com" label="Tailwindcss 3.x" target="_blank" underline="none" teal />
         </x-docs::list.item>
-
-        <x-docs::list.item>
-            <x-link href="https://tailwindcss.com/docs/plugins#aspect-ratio" label="@tailwindcss/aspect-ratio 0.4.x"
-                target="_blank" underline="none" teal />
-        </x-docs::list.item>
-
-        <x-docs::list.item>
-            <x-link href="https://tailwindcss.com/docs/plugins#forms" label="@tailwindcss/forms 0.4.x" target="_blank"
-                underline="none" teal />
-        </x-docs::list.item>
-
-        <x-docs::list.item>
-            <x-link href="https://tailwindcss.com/docs/plugins#typography" label="@tailwindcss/typography 0.5.x"
-                target="_blank" underline="none" teal />
-        </x-docs::list.item>
     </x-docs::list>
 
     <x-docs::title id="installation" title="Installation" />
 
     <x-docs::text>
-        <b>1.</b> Run the following command to add WireUI to your project:
+        <b>1.</b> Execute the following command to seamlessly integrate WireUI into your project:
     </x-docs::text>
 
     <x-docs::code.block language="bash">
@@ -88,17 +73,17 @@
     </x-docs::code.block>
 
     <x-docs::text>
-        <b>2.</b> Add the WireUI tag above Alpinejs script tag in your page layout:
+        <b>2.</b> Insert the WireUI tag above the Alpine.js script tag in your page layout:
     </x-docs::text>
 
-    <x-docs::code.block language="html">
+    <x-docs::code.block language="blade">
         @verbatim
             <html>
 
             <head>
                 ...
                 <wireui:scripts />
-                <script src=\"//unpkg.com/alpinejs\" defer></script>
+                <script src="//unpkg.com/alpinejs" defer></script>
             </head>
 
             </html>
@@ -106,14 +91,14 @@
     </x-docs::code.block>
 
     <x-docs::text>
-        Alternatively, you can use the equivalent Blade directive:
+        For an alternative approach, you can utilize the equivalent Blade directive:
     </x-docs::text>
 
-    <x-docs::code.block language="html">
+    <x-docs::code.block language="blade">
         @verbatim
             ...
             @wireUiScripts
-            <script src=\"//unpkg.com/alpinejs\" defer></script>
+            <script src="//unpkg.com/alpinejs" defer></script>
             ...
 
             Sometimes you need to pass extra html attributes to script tag, like the nonce attribute
@@ -123,8 +108,8 @@
     </x-docs::code.block>
 
     <x-docs::text>
-        <b>3.</b> Add the following settings to your Tailwindcss config file,
-        <x-docs::mark>tailwind.config.js</x-docs::mark>:
+        <b>3.</b> Incorporate the following configurations into your Tailwind CSS setup, located in the
+        <x-docs::mark>tailwind.config.js</x-docs::mark> file:
     </x-docs::text>
 
     <x-docs::code.block language="js">
@@ -149,15 +134,14 @@
     <x-docs::title id="publishing" title="Publishing" />
 
     <x-docs::text>
-        WireUI does not need any additional configuration, but you can publish the files and customize them to your
-        preference.
+        WireUI requires no extra configuration; however, you have the flexibility to publish the files and tailor them
+        to your preferences.
     </x-docs::text>
 
     <x-docs::code.block language="bash">
         @verbatim
-            php artisan vendor:publish --tag='wireui.config'
-            php artisan vendor:publish --tag='wireui.resources'
-            php artisan vendor:publish --tag='wireui.lang'
+            php artisan vendor:publish --tag="wireui.lang"
+            php artisan vendor:publish --tag="wireui.config"
         @endverbatim
     </x-docs::code.block>
 </div>

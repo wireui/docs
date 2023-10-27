@@ -15,7 +15,7 @@
         @endif
     @endif
 
-    <div x-ref="code" class="level3" wire:ignore>
+    <div x-ref="code" wire:ignore>
         <x-docs-code :language="$language" :contents="serialize_slot($slot)" :line-numbers="$lineNumbers" />
     </div>
 

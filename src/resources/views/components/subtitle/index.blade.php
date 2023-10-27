@@ -6,7 +6,7 @@
 
 <div @isset($id) id="{{ $id }}" @endisset class="mt-5 mb-3">
     <a @if ($href) href="{{ $href }}" @endif
-        {{ $attributes->class('text-lg font-extrabold leading-8 tracking-tight text-teal-600 cursor-pointer level1') }}>
+        {{ $attributes->class('text-lg font-extrabold leading-8 tracking-tight text-teal-600') }}>
         {{ $title }}
     </a>
 </div>

@@ -1,24 +1,13 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            {{-- <x-docs::summary.header href="#alert" label="Alerts">
-                <x-docs::summary.item href="#simple-alert" label="Simple Alert" />
-                <x-docs::summary.item href="#alert-slot" label="Alert Slot" />
-                <x-docs::summary.item href="#action-slot" label="Alert Action Slot and Borderless" />
-                <x-docs::summary.item href="#footer-slot" label="Alert Footer" />
-            </x-docs::summary.header> --}}
-
             <x-docs::summary.header href="#simple-alert" label="Simple Alert" />
 
-            <x-docs::summary.header href="#alert-slot" label="Alert Slot" />
-
-            <x-docs::summary.header href="#action-slot" label="Alert Action Slot and Borderless" />
-
-            <x-docs::summary.header href="#footer-slot" label="Alert Footer" />
+            <x-docs::summary.header href="#alert-slots" label="Alert Slots" />
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="alerts" title="Alerts" />
+    <x-docs::title title="Alert" />
 
     <x-docs::text>
         Alerts are often used to display a positive, negative, info or warning message. It is available for these 4
@@ -27,182 +16,60 @@
 
     <x-docs::subtitle id="simple-alert" title="Simple Alert" />
 
+    <x-docs::text>
+        The alert component natively has 6 colors, which are:
+        <x-docs::mark>primary</x-docs::mark>,
+        <x-docs::mark>secondary</x-docs::mark>,
+        <x-docs::mark>positive</x-docs::mark>,
+        <x-docs::mark>negative</x-docs::mark>,
+        <x-docs::mark>warning</x-docs::mark> and
+        <x-docs::mark>info</x-docs::mark>.
+        A simple way to use the alert is to just pass the title and the color you want, as in the example below:
+    </x-docs::text>
+
     <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex justify-center gap-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" primary flat>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
+        <x-slot name="slot" class="flex flex-col space-y-4">
+            @verbatim
+                <x-alert title="Any Message!" />
 
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" primary outline>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
+                <x-alert title="Any Message!" secondary />
 
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" primary solid>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
+                <x-alert title="Success Message!" positive />
 
+                <x-alert title="Error Message!" negative />
 
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" positive flat>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
+                <x-alert title="Alert Message!" warning />
 
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" positive outline>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" positive solid>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" negative flat>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" negative outline>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" negative solid>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" warning flat>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" warning outline>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" warning solid>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" info flat>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" info outline>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" info solid>
-                    This is an error alert — <b>check it out!</b>
-                </x-alert>
-            </div>
-        @endverbatim
+                <x-alert title="Information Message!" info />
+            @endverbatim
+        </x-slot>
     </x-docs::code.preview>
 
-    <x-docs::subtitle id="icon-alert" title="Icon Alert" />
+    <x-docs::subtitle id="alert-slots" title="Alert Slots" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex justify-center gap-4">
-                <x-alert padding="px-2" primary flat>
-                    <x-slot name="title">
-                        Teste <b>Aqui</b>
+        <x-slot name="slot" class="flex flex-col space-y-4">
+            @verbatim
+                <x-alert warning>
+                    <x-slot name="title" class="italic !font-bold">
+                        This is an alert alert — check it out!
                     </x-slot>
                 </x-alert>
-            </div>
 
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" primary flat />
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert icon="x-mark" title="Lorem Ipsum is simply!" padding="px-2" primary flat />
-            </div>
-
-            <div class="flex justify-center gap-4 mt-4">
-                <x-alert title="Lorem Ipsum is simply!" padding="px-2" primary flat iconless />
-            </div>
-        @endverbatim
-    </x-docs::code.preview>
-
-    <x-docs::subtitle id="alert-slot" title="Alert Slot" />
-
-    <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex justify-center gap-4">
-                <x-alert title="Lorem Ipsum is simply!" shadow="2xl" info>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book
+                <x-alert title="Success Message!" positive>
+                    This is an success alert — <b>check it out!</b>
                 </x-alert>
-            </div>
-        @endverbatim
-    </x-docs::code.preview>
 
-    <x-docs::subtitle id="action-slot" title="Alert Action Slot and Borderless" />
-
-    <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex justify-center gap-4">
-                <x-alert title="Lorem Ipsum is simply!" positive rounded>
-                    <x-slot name="action">
-                        <button class="rounded-full focus:outline-none focus:ring-2 focus:ring-positive-600">
-                            <x-icon name="ellipsis-vertical" class="w-4 h-4 text-gray-500" />
-                        </button>
-                    </x-slot>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book
-                </x-alert>
-            </div>
-        @endverbatim
-    </x-docs::code.preview>
-
-    <x-docs::subtitle id="alert-footer" title="Alert Footer" />
-
-    <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex justify-center gap-4">
-                <x-alert title="Lorem Ipsum is simply!" negative>
-                    <x-slot name="action">
-                        <button class="rounded-full focus:outline-none focus:ring-2 focus:ring-negative-600">
-                            <x-icon name="ellipsis-vertical" class="w-4 h-4 text-gray-500" />
-                        </button>
-                    </x-slot>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it to make a type specimen book
-                    <x-slot name="footer" class="flex items-center justify-end">
-                        <x-button sm label="Close" flat negative />
+                <x-alert title="Error Message!" negative>
+                    <x-slot name="slot" class="italic">
+                        This is an error alert — <b>check it out!</b>
                     </x-slot>
                 </x-alert>
-            </div>
-        @endverbatim
+            @endverbatim
+        </x-slot>
     </x-docs::code.preview>
 </div>
