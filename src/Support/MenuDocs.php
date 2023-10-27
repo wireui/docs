@@ -2,6 +2,7 @@
 
 namespace WireUi\Docs\Support;
 
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
@@ -13,7 +14,7 @@ class MenuDocs
      */
     public function getMenu(): Collection
     {
-        return Cache::sear('wireui::menu', fn () => $this->generateMenu());
+        return Cache::remember('wireui::menu', Carbon::now()->addDay(), fn () => $this->generateMenu());
     }
 
     /**
@@ -119,7 +120,7 @@ class MenuDocs
     //  */
     // public function getPreviousLink(string $page): ?array
     // {
-    //     return Cache::sear("wireui::previous::{$page}", fn () => $this->generatePreviousLink($page));
+    //     return Cache::remember("wireui::previous::{$page}", Carbon::now()->addDay(), fn () => $this->generatePreviousLink($page));
     // }
 
     // /**
@@ -142,7 +143,7 @@ class MenuDocs
     //  */
     // public function getNextLink(string $page): ?array
     // {
-    //     return Cache::sear("wireui::next::{$page}", fn () => $this->generateNextLink($page));
+    //     return Cache::remember("wireui::next::{$page}", Carbon::now()->addDay(), fn () => $this->generateNextLink($page));
     // }
 
     // /**
