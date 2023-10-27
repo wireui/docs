@@ -44,7 +44,7 @@ class ClearCacheCommand extends Command
 
     private function getFilesName(): Collection
     {
-        $docs = File::allFiles(__DIR__ . '/../resources/views/sections');
+        $docs = File::allFiles(__DIR__.'/../resources/views/sections');
 
         return collect($docs)->map(function ($file) {
             return Str::remove('.blade.php', $file->getFilename());
