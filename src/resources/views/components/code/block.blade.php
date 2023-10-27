@@ -2,10 +2,10 @@
 
 <div x-cloak x-data="codePreview()"
     {{ $attributes->class([
-        'relative shadow-md dark:shadow-none border-2 dark:border-0 rounded-lg' => !$clean,
+        'relative shadow-lg dark:shadow-none rounded-lg' => !$clean,
         'mt-3 mb-6',
     ]) }}>
-    @if($render)
+    @if ($render)
         @if (check_slot($slot))
             <div {{ $slot->attributes }}>
                 {!! Blade::render(serialize_slot($slot), $this->all()) !!}
@@ -21,7 +21,7 @@
 
     @if (!$noCopy)
         <div class="absolute top-0 right-0 p-1">
-            <x-mini-button x-ref="copy" primary flat focus="none" xs>
+            <x-mini-button x-ref="copy" flat focus="none" teal xs>
                 <x-icon x-show="!copy" name="document" class="w-4 h-4 stroke-current" outline />
 
                 <x-icon x-show="copy" name="document-check" class="w-4 h-4 stroke-current" outline />

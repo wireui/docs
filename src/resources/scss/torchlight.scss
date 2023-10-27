@@ -3,7 +3,7 @@
  overflow-x-auto is recommended.
 */
 pre {
-    @apply rounded-lg overflow-x-auto soft-scrollbar;
+    @apply rounded-lg overflow-x-auto hide-scrollbar;
 }
 
 /*
@@ -13,15 +13,15 @@ pre {
  colors extend edge to edge.
 */
 pre code.torchlight {
-    background-color: #27272A !important;
-    @apply block py-6 min-w-max text-sm;
+    background-color: #0f172a !important;
+    @apply block py-3 min-w-max text-xs md:text-sm md:py-6;
 }
 
 /*
  Horizontal line padding.
 */
 pre code.torchlight .line {
-    @apply px-6;
+    @apply px-3 md:px-6;
 }
 
 // Line separator

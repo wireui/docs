@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa016c10255fbde71534bc40c8d27333",
+    "content-hash": "bbd29463f26b3f667cae2bd7df857111",
     "packages": [
         {
             "name": "brick/math",
@@ -5642,7 +5642,7 @@
             "dist": {
                 "type": "path",
                 "url": "../wireui",
-                "reference": "e6de0d108dffa019fce25defe0d559e1c0023fce"
+                "reference": "53b1e7e223c70370d15af2dba381faab31234902"
             },
             "require": {
                 "laravel/framework": "^10.0",
@@ -10017,9 +10017,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "wireui/wireui": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

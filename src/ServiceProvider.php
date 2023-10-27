@@ -4,7 +4,7 @@ namespace WireUi\Docs;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support;
-use WireUi\Docs\Middleware\CheckPage;
+use WireUi\Docs\Middleware\CheckDocs;
 use WireUi\Docs\View\Components\Code;
 
 class ServiceProvider extends Support\ServiceProvider
@@ -44,6 +44,6 @@ class ServiceProvider extends Support\ServiceProvider
     {
         $router = $this->app->make(Router::class);
 
-        $router->aliasMiddleware('check.page', CheckPage::class);
+        $router->aliasMiddleware('check.docs', CheckDocs::class);
     }
 }
