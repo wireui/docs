@@ -24,6 +24,8 @@ class ServiceProvider extends Support\ServiceProvider
     {
         $this->loadViews();
 
+        $this->registerCommands();
+
         $this->registerMiddleware();
     }
 
@@ -35,6 +37,18 @@ class ServiceProvider extends Support\ServiceProvider
         $this->loadViewComponentsAs('docs', [Code::class]);
 
         $this->loadViewsFrom(__DIR__.'/resources/views', 'docs');
+    }
+
+    /**
+     * Register the package's commands.
+     */
+    private function registerCommands(): void
+    {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                Commands\ClearCacheCommand::class,
+            ]);
+        }
     }
 
     /**
