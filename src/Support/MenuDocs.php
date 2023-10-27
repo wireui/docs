@@ -24,47 +24,47 @@ class MenuDocs
         return collect([
             'Getting Started' => [
                 'Installation',
-                'CSS Utilities',
-                'Troubleshooting',
+                // 'CSS Utilities',
+                // 'Troubleshooting',
             ],
             'Components' => [
                 'UI Components' => [
                     'Alert',
-                    'Avatar',
-                    'Badge',
-                    'Card',
-                    'Dropdown',
-                    'Icon',
-                    'Link',
-                    'Modal',
-                    'Table',
+                    // 'Avatar',
+                    // 'Badge',
+                    // 'Card',
+                    // 'Dropdown',
+                    // 'Icon',
+                    // 'Link',
+                    // 'Modal',
+                    // 'Table',
                 ],
                 'Form Components' => [
-                    'Button',
-                    'Checkbox',
-                    'Color Picker',
-                    'Datetime Picker',
-                    'Error',
-                    'Input',
-                    'Native Select',
-                    'Radio',
-                    'Select',
-                    'Textarea',
-                    'Time Picker',
-                    'Toggle',
+                    // 'Button',
+                    // 'Checkbox',
+                    // 'Color Picker',
+                    // 'Datetime Picker',
+                    // 'Error',
+                    // 'Input',
+                    // 'Native Select',
+                    // 'Radio',
+                    // 'Select',
+                    // 'Textarea',
+                    // 'Time Picker',
+                    // 'Toggle',
                 ],
             ],
             'Actions' => [
-                'Dialogs',
-                'Notifications',
+                // 'Dialogs',
+                // 'Notifications',
             ],
             'Customize' => [
-                'Colors',
-                'Components',
-                'Contribution Guide',
+                // 'Colors',
+                // 'Components',
+                // 'Contribution Guide',
             ],
             'Advanced' => [
-                'Hooks',
+                // 'Hooks',
             ],
         ]);
     }
@@ -75,6 +75,21 @@ class MenuDocs
     public function getSection(string $section): ?array
     {
         return $this->getMenu()->get($this->serializeMenu($section));
+    }
+
+    /**
+     * Get the default page for the given section.
+     */
+    public function getDefaultPage(string $slug): ?string
+    {
+        return match ($slug) {
+            'getting-started' => 'installation',
+            'components' => 'alert',
+            'actions' => 'dialogs',
+            'customize' => 'colors',
+            'advanced' => 'hooks',
+            default => null,
+        };
     }
 
     /**

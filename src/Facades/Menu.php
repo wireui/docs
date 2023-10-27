@@ -8,6 +8,7 @@ use WireUi\Docs\Support\MenuDocs;
 /**
  * @method static \Illuminate\Support\Collection getMenu()
  * @method static ?array getSection(string $section)
+ * @method static ?string getDefaultPage(string $section)
  * @method static bool hasSection(string $section)
  * @method static bool hasPage(string $page, string $section)
  * @method static ?array getPreviousLink(string $page)

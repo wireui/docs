@@ -15,13 +15,13 @@ class CheckDocs
      */
     public function handle(Request $request, Closure $next): Response|RedirectResponse
     {
-        $page = $request->page;
-
         $section = $request->section;
+
+        $page = $request->page ?? Menu::getDefaultPage($section);
 
         abort_unless(Menu::hasSection($section), Response::HTTP_NOT_FOUND);
 
-        abort_unless(is_null($page) || Menu::hasPage($page, $section), Response::HTTP_NOT_FOUND);
+        abort_unless(Menu::hasPage($page, $section), Response::HTTP_NOT_FOUND);
 
         return $next($request);
     }
