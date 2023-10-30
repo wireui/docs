@@ -26,12 +26,6 @@
         "pestphp/pest-plugin-laravel": "^2.0",
         "pestphp/pest-plugin-livewire": "^2.1"
     },
-    "repositories": {
-        "wireui/wireui": {
-            "type": "path",
-            "url": "../wireui"
-        }
-    },
     "authors": [
         {
             "name": "Pedro Oliveira",

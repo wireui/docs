@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7a295fa14b66bff1b7babef02500b5d",
+    "content-hash": "4d1f747b90a4732b0a564dde72a31f3c",
     "packages": [
         {
             "name": "brick/math",
@@ -5639,10 +5639,16 @@
         {
             "name": "wireui/wireui",
             "version": "dev-feature-refactor-traits",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wireui/wireui.git",
+                "reference": "2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8"
+            },
             "dist": {
-                "type": "path",
-                "url": "../wireui",
-                "reference": "620a808e4dfba377f04349034b15f7ef36ab58e6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8",
+                "reference": "2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "^10.0",
@@ -5672,36 +5678,14 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "WireUi\\": "src/"
-                },
                 "files": [
                     "src/helpers.php"
-                ]
-            },
-            "autoload-dev": {
+                ],
                 "psr-4": {
-                    "App\\": "vendor/orchestra/testbench-core/laravel/app",
-                    "Tests\\": "tests/"
+                    "WireUi\\": "src/"
                 }
             },
-            "scripts": {
-                "post-autoload-dump": [
-                    "./vendor/bin/dusk-updater detect --no-interaction"
-                ],
-                "test": [
-                    "./vendor/bin/pest"
-                ],
-                "test:ci": [
-                    "CI=true ./vendor/bin/pest"
-                ],
-                "pint": [
-                    "./vendor/bin/pint"
-                ],
-                "pint:test": [
-                    "./vendor/bin/pint --test"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5719,9 +5703,17 @@
                 "livewire-ui",
                 "wireui"
             ],
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/wireui/wireui/issues",
+                "source": "https://github.com/wireui/wireui/tree/feature-refactor-traits"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/PH7-Jack",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-10-29T04:01:06+00:00"
         }
     ],
     "packages-dev": [
