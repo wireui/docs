@@ -5642,12 +5642,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wireui/wireui.git",
-                "reference": "2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8"
+                "reference": "94df941047298a023d366999745c037a7adab590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wireui/wireui/zipball/2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8",
-                "reference": "2e691ec4c9de5a4adcf00907f081bf6b1f9b06a8",
+                "url": "https://api.github.com/repos/wireui/wireui/zipball/94df941047298a023d366999745c037a7adab590",
+                "reference": "94df941047298a023d366999745c037a7adab590",
                 "shasum": ""
             },
             "require": {
@@ -5713,7 +5713,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-10-29T04:01:06+00:00"
+            "time": "2023-10-31T03:49:16+00:00"
         }
     ],
     "packages-dev": [
