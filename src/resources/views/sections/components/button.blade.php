@@ -13,8 +13,6 @@ $sleeping = fn() => sleep(2);
 
             <x-docs::summary.header href="#flat-colors" label="Flat Colors" />
 
-            {{-- <x-docs::summary.header href="#mini-buttons" label="Mini Buttons" /> --}}
-
             <x-docs::summary.header href="#state-colors" label="State Colors" />
 
             <x-docs::summary.header href="#rounders-button" label="Rounders Button" />
@@ -34,8 +32,12 @@ $sleeping = fn() => sleep(2);
     <x-docs::title id="buttons" title="Buttons" />
 
     <x-docs::text>
-        The button component has multiple variants, colors, and options to customize. A straightforward API to use to
-        enhance your application with beautiful components
+        The button component is a powerful tool that opens up a world of possibilities for customization. With multiple
+        variants, a rich palette of colors, and a straightforward API, it empowers you to enhance your application with
+        beautiful and functional components. Whether you're looking to create eye-catching call-to-action buttons,
+        subtle navigation links, or interactive elements, the button component gives you the control and versatility you
+        need to make your application stand out. Additionally, you can easily add loading indicators for specific
+        actions and fine-tune their timing, making it a comprehensive solution for creating an engaging user experience.
     </x-docs::text>
 
     <x-docs::subtitle id="solid-colors" title="Solid Colors" />
