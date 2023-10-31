@@ -124,7 +124,6 @@
     <x-docs::subtitle id="flat-colors" title="Flat Colors" />
 
     <x-docs::text>
-
         We also provide the flat variant for your project. Like our other variants, you can access the full spectrum of
         Tailwind colors for your customization needs.
     </x-docs::text>
@@ -214,11 +213,11 @@
 
     <x-docs::text>
         In contrast to version 1, we've introduced the <b>mini-badge</b>, which offers extensive customization options,
-        particularly with regards to rounding. In version 1, the only available option was the <b>circle-badge</b>.
+        particularly with regards to rounding. In version 1, the only available option was the <b>badge.circle</b>.
     </x-docs::text>
 
     <x-alert title="Attention!" class="my-4" warning>
-        The attributes [right-icon, prepend, append] are not supported in <b>mini-badge</b> component.
+        The attributes [full, right-icon, prepend, append] are not supported in <b>mini-badge</b> component.
     </x-alert>
 
     <x-docs::code.preview language="blade">
