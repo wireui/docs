@@ -13,11 +13,8 @@
     ],
     "require": {
         "php": "^8.2",
-        "laravel/framework": "^10.28",
-        "wireui/wireui": "dev-feature-refactor-traits",
-        "torchlight/torchlight-laravel": "^0.5.14",
-        "livewire/livewire": "^3.0",
-        "livewire/volt": "^1.3"
+        "laravel/framework": "^10.0",
+        "torchlight/torchlight-laravel": "^0.5"
     },
     "require-dev": {
         "laravel/pint": "^1.10",
@@ -30,6 +27,10 @@
         {
             "name": "Pedro Oliveira",
             "email": "pedrolivertwd@gmail.com"
+        },
+        {
+            "name": "João Pedro Lopes",
+            "email": "joaopalopes24@gmail.com"
         }
     ],
     "license": "MIT",
