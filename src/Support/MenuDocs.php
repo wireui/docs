@@ -2,7 +2,6 @@
 
 namespace WireUi\Docs\Support;
 
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
@@ -14,7 +13,7 @@ class MenuDocs
      */
     public function getMenu(): Collection
     {
-        return Cache::remember('wireui::menu', Carbon::now()->addDay(), fn () => $this->generateMenu());
+        return Cache::sear('wireui::menu', fn () => $this->generateMenu());
     }
 
     /**
@@ -24,9 +23,11 @@ class MenuDocs
     {
         return collect([
             'Getting Started' => [
-                'Installation',
-                // 'CSS Utilities',
-                // 'Troubleshooting',
+                'Getting Started' => [
+                    'Installation',
+                    'CSS Utilities',
+                    'Troubleshooting',
+                ],
             ],
             'Components' => [
                 'UI Components' => [
@@ -45,7 +46,7 @@ class MenuDocs
                     // 'Checkbox',
                     // 'Color Picker',
                     // 'Datetime Picker',
-                    'Error',
+                    'Errors',
                     // 'Input',
                     // 'Native Select',
                     // 'Radio',
@@ -56,16 +57,22 @@ class MenuDocs
                 ],
             ],
             'Actions' => [
-                // 'Dialogs',
-                // 'Notifications',
+                'Actions' => [
+                    'Dialogs',
+                    'Notifications',
+                ],
             ],
             'Customize' => [
-                // 'Colors',
-                // 'Components',
-                // 'Contribution Guide',
+                'Customize' => [
+                    'Colors',
+                    'Components',
+                    'Contribution Guide',
+                ],
             ],
             'Advanced' => [
-                // 'Hooks',
+                'Advanced' => [
+                    'Hooks',
+                ],
             ],
         ]);
     }
@@ -75,7 +82,9 @@ class MenuDocs
      */
     public function getSection(string $section): ?array
     {
-        return $this->getMenu()->get($this->serializeMenu($section));
+        return $this->getMenu()->mapWithKeys(function ($section, $key) {
+            return [Str::slug($key) => $section];
+        })->get($section);
     }
 
     /**
@@ -98,7 +107,9 @@ class MenuDocs
      */
     public function hasSection(string $section): bool
     {
-        return $this->getMenu()->keys()->contains($this->serializeMenu($section));
+        $sections = $this->getMenu()->keys()->transform(fn ($item) => Str::slug($item));
+
+        return $sections->contains($section);
     }
 
     /**
@@ -106,66 +117,45 @@ class MenuDocs
      */
     public function hasPage(string $page, string $section): bool
     {
-        $page = $this->serializeMenu($page);
+        $pages = collect($this->getSection($section))->collapse();
 
-        $pages = collect($this->getSection($section));
-
-        return $pages->contains(function ($item) use ($page) {
-            return is_array($item) ? in_array($page, $item, true) : $item === $this->serializeMenu($page);
-        });
+        return $pages->transform(fn ($item) => Str::slug($item))->contains($page);
     }
 
-    // /**
-    //  * Get the previous link for the given page in cache.
-    //  */
-    // public function getPreviousLink(string $page): ?array
-    // {
-    //     return Cache::remember("wireui::previous::{$page}", Carbon::now()->addDay(), fn () => $this->generatePreviousLink($page));
-    // }
-
-    // /**
-    //  * Generate the previous link for the given page.
-    //  */
-    // private function generatePreviousLink(string $page): ?array
-    // {
-    //     $titles = $this->getMenu()->pluck('links')->collapse();
-
-    //     $links = $titles->map(fn ($title) => Str::slug($title));
-
-    //     return [
-    //         'title' => $titles->get($links->search($page) - 1),
-    //         'href' => '/docs/'.$links->get($links->search($page) - 1),
-    //     ];
-    // }
-
-    // /**
-    //  * Get the next link for the given page in cache.
-    //  */
-    // public function getNextLink(string $page): ?array
-    // {
-    //     return Cache::remember("wireui::next::{$page}", Carbon::now()->addDay(), fn () => $this->generateNextLink($page));
-    // }
-
-    // /**
-    //  * Generate the next link for the given page.
-    //  */
-    // private function generateNextLink(string $page): ?array
-    // {
-    //     $titles = $this->getMenu()->pluck('links')->collapse();
-
-    //     $links = $titles->map(fn ($title) => Str::slug($title));
-
-    //     return [
-    //         'title' => $titles->get($links->search($page) + 1),
-    //         'href' => '/docs/'.$links->get($links->search($page) + 1),
-    //     ];
-    // }
+    /**
+     * Get the previous link for the given page in cache.
+     */
+    public function getPreviousLink(string $page): array
+    {
+        return Cache::sear("wireui::previous::{$page}", fn () => $this->getPositionMenu($page, fn ($position) => $position - 1));
+    }
 
     /**
-     * Serialize the given text.
+     * Get the next link for the given page in cache.
      */
-    private function serializeMenu(string $text): string
+    public function getNextLink(string $page): array
     {
-        return Str::replace('-', ' ', Str::title($text));
+        return Cache::sear("wireui::next::{$page}", fn () => $this->getPositionMenu($page, fn ($position) => $position + 1));
+    }
+
+    /**
+     * Get the position menu for the given page.
+     */
+    private function getPositionMenu(string $page, callable $callback): array
+    {
+        $titles = $this->getMenu()->mapWithKeys(function ($section, $key) {
+            return [Str::slug($key) => collect($section)->collapse()->toArray()];
+        });
+
+        $pages = $titles->collapse()->transform(fn ($item) => Str::slug($item));
+
+        $previous = $titles->collapse()->get($callback($pages->search($page)));
+
+        $section = $titles->search(fn ($item) => in_array($previous, $item));
+
+        return [
+            'title' => $previous,
+            'href' => "/{$section}/".Str::slug($previous),
+        ];
     }
 }
