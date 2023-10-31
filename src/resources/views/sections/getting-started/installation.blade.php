@@ -5,13 +5,15 @@
 
             <x-docs::summary.header href="#requirements" label="Requirements" />
 
-            <x-docs::summary.header href="#installation" label="Installation" />
+            <x-docs::summary.header href="#installation-steps" label="Installation" />
 
             <x-docs::summary.header href="#publishing" label="Publishing" />
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="meet-wireui" title="Meet WireUI" />
+    <x-docs::title id="installation" title="Installation" />
+
+    <x-docs::subtitle id="meet-wireui" title="Meet WireUI" />
 
     <x-docs::text>
         WireUI is a robust library that offers a comprehensive range of components and resources, designed to
@@ -35,7 +37,7 @@
         <x-docs::list.item text="Advanced Customization" />
     </x-docs::list>
 
-    <x-docs::title id="requirements" title="Requirements" />
+    <x-docs::subtitle id="requirements" title="Requirements" />
 
     <x-docs::list>
         <x-docs::list.item>
@@ -60,7 +62,7 @@
         </x-docs::list.item>
     </x-docs::list>
 
-    <x-docs::title id="installation" title="Installation" />
+    <x-docs::subtitle id="installation-steps" title="Installation" />
 
     <x-docs::text>
         <b>1.</b> Execute the following command to seamlessly integrate WireUI into your project:
@@ -131,7 +133,7 @@
         @endverbatim
     </x-docs::code.block>
 
-    <x-docs::title id="publishing" title="Publishing" />
+    <x-docs::subtitle id="publishing" title="Publishing" />
 
     <x-docs::text>
         WireUI requires no extra configuration; however, you have the flexibility to publish the files and tailor them

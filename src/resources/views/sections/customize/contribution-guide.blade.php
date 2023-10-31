@@ -1,5 +1,5 @@
 <div>
-    <x-docs::title title="Contribution Guide" />
+    <x-docs::title id="contribution-guide" title="Contribution Guide" />
 
     <x-docs::text>
         You can contribute to the project by making a pull request on GitHub. This guide will help you get started with

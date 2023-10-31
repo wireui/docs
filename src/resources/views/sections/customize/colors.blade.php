@@ -1,5 +1,5 @@
 <div>
-    <x-docs::title title="Colors" />
+    <x-docs::title id="colors" title="Colors" />
 
     <x-docs::text>
         Tailor the visual aesthetics of your WireUI components to your liking by customizing the default color scheme.

@@ -1,8 +1,6 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#troubleshooting" label="Troubleshooting" />
-
             <x-docs::summary.header href="#version-update" label="Version Update" />
 
             <x-docs::summary.header href="#using-https" label="WireUI not using https" />
@@ -21,7 +19,7 @@
         to include as many details as possible.
     </x-docs::text>
 
-    <x-docs::title id="version-update" title="Version Update" />
+    <x-docs::subtitle id="version-update" title="Version Update" />
 
     <x-docs::text>
         If you've recently updated WireUI and are encountering issues, please ensure you consult the version-specific
@@ -31,7 +29,7 @@
         <x-link href="https://twitter.com/ph7jack" target="_blank" teal>@ph7jack</x-link>, on Twitter.
     </x-docs::text>
 
-    <x-docs::title id="using-https" title="WireUI not using https" />
+    <x-docs::subtitle id="using-https" title="WireUI not using https" />
 
     <x-docs::text>
         If your assets (scripts and CSS files) are loaded via
@@ -62,7 +60,7 @@
         @endverbatim
     </x-docs::code.block>
 
-    <x-docs::title id="tailwind-forms" title="Tailwind Forms" />
+    <x-docs::subtitle id="tailwind-forms" title="Tailwind Forms" />
 
     <x-docs::text>
         If you've come across the

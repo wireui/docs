@@ -1,5 +1,5 @@
 <div>
-    <x-docs::title title="Components Customization" />
+    <x-docs::title id="components" title="Components" />
 
     <x-docs::text>
         You can disable, rename or extend all the WireUI components.
