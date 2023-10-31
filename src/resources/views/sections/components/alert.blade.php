@@ -28,14 +28,9 @@
     <x-docs::subtitle id="simple-alert" title="Simple Alert" />
 
     <x-docs::text>
-        The alert component natively has 6 colors, which are:
-        <x-docs::mark>primary</x-docs::mark>,
-        <x-docs::mark>secondary</x-docs::mark>,
-        <x-docs::mark>positive</x-docs::mark>,
-        <x-docs::mark>negative</x-docs::mark>,
-        <x-docs::mark>warning</x-docs::mark> and
-        <x-docs::mark>info</x-docs::mark>.
-        A simple way to use the alert is to just pass the title and the color you want, as in the example below:
+        The alert component natively has 6 colors, which are: <b>primary</b>, <b>secondary</b>, <b>positive</b>,
+        <b>negative</b>, <b>warning</b> and <b>info</b>. A simple way to use the alert is to just pass the title and the
+        color you want, as in the example below:
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -60,11 +55,8 @@
 
     <x-docs::text>
         In the realm of the alert component, we offer three distinct variants to cater to the specific requirements of
-        your project:
-        <x-docs::mark>flat</x-docs::mark>,
-        <x-docs::mark>outline</x-docs::mark>, and
-        <x-docs::mark>solid</x-docs::mark>.
-        It's important to note that the default variant for WireUI is <b>flat</b>.
+        your project: <b>flat</b>, <b>outline</b>, and <b>solid</b>. It's important to note that the default variant for
+        WireUI is <b>flat</b>.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -83,7 +75,7 @@
     <x-docs::subtitle id="alert-slots" title="Alert Slots" />
 
     <x-docs::text>
-        In the context of the alert component, you can utilize the "title" attribute as a slot for enhanced
+        In the context of the alert component, you can utilize the <b>title</b> attribute as a slot for enhanced
         customization. If you require both a title and a description, you have the flexibility to pass the description
         into either the default slot, and even tailor the default slot to your specific needs.
     </x-docs::text>

@@ -24,13 +24,8 @@
     <x-docs::text>
         The avatar component is designed to showcase either an image, a label, or a default SVG placeholder. It's a
         versatile tool that allows you to create various features, such as profile pictures, with ease. The alert
-        component natively has 6 colors, which are:
-        <x-docs::mark>primary</x-docs::mark>,
-        <x-docs::mark>secondary</x-docs::mark>,
-        <x-docs::mark>positive</x-docs::mark>,
-        <x-docs::mark>negative</x-docs::mark>,
-        <x-docs::mark>warning</x-docs::mark> and
-        <x-docs::mark>info</x-docs::mark>.
+        component natively has 6 colors, which are: <b>primary</b>, <b>secondary</b>, <b>positive</b>, <b>negative</b>,
+        <b>warning</b> and <b>info</b>.
     </x-docs::text>
 
     <x-docs::subtitle id="avatar-image" title="Avatar Image" />
@@ -59,9 +54,8 @@
     <x-docs::subtitle id="avatar-label" title="Avatar Label" />
 
     <x-docs::text>
-        An alternative approach for using the avatar involves providing the
-        <x-docs::mark>label</x-docs::mark>
-        attribute, typically containing initials or a state representation.
+        An alternative approach for using the avatar involves providing the <b>label</b> attribute, typically containing
+        initials or a state representation.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -132,7 +126,7 @@
     <x-docs::subtitle id="avatar-sizes" title="Avatar Sizes" />
 
     <x-docs::text>
-        The <x-docs::mark>size</x-docs::mark> property offers a broad spectrum of options, coupled with the flexibility
+        The <b>size</b> property offers a broad spectrum of options, coupled with the flexibility
         for customization to suit your specific needs.
     </x-docs::text>
 
