@@ -127,7 +127,9 @@ class MenuDocs
      */
     public function getPreviousLink(string $page): array
     {
-        return Cache::sear("wireui::previous::{$page}", fn () => $this->getPositionMenu($page, fn ($position) => $position - 1));
+        return Cache::sear("wireui::previous::{$page}", function () use ($page) {
+            return $this->getPositionMenu($page, fn ($position) => $position - 1);
+        });
     }
 
     /**
@@ -135,7 +137,9 @@ class MenuDocs
      */
     public function getNextLink(string $page): array
     {
-        return Cache::sear("wireui::next::{$page}", fn () => $this->getPositionMenu($page, fn ($position) => $position + 1));
+        return Cache::sear("wireui::next::{$page}", function () use ($page) {
+            return $this->getPositionMenu($page, fn ($position) => $position + 1);
+        });
     }
 
     /**

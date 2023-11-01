@@ -51,10 +51,7 @@ $sleeping = fn() => sleep(2);
             <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
                 <x-button label="Default" />
                 <x-button black label="Black" />
-                <div
-                    class="flex justify-center p-3 px-5 bg-black border rounded-md dark:border-none dark:p-0 dark:bg-transparent">
-                    <x-button white label="White" />
-                </div>
+                <x-button white label="White" />
             </div>
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
                 <x-button primary label="Primary" />
@@ -98,8 +95,10 @@ $sleeping = fn() => sleep(2);
 
     <x-docs::code.preview language="blade">
         @verbatim
-            <div class="flex flex-wrap items-center justify-center mb-4">
+            <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
                 <x-button light label="Default" />
+                <x-button light black label="Black" />
+                <x-button light white label="White" />
             </div>
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
                 <x-button light primary label="Primary" />
@@ -145,10 +144,7 @@ $sleeping = fn() => sleep(2);
             <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
                 <x-button outline label="Default" />
                 <x-button outline black label="Black" />
-                <div
-                    class="flex justify-center p-3 px-5 bg-black border rounded-md dark:border-none dark:p-0 dark:bg-transparent">
-                    <x-button outline white label="White" />
-                </div>
+                <x-button outline white label="White" />
             </div>
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6 bg-red-500pr-4">
                 <x-button outline primary label="Primary" />
@@ -194,10 +190,7 @@ $sleeping = fn() => sleep(2);
             <div class="flex flex-wrap items-center justify-center gap-4 mb-4">
                 <x-button flat label="Default" />
                 <x-button flat black label="Black" />
-                <div
-                    class="flex justify-center p-3 px-5 bg-black border rounded-md dark:border-none dark:p-0 dark:bg-transparent">
-                    <x-button flat white label="White" />
-                </div>
+                <x-button flat white label="White" />
             </div>
             <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 xl:grid-cols-6">
                 <x-button flat primary label="Primary" />
