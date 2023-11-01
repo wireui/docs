@@ -1,11 +1,5 @@
 <div>
-    <x-slot name="summary">
-        <x-docs::summary>
-            <x-docs::summary.header href="#heroicons" label="Heroicons" />
-        </x-docs::summary>
-    </x-slot>
-
-    <x-docs::title id="heroicons" title="Heroicons" />
+    <x-docs::title id="icon" title="Icon" />
 
     <x-docs::text>
         All

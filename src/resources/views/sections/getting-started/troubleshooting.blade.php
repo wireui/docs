@@ -37,9 +37,7 @@
         <x-docs::mark>https://</x-docs::mark>, you can consider the following steps
     </x-docs::text>
 
-    <br>
-
-    <x-docs::text>
+    <x-docs::text class="mt-4">
         <b>1.</b> Ensure that the `APP_URL` in your
         <x-docs::mark>.env</x-docs::mark> file is configured with an HTTPS prefix.
     </x-docs::text>
