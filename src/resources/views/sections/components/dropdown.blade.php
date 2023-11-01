@@ -369,73 +369,73 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <x-dropdown icon="bars-3" position="top">
+                <x-dropdown icon="arrow-up" position="top">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="top-start">
+                <x-dropdown icon="arrow-up-right" position="top-start">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="top-end">
+                <x-dropdown icon="arrow-up-left" position="top-end">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="right">
+                <x-dropdown icon="arrow-right" position="right">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="right-start">
+                <x-dropdown icon="arrow-down-right" position="right-start">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="right-end">
+                <x-dropdown icon="arrow-up-right" position="right-end">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="bottom">
+                <x-dropdown icon="arrow-down" position="bottom">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="bottom-start">
+                <x-dropdown icon="arrow-down-right" position="bottom-start">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="bottom-end">
+                <x-dropdown icon="arrow-down-left" position="bottom-end">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="left">
+                <x-dropdown icon="arrow-left" position="left">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="left-start">
+                <x-dropdown icon="arrow-down-left" position="left-start">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
                 </x-dropdown>
 
-                <x-dropdown icon="bars-3" position="left-end">
+                <x-dropdown icon="arrow-up-left" position="left-end">
                     <x-dropdown.item label="Settings" />
                     <x-dropdown.item label="My Profile" />
                     <x-dropdown.item label="Logout" />
