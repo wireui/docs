@@ -9,6 +9,11 @@ use Illuminate\Support\Str;
 class MenuDocs
 {
     /**
+     * Reject this pages in previous and next links.
+     */
+    private array $reject = ['Table'];
+
+    /**
      * Get the menu.
      */
     public function getMenu(): Collection
@@ -44,15 +49,15 @@ class MenuDocs
                 ],
                 'Form Components' => [
                     'Checkbox',
-                    // 'Color Picker',
-                    // 'Datetime Picker',
+                    'Color Picker',
+                    'Datetime Picker',
                     'Errors',
-                    // 'Input',
-                    // 'Native Select',
+                    'Input',
+                    'Native Select',
                     'Radio',
-                    // 'Select',
-                    // 'Textarea',
-                    // 'Time Picker',
+                    'Select',
+                    'Textarea',
+                    'Time Picker',
                     'Toggle',
                 ],
             ],
@@ -151,15 +156,17 @@ class MenuDocs
             return [Str::slug($key) => collect($section)->collapse()->toArray()];
         });
 
-        $pages = $titles->collapse()->transform(fn ($item) => Str::slug($item));
+        $titles1 = $titles->collapse()->reject(fn ($item) => in_array($item, $this->reject))->values();
 
-        $previous = $titles->collapse()->get($callback($pages->search($page)));
+        $titles2 = $titles1->map(fn ($item) => Str::slug($item));
 
-        $section = $titles->search(fn ($item) => in_array($previous, $item));
+        $title = $titles1->get($callback($titles2->search($page)));
+
+        $section = $titles->search(fn ($item) => in_array($title, $item));
 
         return [
-            'title' => $previous,
-            'href' => "/{$section}/".Str::slug($previous),
+            'title' => $title,
+            'href' => "/{$section}/".Str::slug($title),
         ];
     }
 }

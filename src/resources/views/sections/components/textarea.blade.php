@@ -1,35 +1,32 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#textarea" label="Textarea">
-                <x-docs::summary.item href="#textarea-input" label="Textarea Input" />
-            </x-docs::summary.header>
-
-            <x-docs::summary.header href="#textarea-options" label="Textarea Options" />
+            <x-docs::summary.item href="#textarea-simple" label="Textarea Simples" />
         </x-docs::summary>
     </x-slot>
 
     <x-docs::title id="textarea" title="Textarea" />
 
     <x-docs::text>
-        The Textarea component is very useful to build forms.
-        <br><br>
-        You can set the attribute
-        <x-docs::mark>wire:model</x-docs::mark>
-        to automatically have the attributes
-        <x-docs::mark>id</x-docs::mark>
-        set to the MD5 of the model and
-        <x-docs::mark>name</x-docs::mark>
-        to the exact model. You must NOT pass the attributes id and name for this to work.
+        A textarea component is a user interface element commonly used in web development to create a multi-line text
+        input field. It allows users to enter and edit larger amounts of text, making it suitable for tasks such as
+        composing messages, comments, or longer pieces of content. Textareas are versatile and can be customized with
+        various attributes and styling to meet specific design and functionality requirements. They are an essential
+        part of web forms and provide a user-friendly way for individuals to input textual information.
     </x-docs::text>
 
-    <x-docs::code.block language="blade">
-        @verbatim
-            <x-textarea wire:model="comment" label="Comment" placeholder="Your comment" />
-        @endverbatim
-    </x-docs::code.block>
+    <x-alert title="Information!" class="my-4" info>
+        The textarea component has all
+        <x-link href="/components/inputs" info>Inputs</x-link>
+        options and slots.
+    </x-alert>
 
-    <x-docs::subtitle id="textarea-input" title="Textarea Input" />
+    <x-docs::subtitle id="textarea-simple" title="Textarea Simples" />
+
+    <x-docs::text>
+        The textarea is an uncomplicated component that is easy to use and employs attributes similar to those used with
+        input elements.
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
@@ -38,12 +35,4 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
-
-    <x-docs::title id="textarea-options" title="Textarea Options" />
-
-    <x-docs::text>
-        The textarea component has all
-        <x-link href="{{ route('docs.index', 'inputs') }}#input-options">Inputs</x-link>
-        options and slots.
-    </x-docs::text>
 </div>
