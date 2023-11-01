@@ -1,21 +1,19 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#select" label="Select">
-                <x-docs::summary.item href="#async-search" label="Async Search" />
-                <x-docs::summary.item href="#simple-options" label="Simple Options" />
-                <x-docs::summary.item href="#multiselect" label="Multi Select" />
-                <x-docs::summary.item href="#custom-options" label="Custom Options" />
-                <x-docs::summary.item href="#option-with-description" label="Option With Description" />
-                <x-docs::summary.item href="#slot-options" label="Slot Options" />
-                <x-docs::summary.item href="#customizable-options" label="Customizable Options" />
-            </x-docs::summary.header>
+            <x-docs::summary.header href="#async-search" label="Async Search" />
 
-            <x-docs::summary.header href="#select-options" label="Select Options" />
+            <x-docs::summary.header href="#simple-options" label="Simple Options" />
 
-            <x-docs::summary.header href="#default-options" label="Default Option" />
+            <x-docs::summary.header href="#multiselect" label="Multi Select" />
 
-            <x-docs::summary.header href="#user-options" label="User Option" />
+            <x-docs::summary.header href="#custom-options" label="Custom Options" />
+
+            <x-docs::summary.header href="#option-with-description" label="Option With Description" />
+
+            <x-docs::summary.header href="#slot-options" label="Slot Options" />
+
+            <x-docs::summary.header href="#customizable-options" label="Customizable Options" />
 
             <x-docs::summary.header href="#select-events" label="Select Events" />
 
@@ -69,36 +67,28 @@
 
         <x-docs::list.item>
             Implement the
-            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L17"
-                target="_blank">
-                search
-            </x-link>
+            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L17" label="search" target="_blank" teal />
             scope
         </x-docs::list.item>
 
         <x-docs::list.item>
             Implement the
-            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L23"
-                target="_blank">
-                selected
-            </x-link>
+            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L23" label="selected" target="_blank" teal />
             scope
         </x-docs::list.item>
     </x-docs::list>
 
-    <x-alert class="my-6" info>
-        <x-slot name="title">
-            Tip: See these files to read more about the <b>API</b> implementation.
-            <br>
-            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php"
-                target="_blank" info>
-                Controller
-            </x-link>,
-            <x-link href="https://github.com/wireui/docs/tree/main/tests/Feature/Controllers/Api/Users/IndexTest.php"
-                target="_blank" info>
-                Test
-            </x-link>.
-        </x-slot>
+    <x-alert title="Information!" class="my-6" info>
+        See these files to read more about the <b>API</b> implementation.
+        <br><br>
+        <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php"
+            target="_blank" info sm>
+            Controller
+        </x-link>,
+        <x-link href="https://github.com/wireui/docs/tree/main/tests/Feature/Controllers/Api/Users/IndexTest.php"
+            target="_blank" info sm>
+            Test
+        </x-link>.
     </x-alert>
 
     <x-docs::text>
@@ -108,11 +98,11 @@
     <x-docs::code.block language="js">
         @verbatim
             export type AsyncDataConfig = {
-            api: string | null
-            method: string
-            params: any,
-            credentials?: RequestCredentials,
-            alwaysFetch: boolean
+                api: string | null
+                method: string
+                params: any,
+                credentials?: RequestCredentials,
+                alwaysFetch: boolean
             }
         @endverbatim
     </x-docs::code.block>
@@ -140,27 +130,37 @@
 
     <x-docs::subtitle id="simple-options" title="Simple Options" />
 
+    <x-docs::text>
+        Text
+    </x-docs::text>
+
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Status" placeholder="Select one status" :options="['Active', 'Pending', 'Stuck', 'Done']"
-                    wire:model.defer="select" />
+                <x-select label="Select Status" placeholder="Select one status" :options="['Active', 'Pending', 'Stuck', 'Done']" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
 
     <x-docs::subtitle id="multiselect" title="Multi Select" />
 
+    <x-docs::text>
+        Text
+    </x-docs::text>
+
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Statuses" placeholder="Select many statuses" multiselect :options="['Active', 'Pending', 'Stuck', 'Done']"
-                    wire:model.defer="selectMultiple" />
+                <x-select label="Select Statuses" placeholder="Select many statuses" multiselect :options="['Active', 'Pending', 'Stuck', 'Done']" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
 
     <x-docs::subtitle id="custom-options" title="Custom Options" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
@@ -171,12 +171,16 @@
                     ['name' => 'Stuck', 'id' => 3],
                     ['name' => 'Done', 'id' => 4],
                 ]" option-label="name"
-                    option-value="id" wire:model.defer="select" />
+                    option-value="id" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
 
     <x-docs::subtitle id="option-with-description" title="Option With Description" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
@@ -187,17 +191,21 @@
                     ['name' => 'Stuck', 'id' => 3, 'description' => 'The status is stuck'],
                     ['name' => 'Done', 'id' => 4, 'description' => 'The status is done'],
                 ]" option-label="name"
-                    option-value="id" wire:model.defer="select" />
+                    option-value="id" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
 
     <x-docs::subtitle id="slot-options" title="Slot Options" />
 
+    <x-docs::text>
+        Text
+    </x-docs::text>
+
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Status" placeholder="Select one status" wire:model.defer="select">
+                <x-select label="Select Status" placeholder="Select one status">
                     <x-select.option label="Pending" value="1" />
                     <x-select.option label="In Progress" value="2" />
                     <x-select.option label="Stuck" value="3" />
@@ -209,11 +217,15 @@
 
     <x-docs::subtitle id="customizable-options" title="Customizable Options" />
 
+    <x-docs::text>
+        Text
+    </x-docs::text>
+
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-lg mx-auto">
             @verbatim
                 <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
-                    <x-select label="Select Relator" placeholder="Select relator" wire:model.defer="select">
+                    <x-select label="Select Relator" placeholder="Select relator">
                         <x-select.user-option :src="Vite::docs('andre.jpeg')" label="André Luiz" value="1" />
                         <x-select.user-option :src="Vite::docs('fernando.jpeg')" label="Fernando Gunther" value="2" />
                         <x-select.user-option :src="Vite::docs('keithyellen.jpg')" label="Keithyellen Huhn" value="3" />
@@ -232,7 +244,11 @@
         </x-slot>
     </x-docs::code.preview>
 
-    <x-docs::title id="select-events" title="Select Events" />
+    <x-docs::subtitle id="select-events" title="Select Events" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.block language="blade">
         @verbatim
@@ -248,7 +264,11 @@
         @endverbatim
     </x-docs::code.block>
 
-    <x-docs::title id="after-options-slot" title="After Options Slot" />
+    <x-docs::subtitle id="after-options-slot" title="After Options Slot" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
@@ -256,11 +276,8 @@
                 <x-select label="Search a User" wire:model.defer="asyncSearchUser" placeholder="Select some user"
                     :async-data="route('api.users.index')" option-label="name" option-value="id" hide-empty-message>
                     <x-slot name="afterOptions" class="flex justify-center p-2" x-show="displayOptions.length === 0">
-                        <x-button class="w-full"
-                            x-on:click="
-                            close;
-                            $wireui.notify({ title: 'Not implemented yet', icon: 'info' })
-                        "
+                        <x-button
+                            x-on:click="close; $wireui.notify({ title: 'Not implemented yet', icon: 'info' })"
                             primary flat full>
                             <span x-html="`Create user <b>${search}</b>`"></span>
                         </x-button>
@@ -270,7 +287,11 @@
         </x-slot>
     </x-docs::code.preview>
 
-    <x-docs::title id="select-slots" title="Select Slots" />
+    <x-docs::subtitle id="select-slots" title="Select Slots" />
+
+    <x-docs::text>
+        Text
+    </x-docs::text>
 
     <x-docs::code.block language="blade">
         @verbatim

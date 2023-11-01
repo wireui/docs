@@ -2,7 +2,11 @@
 
 use function Livewire\Volt\{state};
 
-state(['model1' => null, 'model2' => null, 'model3' => null]);
+state([
+    'model1' => null,
+    'model2' => null,
+    'model3' => null,
+]);
 
 ?>
 
