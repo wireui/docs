@@ -1,70 +1,163 @@
+<?php
+
+use function Livewire\Volt\{state};
+
+state(['model1' => null, 'model2' => null, 'model3' => null, 'model4' => null]);
+
+?>
+
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#radio"right-="Radio">
-                <x-docs::summary.item href="#simple-radio"right-="Simple Radio" />
-                <x-docs::summary.item href="#radio-with-label"right-="Radio With Label" />
-                <x-docs::summary.item href="#radio-sizes"right-="Radio Sizes" />
-            </x-docs::summary.header>
+            <x-docs::summary.header href="#radio-label" label="Radio Label" />
 
-            <x-docs::summary.header href="#radio-options" label="Radio Options" />
+            <x-docs::summary.header href="#radio-sizes" label="Radio Sizes" />
+
+            <x-docs::summary.header href="#radio-rounders" label="Radio Rounders" />
+
+            <x-docs::summary.header href="#radio-colors" label="Radio Colors" />
         </x-docs::summary>
     </x-slot>
 
     <x-docs::title id="radio" title="Radio" />
 
     <x-docs::text>
-        Radio buttons are used in forms to present the user with a list of options, allowing only a single selection.
-        Radio buttons can also be used to switch options, like turning something on/off.
+        The radio component offers a versatile and enhanced user experience with several noteworthy features in its
+        latest version. Users have the flexibility to choose between left or right labeling, and the component is
+        available in various sizes suitable for radio applications. One of its standout features is the ability to
+        employ different rounding methods, allowing for tailored customization to meet specific needs. Additionally, the
+        radio component provides a visually appealing touch, offering six default color options, including
+        <b>primary</b>, <b>secondary</b>, <b>positive</b>, <b>negative</b>, <b>warning</b>, and <b>info</b>, which can
+        be easily customized to suit your preferences.
     </x-docs::text>
 
-    <x-docs::subtitle id="simple-radio" title="Simple Radio" />
+    <x-docs::subtitle id="radio-label" title="Radio Label" />
+
+    <x-docs::text>
+        Within the radio, you have the flexibility to choose between using the label on either the right or left side.
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex flex-wrap gap-4">
-                <x-radio id="input-radio" name="radio" value="1" />
-            </div>
-        @endverbatim
-    </x-docs::code.preview>
+        <x-slot name="slot" class="flex flex-col space-y-6">
+            @verbatim
+                <p class="text-sm text-secondary-500 dark:text-secondary-400">
+                    Value: @json($model1)
+                </p>
 
-    <x-docs::subtitle id="radio-with-label" title="Radio With Label" />
+                <div class="flex flex-wrap gap-8">
+                    <x-radio id="label" label="Label in Left" wire:model.live="model1" value="label" />
 
-    <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex flex-wrap gap-4">
-                <x-radio id="left-label" label="Label in Left" name="radio" value="2" />
-                <x-radio id="right-label" right-label="Label in Right" name="radio" value="3" />
-            </div>
-        @endverbatim
+                    <x-radio id="right-label" right-label="Label in Right" wire:model.live="model1" value="right-label" />
+                </div>
+            @endverbatim
+        </x-slot>
     </x-docs::code.preview>
 
     <x-docs::subtitle id="radio-sizes" title="Radio Sizes" />
 
-    <x-docs::code.preview language="blade">
-        @verbatim
-            <div class="flex flex-col gap-4">
-                <div class="flex flex-wrap gap-4">
-                    <x-radio id="xs" name="radio" value="4" primary xs />
-                    <x-radio id="sm" name="radio" value="5" secondary sm />
-                    <x-radio id="md" name="radio" value="6" positive md />
-                    <x-radio id="md" name="radio" value="7" negative md />
-                    <x-radio id="lg" name="radio" value="8" warning lg />
-                    <x-radio id="xl" name="radio" value="9" info xl />
-                </div>
+    <x-docs::text>
+        Additionally, we offer a diverse selection of sizes suitable for radio applications.
+    </x-docs::text>
 
-                <div class="flex flex-wrap gap-4">
-                    <x-radio id="none" name="radio" value="10" xl rounded="none" />
-                    <x-radio id="sm" name="radio" value="11" xl rounded="sm" />
-                    <x-radio id="base" name="radio" value="12" xl rounded="base" />
-                    <x-radio id="md" name="radio" value="13" xl rounded="md" />
-                    <x-radio id="lg" name="radio" value="14" xl rounded="lg" />
-                    <x-radio id="xl" name="radio" value="15" xl rounded="xl" />
-                    <x-radio id="2xl" name="radio" value="16" xl rounded="2xl" />
-                    <x-radio id="3xl" name="radio" value="17" xl rounded="3xl" />
-                    <x-radio id="full" name="radio" value="18" xl rounded="full" />
+    <x-docs::code.preview language="blade">
+        <x-slot name="slot" class="flex flex-col space-y-6">
+            @verbatim
+                <p class="text-sm text-secondary-500 dark:text-secondary-400">
+                    Value: @json($model2)
+                </p>
+
+                <div class="flex flex-wrap gap-8 items-center">
+                    <x-radio id="size-xs" wire:model.live="model2" value="xs" xs />
+
+                    <x-radio id="size-sm" wire:model.live="model2" value="sm" sm /> {{-- DEFAULT --}}
+
+                    <x-radio id="size-md" wire:model.live="model2" value="md" md />
+
+                    <x-radio id="size-lg" wire:model.live="model2" value="lg" lg />
+
+                    <x-radio id="size-xl" wire:model.live="model2" value="xl" xl />
                 </div>
-            </div>
-        @endverbatim
+            @endverbatim
+        </x-slot>
+    </x-docs::code.preview>
+
+    <x-docs::subtitle id="radio-rounders" title="Radio Rounders" />
+
+    <x-docs::text>
+        A notable enhancement in this latest version is the ability to employ different rounding methods in the radio,
+        allowing for customization as needed.
+    </x-docs::text>
+
+    <x-docs::code.preview language="blade">
+        <x-slot name="slot" class="flex flex-col space-y-6">
+            @verbatim
+                <p class="text-sm text-secondary-500 dark:text-secondary-400">
+                    Value: @json($model3)
+                </p>
+
+                <div class="flex flex-wrap gap-8">
+                    {{-- CSS: 'rounded-none' - You can use |rounded="none"| too --}}
+                    <x-radio id="rounded-none" wire:model.live="model3" squared label="None" value="none" xl />
+
+                    {{-- CSS: 'rounded-sm' --}}
+                    <x-radio id="rounded-sm" wire:model.live="model3" rounded="sm" label="SM" value="sm" xl />
+
+                    {{-- CSS: 'rounded' --}}
+                    <x-radio id="rounded-base" wire:model.live="model3" rounded="base" label="Base" value="base" xl />
+
+                    {{-- CSS: 'rounded-md' --}}
+                    <x-radio id="rounded-md" wire:model.live="model3" rounded="md" label="MD" value="md" xl />
+
+                    {{-- CSS: 'rounded-lg' --}}
+                    <x-radio id="rounded-lg" wire:model.live="model3" rounded="lg" label="LG" value="lg" xl />
+
+                    {{-- CSS: 'rounded-xl' --}}
+                    <x-radio id="rounded-xl" wire:model.live="model3" rounded="xl" label="XL" value="xl" xl />
+
+                    {{-- CSS: 'rounded-2xl' --}}
+                    <x-radio id="rounded-2xl" wire:model.live="model3" rounded="2xl" label="2XL" value="2xl" xl />
+
+                    {{-- CSS: 'rounded-3xl' --}}
+                    <x-radio id="rounded-3xl" wire:model.live="model3" rounded="3xl" label="3XL" value="3xl" xl />
+
+                    {{-- CSS: 'rounded-full' - You can use |rounded| too - DEFAULT --}}
+                    <x-radio id="rounded-full" wire:model.live="model3" rounded="full" label="Full" value="full" xl />
+
+                    {{-- Or Custom --}}
+                    <x-radio id="rounded-custom" wire:model.live="model3" rounded="rounded-[0.4rem]" label="Custom" value="custom" xl />
+                </div>
+            @endverbatim
+        </x-slot>
+    </x-docs::code.preview>
+
+    <x-docs::subtitle id="radio-colors" title="Radio Colors" />
+
+    <x-docs::text>
+        Furthermore, you can now customize the interior color of the radio, with six default options available:
+        <b>primary</b>, <b>secondary</b>, <b>positive</b>, <b>negative</b>, <b>warning</b>, and <b>info</b>.
+    </x-docs::text>
+
+    <x-docs::code.preview language="blade">
+        <x-slot name="slot" class="flex flex-col space-y-6">
+            @verbatim
+                <p class="text-sm text-secondary-500 dark:text-secondary-400">
+                    Value: @json($model4)
+                </p>
+
+                <div class="flex flex-wrap gap-8">
+                    <x-radio id="color-primary" wire:model.live="model4" label="Primary" primary value="primary" xl />
+
+                    <x-radio id="color-secondary" wire:model.live="model4" label="Secondary" secondary value="secondary" xl />
+
+                    <x-radio id="color-positive" wire:model.live="model4" label="Positive" positive value="positive" xl />
+
+                    <x-radio id="color-negative" wire:model.live="model4" label="Negative" negative value="negative" xl />
+
+                    <x-radio id="color-warning" wire:model.live="model4" label="Warning" warning value="warning" xl />
+
+                    <x-radio id="color-info" wire:model.live="model4" label="Info" info value="info" xl />
+                </div>
+            @endverbatim
+        </x-slot>
     </x-docs::code.preview>
 </div>
