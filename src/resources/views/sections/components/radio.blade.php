@@ -1,10 +1,10 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#radio" label="Radio">
-                <x-docs::summary.item href="#simple-radio" label="Simple Radio" />
-                <x-docs::summary.item href="#radio-with-label" label="Radio With Label" />
-                <x-docs::summary.item href="#radio-sizes" label="Radio Sizes" />
+            <x-docs::summary.header href="#radio"right-="Radio">
+                <x-docs::summary.item href="#simple-radio"right-="Simple Radio" />
+                <x-docs::summary.item href="#radio-with-label"right-="Radio With Label" />
+                <x-docs::summary.item href="#radio-sizes"right-="Radio Sizes" />
             </x-docs::summary.header>
 
             <x-docs::summary.header href="#radio-options" label="Radio Options" />
@@ -33,8 +33,8 @@
     <x-docs::code.preview language="blade">
         @verbatim
             <div class="flex flex-wrap gap-4">
-                <x-radio id="left-label" left-label="Label in Left" name="radio" value="2" />
-                <x-radio id="right-label" label="Label in Right" name="radio" value="3" />
+                <x-radio id="left-label" label="Label in Left" name="radio" value="2" />
+                <x-radio id="right-label" right-label="Label in Right" name="radio" value="3" />
             </div>
         @endverbatim
     </x-docs::code.preview>

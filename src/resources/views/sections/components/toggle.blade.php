@@ -32,8 +32,8 @@
     <x-docs::code.preview language="blade">
         @verbatim
             <div class="flex flex-wrap gap-4">
-                {{-- <x-toggle id="left-label" left-label="Label in Left" wire:model.defer="toggle" />
-            <x-toggle id="right-label" label="Label in Right" wire:model.defer="toggle" /> --}}
+                <x-toggle id="left-label" label="Label in Left" wire:model.defer="toggle" />
+                <x-toggle id="right-label" right-label="Label in Right" wire:model.defer="toggle" />
             </div>
         @endverbatim
     </x-docs::code.preview>
@@ -43,9 +43,9 @@
     <x-docs::code.preview language="blade">
         @verbatim
             <div class="flex flex-wrap gap-4">
-                {{-- <x-toggle id="sm" wire:model.defer="toggle" />
-            <x-toggle id="md" md wire:model.defer="toggle" />
-            <x-toggle id="lg" lg wire:model.defer="toggle" /> --}}
+                <x-toggle id="sm" wire:model.defer="toggle" />
+                <x-toggle id="md" md wire:model.defer="toggle" />
+                <x-toggle id="lg" lg wire:model.defer="toggle" />
             </div>
         @endverbatim
     </x-docs::code.preview>

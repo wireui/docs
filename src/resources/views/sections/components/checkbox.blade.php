@@ -33,8 +33,8 @@
     <x-docs::code.preview language="blade">
         @verbatim
             <div class="flex flex-wrap gap-4">
-                <x-checkbox id="left-label" left-label="Label in Left" name="checkbox" />
-                <x-checkbox id="right-label" label="Label in Right" name="checkbox" />
+                <x-checkbox id="left-label" label="Label in Left" name="checkbox" />
+                <x-checkbox id="right-label" right-label="Label in Right" name="checkbox" />
             </div>
         @endverbatim
     </x-docs::code.preview>
