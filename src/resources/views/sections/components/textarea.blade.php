@@ -1,7 +1,7 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.item href="#textarea-simple" label="Textarea Simples" />
+            <x-docs::summary.header href="#textarea-simple" label="Textarea Simples" />
         </x-docs::summary>
     </x-slot>
 

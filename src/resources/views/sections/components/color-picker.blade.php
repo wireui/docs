@@ -1,22 +1,37 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#color-picker" label="Color Picker">
-                <x-docs::summary.item href="#default-colors" label="Default Colors" />
-                <x-docs::summary.item href="#tailwind-colors" label="Tailwind Colors" />
-                <x-docs::summary.item href="#custom-colors" label="Custom Colors" />
-                <x-docs::summary.item href="#color-name-as-value" label="Color name as value" />
-            </x-docs::summary.header>
+            <x-docs::summary.header href="#color-picker-simple" label="Color Picker Simple" />
 
-            <x-docs::summary.header href="#color-picker-options" label="Color Picker Options" />
+            <x-docs::summary.header href="#default-colors" label="Default Colors" />
+
+            <x-docs::summary.header href="#default-colors" label="Default Colors" />
+
+            <x-docs::summary.header href="#tailwind-colors" label="Tailwind Colors" />
+
+            <x-docs::summary.header href="#custom-colors" label="Custom Colors" />
+
+            <x-docs::summary.header href="#color-name-as-value" label="Color name as value" />
         </x-docs::summary>
     </x-slot>
 
     <x-docs::title id="color-picker" title="Color Picker" />
 
     <x-docs::text>
-        The Color Picker component allows you to select a color from a palette of colors.
-        You can customize the default colors or the colors for each component instance.
+        The Color Picker component provides a versatile and user-friendly tool for selecting and customizing colors
+        within your web applications. It seamlessly integrates with Tailwind CSS, offering default color options that
+        you can easily use. However, you also have the flexibility to tailor these colors to your specific preferences,
+        either by generating new color variations using code or utilizing the colors defined in your Tailwind CSS
+        configuration. This component allows you to specify colors for various components, whether with or without
+        labels, and provides the option to render colors by name rather than relying on hexadecimal values. It offers a
+        robust and adaptable solution for managing and manipulating colors throughout your web projects.
+    </x-docs::text>
+
+    <x-docs::subtitle id="color-picker-simple" title="Color Picker Simple" />
+
+    <x-docs::text>
+        A straightforward method for utilizing the Color Picker is to render the component and leverage the built-in
+        WireUI color palette as the default option.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -29,13 +44,14 @@
 
     <x-docs::subtitle id="default-colors" title="Default Colors" />
 
-    <x-alert class="mb-4" info>
-        <x-slot name="title">
-            You can customize the default colors from the
-            <x-link href="https://alpinejs.dev/globals/alpine-store" target="_blank" info>
-                Alpine.js store
-            </x-link>
-        </x-slot>
+    <x-docs::text>
+        By default, WireUI incorporates the complete set of Wind colors from its Tailwind color palette. However, if
+        desired, you have the flexibility to customize these colors to suit your specific preferences or needs.
+    </x-docs::text>
+
+    <x-alert title="Information!" class="mb-4" info>
+        You can customize the default colors from the
+        <x-link href="https://alpinejs.dev/globals/alpine-store" label="Alpine.js store" target="_blank" info sm />.
     </x-alert>
 
     <x-docs::text.title title="From Alpine CDN:" />
@@ -46,7 +62,7 @@
                 Alpine.store('wireui:color-picker').setColors([
                     { name: 'White', value: '#FFF' },
                     { name: 'Black', value: '#000' },
-                    { name: 'Teal',  value: '#14b8a6' },
+                    { name: 'Teal', value: '#14b8a6' },
                 ])
             })
         @endverbatim
@@ -61,7 +77,7 @@
             Alpine.store('wireui:color-picker').setColors([
                 { name: 'White', value: '#FFF' },
                 { name: 'Black', value: '#000' },
-                { name: 'Teal',  value: '#14b8a6' },
+                { name: 'Teal', value: '#14b8a6' },
             ])
 
             Alpine.start()
@@ -70,17 +86,11 @@
 
     <x-docs::subtitle id="tailwind-colors" title="Tailwind Colors" />
 
-    <x-alert class="mb-4" info>
-        <x-slot name="title">
-            If you want to use the Tailwind colors from your Tailwind CSS config, just use the code below to generate the
-            new colors.
-            If you are using TypeScript see
-            <x-link
-                href="https://github.com/wireui/wireui/blob/e3e3aff647b306ec1883c7dabec208daaa475d46/ts/components/color-picker/colors.ts"
-                target="_blank" info>
-                this file
-            </x-link>.
-        </x-slot>
+    <x-alert title="Information!" class="mb-4" info>
+        To utilize Tailwind colors from your Tailwind CSS configuration, simply employ the following code snippet to
+        generate the new color variations. If you're working with TypeScript, you can refer to the corresponding
+        <x-link href="https://github.com/wireui/wireui/blob/e3e3aff647b306ec1883c7dabec208daaa475d46/ts/components/color-picker/colors.ts" label="TypeScript file" target="_blank" info sm />
+        for additional guidance.
     </x-alert>
 
     <x-docs::code.block language="js">
@@ -124,10 +134,14 @@
     </x-docs::code.block>
 
     <x-alert title="Attention" class="mb-4" warning>
-        Remember to pass a correct colors options into the component attributes.
+        Be sure to provide the component attributes with the correct "colors" options for accurate configuration.
     </x-alert>
 
     <x-docs::subtitle id="custom-colors" title="Custom Colors" />
+
+    <x-docs::text>
+        You can also tailor the colors of a specific component, whether you choose to use labels or not.
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="grid grid-cols-1 gap-5 sm:grid-cols-2">
@@ -162,6 +176,10 @@
     </x-docs::code.preview>
 
     <x-docs::subtitle id="color-name-as-value" title="Color name as value" />
+
+    <x-docs::text>
+        An alternative option is to render the color by name rather than using hexadecimal values.
+    </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
