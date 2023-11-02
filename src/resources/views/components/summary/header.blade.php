@@ -2,7 +2,7 @@
 
 <div>
     <a @isset($href) href="{{ $href }}" @endisset
-        {{ $attributes->class('font-semibold text-secondary-600 text-base dark:text-secondary-500') }}>
+        {{ $attributes->class('font-semibold text-secondary-600 text-sm dark:text-secondary-500') }}>
         <span class="text-teal-600">#</span>
         {{ $label }}
     </a>

@@ -16,30 +16,36 @@ state([
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#datetime-picker" label="Datetime Picker">
-                <x-docs::summary.item href="#default" label="Default Datetime Picker" />
-                <x-docs::summary.item href="#custom-format" label="Custom Datetime Format" />
-                <x-docs::summary.item href="#display-format" label="Custom Display Format" />
-                <x-docs::summary.item href="#without-timezone" label="Without Timezone" />
-                <x-docs::summary.item href="#min-max-dates" label="Min & Max dates" />
-                <x-docs::summary.item href="#min-max-times" label="Min & Max times" />
-            </x-docs::summary.header>
+            <x-docs::summary.header href="#default" label="Datetime Picker Default" />
 
-            <x-docs::summary.header href="#datetime-picker-options" label="Datetime Picker Options" />
+            <x-docs::summary.header href="#custom-format" label="Datetime Custom Format" />
+
+            <x-docs::summary.header href="#display-format" label="Custom Display Format" />
+
+            <x-docs::summary.header href="#without-timezone" label="Without Timezone" />
+
+            <x-docs::summary.header href="#min-max-dates" label="Min & Max dates" />
+
+            <x-docs::summary.header href="#min-max-times" label="Min & Max times" />
         </x-docs::summary>
     </x-slot>
 
     <x-docs::title id="datetime-picker" title="Datetime Picker" />
 
     <x-docs::text>
-        The Datetime Picker component is able to change date and time using timezones or ignoring timezone diff.
-        You can use automatic timezone or set a custom timezone to System Timezone or User Timezone.
+        The datetime picker is a versatile component that enhances your project by providing an easy-to-use interface
+        for selecting both date and time. It offers customization options for the input value format and user display
+        format, allowing you to tailor it to your specific needs. Furthermore, the datetime picker allows you to operate
+        without specifying a timezone, offering flexibility in various scenarios. Additionally, it enables you to set a
+        start and end date and time, giving you precise control over the range of selections. You can also define the
+        minimum and maximum hours as needed, making it a comprehensive and adaptable tool for managing date and
+        time-related functionalities in your project.
     </x-docs::text>
 
-    <x-docs::subtitle id="default" title="Default Datetime Picker" />
+    <x-docs::subtitle id="default" title="Datetime Picker Default" />
 
     <x-docs::text>
-        Text
+        The datetime picker is an easy-to-use component that can greatly enhance your project.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -57,10 +63,10 @@ state([
         </x-slot>
     </x-docs::code.preview>
 
-    <x-docs::subtitle id="custom-format" title="Custom Datetime Format" />
+    <x-docs::subtitle id="custom-format" title="Datetime Custom Format" />
 
     <x-docs::text>
-        Text
+        You can customize the format assigned to the input value within the datetime picker.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -82,7 +88,7 @@ state([
     <x-docs::subtitle id="display-format" title="Custom Display Format" />
 
     <x-docs::text>
-        Text
+        You also have the option to tailor the date and time format for user display.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -104,7 +110,7 @@ state([
     <x-docs::subtitle id="without-timezone" title="Without Timezone" />
 
     <x-docs::text>
-        Text
+        Additionally, there's an option to configure the datetime picker without specifying a timezone.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -126,7 +132,7 @@ state([
     <x-docs::subtitle id="min-max-dates" title="Min & Max dates" />
 
     <x-docs::text>
-        Text
+        Another feature within the datetime picker component is the ability to choose both a start and end date and time.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -166,7 +172,7 @@ state([
     <x-docs::subtitle id="min-max-times" title="Min & Max times" />
 
     <x-docs::text>
-        Text
+        You also have the flexibility to set both the minimum and maximum hours.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

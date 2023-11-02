@@ -24,7 +24,10 @@ state([
     <x-docs::title id="time-picker" title="Time Picker" />
 
     <x-docs::text>
-        The Time Picker component is able to change time in datetime, or change only time.
+        The time picker component offers a versatile and user-friendly way to select and customize the time display. It
+        provides options for choosing between the standard 24-hour format and the AM/PM 12-hour format, along with the
+        flexibility to set the minute interval to suit your specific needs. This component allows for precise and
+        tailored time selection, making it a valuable tool for a wide range of applications.
     </x-docs::text>
 
     <x-alert title="Attention!" class="my-4" warning>
@@ -36,13 +39,20 @@ state([
     <x-docs::subtitle id="am-pm" title="AM/PM Time Picker" />
 
     <x-docs::text>
-        Text
+        In the time picker, you can choose the AM/PM format.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="max-w-sm px-4 mx-auto sm:px-16">
+        <x-slot name="slot" class="max-w-md px-4 mx-auto sm:px-16">
             @verbatim
-                <x-time-picker id="am-pm-time" wire:model="model1" label="AM/PM" placeholder="12:00 AM" />
+                <span class="dark:text-gray-400">Model: {{ $model1 }}</span>
+
+                <x-time-picker
+                    id="am-pm-time"
+                    wire:model="model1"
+                    label="AM/PM"
+                    placeholder="12:00 AM"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -50,13 +60,21 @@ state([
     <x-docs::subtitle id="24-hours" title="24H Time Picker" />
 
     <x-docs::text>
-        Text
+        Furthermore, there's the option to utilize the 24-hour standard time format.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="max-w-sm px-4 mx-auto sm:px-16">
+        <x-slot name="slot" class="max-w-md px-4 mx-auto sm:px-16">
             @verbatim
-                <x-time-picker id="24-hours" wire:model="model2" label="24 Hours" placeholder="22:30" format="24" />
+                <span class="dark:text-gray-400">Model: {{ $model2 }}</span>
+
+                <x-time-picker
+                    id="24-hours"
+                    wire:model="model2"
+                    label="24 Hours"
+                    placeholder="22:30"
+                    format="24"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -64,13 +82,21 @@ state([
     <x-docs::subtitle id="custom-interval" title="Custom Interval" />
 
     <x-docs::text>
-        Text
+        Another customization option involves setting the minute interval.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="max-w-sm px-4 mx-auto sm:px-16">
+        <x-slot name="slot" class="max-w-md px-4 mx-auto sm:px-16">
             @verbatim
-                <x-time-picker id="interval" wire:model="model3" label="AM/PM" placeholder="12:00 AM" interval="30" />
+                <span class="dark:text-gray-400">Model: {{ $model3 }}</span>
+
+                <x-time-picker
+                    id="interval"
+                    wire:model="model3"
+                    label="AM/PM"
+                    placeholder="12:00 AM"
+                    interval="30"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

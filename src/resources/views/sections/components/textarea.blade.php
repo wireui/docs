@@ -1,7 +1,7 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#textarea-simple" label="Textarea Simples" />
+            <x-docs::summary.header href="#textarea-simple" label="Textarea Simple" />
         </x-docs::summary>
     </x-slot>
 
@@ -21,7 +21,7 @@
         options and slots.
     </x-alert>
 
-    <x-docs::subtitle id="textarea-simple" title="Textarea Simples" />
+    <x-docs::subtitle id="textarea-simple" title="Textarea Simple" />
 
     <x-docs::text>
         The textarea is an uncomplicated component that is easy to use and employs attributes similar to those used with
