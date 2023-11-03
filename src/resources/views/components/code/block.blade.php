@@ -6,7 +6,7 @@
         'mt-3 mb-6',
     ]) }}>
     @if ($render)
-        @if (check_slot($slot))
+        @if (WireUi::checkSlot($slot))
             <div {{ $slot->attributes }}>
                 {!! Blade::render(serialize_slot($slot), $this->all()) !!}
             </div>
