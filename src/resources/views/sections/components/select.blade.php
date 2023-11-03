@@ -17,17 +17,23 @@
 
             <x-docs::summary.header href="#select-events" label="Select Events" />
 
-            <x-docs::summary.header href="#after-options-slot" label="After Options Slot" />
-
             <x-docs::summary.header href="#select-slots" label="Select Slots" />
+
+            <x-docs::summary.header href="#after-options-slot" label="After Options Slot" />
         </x-docs::summary>
     </x-slot>
 
     <x-docs::title id="select" title="Select" />
 
     <x-docs::text>
-        The Select component has support to render default html select with slot or options prop.
-        You can customize the option component for one or all options. See Examples.
+        The <b>select</b> component is a versatile and highly customizable feature offered by WireUi. It allows users to
+        tailor their web applications to specific needs, enabling them to create dynamic and interactive interfaces.
+        With the <b>select</b> component, you can implement various functionalities, such as async search, event
+        listeners, slots for custom content placement (before and after options), and the ability to send requests with
+        specific parameters like <b>search</b> and <b>selected</b>. This component supports a flexible API design,
+        making it easy to retrieve and display options, and you can seamlessly merge query string parameters with
+        <b>asyncData</b> parameters. In summary, the <b>select</b> component is a powerful tool for creating tailored
+        and user-friendly selection interfaces in web applications.
     </x-docs::text>
 
     <x-docs::subtitle id="async-search" title="Async Search" />
@@ -46,52 +52,58 @@
         </x-slot>
     </x-docs::code.preview>
 
-    <x-docs::text.title title="How to Implement the async-search?" />
+    <x-docs::text.title title="Implementing Async Search with WireUi:" />
 
-    <x-docs::text>
-        WireUi will make a request with the
-        <x-docs::mark>search</x-docs::mark> <b>parameter(string)</b>
-        when the user types in the input.
-        <br>
-        When the component is initialized and has any selected value,
-        the select will send a request with the
-        <x-docs::mark>selected</x-docs::mark> <b>parameter(array)</b>
-        to find the selected option.
-        <br>
-        You are free to create your API as you want, just apply these two scopes: search and selected.
+    <x-docs::text class="mt-4">
+        <b>1.</b> WireUi will automatically send a request with a <x-docs::mark>search</x-docs::mark>
+        <b>parameter (a string)</b> as the user types into the input field.
     </x-docs::text>
+
+    <x-docs::text class="mt-4">
+        <b>2.</b> When the select component initializes and contains a selected value, it will
+        send a request with a <x-docs::mark>selected</x-docs::mark> <b>parameter (an array)</b>
+        to fetch details for the selected option.
+    </x-docs::text>
+
+    <x-docs::text class="mt-4">
+        <b>3.</b> Design your API according to your requirements, but ensure that
+        it supports these two key scopes: <b>search</b> and <b>selected</b>.
+    </x-docs::text>
+
+    <x-docs::text.title title="Additional Guidelines:" />
 
     <x-docs::list>
         <x-docs::list.item>
-            Create an API that returns an array in the response.
+            Your API should return data as an array in the response.
         </x-docs::list.item>
 
         <x-docs::list.item>
-            Set the <x-docs::mark>option-label</x-docs::mark> and <x-docs::mark>option-value</x-docs::mark> attributes.
+            Make sure to set the <b>option-label</b> and <b>option-value</b> attributes
+            to properly define how options are displayed and identified.
         </x-docs::list.item>
 
         <x-docs::list.item>
             Implement the
             <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php#L17" label="search" target="_blank" teal />
-            scope.
+            scope to handle searches based on user input.
         </x-docs::list.item>
 
         <x-docs::list.item>
             Implement the
             <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php#L23" label="selected" target="_blank" teal />
-            scope.
+            scope to retrieve information for the selected option.
         </x-docs::list.item>
     </x-docs::list>
 
     <x-alert title="Information!" class="my-6" info>
-        See these files to read more about the <b>API</b> implementation.
-        <br><br>
+        For a deeper understanding of the API implementation, refer to the following files:
         <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php" label="Controller" target="_blank" info sm />,
         <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserControllerTest.php" label="Test" target="_blank" info sm />.
     </x-alert>
 
     <x-docs::text>
-        You can customize the asyncData prop to change the http method and add more data to the request.
+        You have the flexibility to customize the <b>asyncData</b> prop, allowing you
+        to modify the HTTP method and incorporate additional data into the request.
     </x-docs::text>
 
     <x-docs::code.block language="js">
@@ -106,10 +118,11 @@
         @endverbatim
     </x-docs::code.block>
 
-    <x-docs::text.title title="How to Customize the async-data?" />
+    <x-docs::text.title title="How to Personalize the Async Data Configuration?" />
 
     <x-docs::text>
-        The queryString params will be merged with the asyncData params.
+        The query string parameters will be seamlessly merged with
+        the parameters from the <b>asyncData</b> component.
     </x-docs::text>
 
     <x-docs::code.block language="blade">
@@ -130,7 +143,8 @@
     <x-docs::subtitle id="simple-options" title="Simple Options" />
 
     <x-docs::text>
-        One way to pass options in a simple way is by assigning an array of values, where the name and ID will be the same.
+        A straightforward method for configuring options is to utilize an array of values,
+        ensuring that both the <b>name</b> and <b>ID</b> correspond identically.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -144,7 +158,8 @@
     <x-docs::subtitle id="multiselect" title="Multi Select" />
 
     <x-docs::text>
-        Text
+        Another noteworthy feature of the <b>select</b> functionality is
+        the ability to choose multiple options simultaneously.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -158,7 +173,8 @@
     <x-docs::subtitle id="custom-options" title="Custom Options" />
 
     <x-docs::text>
-        If you wish, you can pass an array specifying the name and ID independently.
+        Should you prefer, you have the option to provide an array where
+        you can specify the <b>name</b> and <b>ID</b> separately.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -179,7 +195,8 @@
     <x-docs::subtitle id="option-with-description" title="Option With Description" />
 
     <x-docs::text>
-        Another customization is to be able to assign the description field to a king in which it will be shown after the name.
+        Another customization option allows you to assign a <b>description</b> field
+        to a key element, which will be displayed after the <b>name</b>.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -200,7 +217,8 @@
     <x-docs::subtitle id="slot-options" title="Slot Options" />
 
     <x-docs::text>
-        If you need even greater customization, you can pass the options in the default slot in Native select
+        For even more extensive customization, you can pass the options
+        within the default slot of the <b>select</b> component.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -219,7 +237,9 @@
     <x-docs::subtitle id="customizable-options" title="Customizable Options" />
 
     <x-docs::text>
-        Text
+        Additionally, we offer customizable options, including the <b>user-option</b>,
+        which can be utilized as a slot or in conjunction with the
+        <b>select async search</b> using the template.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -248,7 +268,8 @@
     <x-docs::subtitle id="select-events" title="Select Events" />
 
     <x-docs::text>
-        Text
+        Within the <b>select</b> component, we've integrated event listeners
+        that respond to actions occurring during its manipulation.
     </x-docs::text>
 
     <x-docs::code.block language="blade">
@@ -265,10 +286,29 @@
         @endverbatim
     </x-docs::code.block>
 
+    <x-docs::subtitle id="select-slots" title="Select Slots" />
+
+    <x-docs::text>
+        The <b>select</b> component provides two available slots for
+        customization: <b>beforeOptions</b> and <b>afterOptions</b>.
+    </x-docs::text>
+
+    <x-docs::code.block language="blade">
+        @verbatim
+            <x-slot name="beforeOptions">
+                // html code
+            </x-slot>
+
+            <x-slot name="afterOptions">
+                // html code
+            </x-slot>
+        @endverbatim
+    </x-docs::code.block>
+
     <x-docs::subtitle id="after-options-slot" title="After Options Slot" />
 
     <x-docs::text>
-        Text
+        Here's an example of how to utilize the <b>afterOptions</b> slot.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -289,22 +329,4 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
-
-    <x-docs::subtitle id="select-slots" title="Select Slots" />
-
-    <x-docs::text>
-        Text
-    </x-docs::text>
-
-    <x-docs::code.block language="blade">
-        @verbatim
-            <x-slot name="beforeOptions">
-                // html code
-            </x-slot>
-
-            <x-slot name="afterOptions">
-                // html code
-            </x-slot>
-        @endverbatim
-    </x-docs::code.block>
 </div>
