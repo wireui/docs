@@ -29,7 +29,7 @@ $sleeping = fn() => sleep(2);
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="buttons" title="Buttons" />
+    <x-docs::title id="button" title="Button" />
 
     <x-docs::text>
         The button component is a powerful tool that opens up a world of possibilities for customization. With multiple

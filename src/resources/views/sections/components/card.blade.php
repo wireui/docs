@@ -1,7 +1,7 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#card-simples" label="Card Simples" />
+            <x-docs::summary.header href="#card-simple" label="Card Simple" />
 
             <x-docs::summary.header href="#card-slots" label="Card Slots" />
 
@@ -13,7 +13,7 @@
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="cards" title="Cards" />
+    <x-docs::title id="card" title="Card" />
 
     <x-docs::text>
         Cards are a popular choice for organizing and displaying content within a confined container, effectively
@@ -27,7 +27,7 @@
         user profiles, or any other content that benefits from a visually appealing and compartmentalized presentation.
     </x-docs::text>
 
-    <x-docs::subtitle id="card-simples" title="Card Simples" />
+    <x-docs::subtitle id="card-simple" title="Card Simple" />
 
     <x-docs::text>
         You can use the card component in a straightforward manner by simply providing the content, and optionally,

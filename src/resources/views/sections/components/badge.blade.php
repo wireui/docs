@@ -19,7 +19,7 @@
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="badges" title="Badges" />
+    <x-docs::title id="badge" title="Badge" />
 
     <x-docs::text>
         The badge component is a versatile feature-rich element that offers a multitude of styles and customization

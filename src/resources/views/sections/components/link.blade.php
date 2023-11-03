@@ -9,7 +9,7 @@
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="links" title="Links" />
+    <x-docs::title id="link" title="Link" />
 
     <x-docs::text>
         Link components can be customized in various ways, including specifying the link text, defining the target URL,

@@ -23,7 +23,7 @@
         </x-docs::summary>
     </x-slot>
 
-    <x-docs::title id="inputs" title="Inputs" />
+    <x-docs::title id="input" title="Input" />
 
     <x-docs::text>
         The input component offers a high degree of flexibility and customization. Users can easily add labels and

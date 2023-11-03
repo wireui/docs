@@ -1,7 +1,7 @@
 <div>
     <x-slot name="summary">
         <x-docs::summary>
-            <x-docs::summary.header href="#alert-simples" label="Alert Simples" />
+            <x-docs::summary.header href="#alert-simple" label="Alert Simple" />
 
             <x-docs::summary.header href="#alert-variants" label="Alert Variants" />
 
@@ -25,7 +25,7 @@
         notifications, or various other types of updates.
     </x-docs::text>
 
-    <x-docs::subtitle id="alert-simples" title="Alert Simples" />
+    <x-docs::subtitle id="alert-simple" title="Alert Simple" />
 
     <x-docs::text>
         The alert component natively has 6 colors, which are: <b>primary</b>, <b>secondary</b>, <b>positive</b>,
