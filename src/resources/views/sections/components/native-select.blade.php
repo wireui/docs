@@ -14,13 +14,18 @@
     <x-docs::title id="native-select" title="Native Select" />
 
     <x-docs::text>
-        The Native Select component has support to render default html select with slot or options prop. See Examples.
+        The Native select component offers a versatile and user-friendly way to customize and configure options. It
+        provides multiple methods for passing options, from assigning an array of values where the <b>name</b> and
+        <b>ID</b> match to specifying them independently. Additionally, this component allows for extensive
+        customization by passing options through the default slot, granting users the flexibility to tailor the select
+        component to their specific needs and preferences.
     </x-docs::text>
 
     <x-docs::subtitle id="simple-options" title="Simple Options" />
 
     <x-docs::text>
-        Text
+        A straightforward method for configuring options is to use an array
+        of values in which the <b>name</b> and <b>ID</b> are identical.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -34,7 +39,8 @@
     <x-docs::subtitle id="custom-options" title="Custom Options" />
 
     <x-docs::text>
-        Text
+        Should you prefer, you have the option to pass an array where you can
+        specify the <b>name</b> and <b>ID</b> separately.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -53,7 +59,8 @@
     <x-docs::subtitle id="option-with-description" title="Option With Description" />
 
     <x-docs::text>
-        Text
+        Another customization option is to assign the <b>description</b> field to a king,
+        which will be displayed after the <b>name</b>.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -72,7 +79,8 @@
     <x-docs::subtitle id="slot-options" title="Slot Options" />
 
     <x-docs::text>
-        Text
+        For even more extensive customization, you can pass the options in the
+        default slot within the native select component.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

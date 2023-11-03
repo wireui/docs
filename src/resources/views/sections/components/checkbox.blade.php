@@ -39,17 +39,11 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="flex flex-col space-y-6">
+        <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <p class="text-sm text-secondary-500 dark:text-secondary-400">
-                    Value: @json($model1)
-                </p>
+                <x-checkbox id="label" label="Label in Left" wire:model="model1" value="label" />
 
-                <div class="flex flex-wrap gap-8">
-                    <x-checkbox id="label" label="Label in Left" wire:model.live="model1" value="label" />
-
-                    <x-checkbox id="right-label" right-label="Label in Right" wire:model.live="model1" value="right-label" />
-                </div>
+                <x-checkbox id="right-label" right-label="Label in Right" wire:model="model1" value="right-label" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -61,23 +55,17 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="flex flex-col space-y-6">
+        <x-slot name="slot" class="flex flex-wrap gap-8 items-center">
             @verbatim
-                <p class="text-sm text-secondary-500 dark:text-secondary-400">
-                    Value: @json($model2)
-                </p>
+                <x-checkbox id="size-xs" wire:model="model2" value="xs" xs />
 
-                <div class="flex flex-wrap gap-8 items-center">
-                    <x-checkbox id="size-xs" wire:model.live="model2" value="xs" xs />
+                <x-checkbox id="size-sm" wire:model="model2" value="sm" sm /> {{-- DEFAULT --}}
 
-                    <x-checkbox id="size-sm" wire:model.live="model2" value="sm" sm /> {{-- DEFAULT --}}
+                <x-checkbox id="size-md" wire:model="model2" value="md" md />
 
-                    <x-checkbox id="size-md" wire:model.live="model2" value="md" md />
+                <x-checkbox id="size-lg" wire:model="model2" value="lg" lg />
 
-                    <x-checkbox id="size-lg" wire:model.live="model2" value="lg" lg />
-
-                    <x-checkbox id="size-xl" wire:model.live="model2" value="xl" xl />
-                </div>
+                <x-checkbox id="size-xl" wire:model="model2" value="xl" xl />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -90,43 +78,37 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="flex flex-col space-y-6">
+        <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <p class="text-sm text-secondary-500 dark:text-secondary-400">
-                    Value: @json($model3)
-                </p>
+                {{-- CSS: 'rounded-none' - You can use |rounded="none"| too --}}
+                <x-checkbox id="rounded-none" wire:model="model3" squared label="None" value="none" xl />
 
-                <div class="flex flex-wrap gap-8">
-                    {{-- CSS: 'rounded-none' - You can use |rounded="none"| too --}}
-                    <x-checkbox id="rounded-none" wire:model.live="model3" squared label="None" value="none" xl />
+                {{-- CSS: 'rounded-sm' --}}
+                <x-checkbox id="rounded-sm" wire:model="model3" rounded="sm" label="SM" value="sm" xl />
 
-                    {{-- CSS: 'rounded-sm' --}}
-                    <x-checkbox id="rounded-sm" wire:model.live="model3" rounded="sm" label="SM" value="sm" xl />
+                {{-- CSS: 'rounded' --}}
+                <x-checkbox id="rounded-base" wire:model="model3" rounded="base" label="Base" value="base" xl />
 
-                    {{-- CSS: 'rounded' --}}
-                    <x-checkbox id="rounded-base" wire:model.live="model3" rounded="base" label="Base" value="base" xl />
+                {{-- CSS: 'rounded-md' --}}
+                <x-checkbox id="rounded-md" wire:model="model3" rounded="md" label="MD" value="md" xl />
 
-                    {{-- CSS: 'rounded-md' --}}
-                    <x-checkbox id="rounded-md" wire:model.live="model3" rounded="md" label="MD" value="md" xl />
+                {{-- CSS: 'rounded-lg' --}}
+                <x-checkbox id="rounded-lg" wire:model="model3" rounded="lg" label="LG" value="lg" xl />
 
-                    {{-- CSS: 'rounded-lg' --}}
-                    <x-checkbox id="rounded-lg" wire:model.live="model3" rounded="lg" label="LG" value="lg" xl />
+                {{-- CSS: 'rounded-xl' --}}
+                <x-checkbox id="rounded-xl" wire:model="model3" rounded="xl" label="XL" value="xl" xl />
 
-                    {{-- CSS: 'rounded-xl' --}}
-                    <x-checkbox id="rounded-xl" wire:model.live="model3" rounded="xl" label="XL" value="xl" xl />
+                {{-- CSS: 'rounded-2xl' --}}
+                <x-checkbox id="rounded-2xl" wire:model="model3" rounded="2xl" label="2XL" value="2xl" xl />
 
-                    {{-- CSS: 'rounded-2xl' --}}
-                    <x-checkbox id="rounded-2xl" wire:model.live="model3" rounded="2xl" label="2XL" value="2xl" xl />
+                {{-- CSS: 'rounded-3xl' --}}
+                <x-checkbox id="rounded-3xl" wire:model="model3" rounded="3xl" label="3XL" value="3xl" xl />
 
-                    {{-- CSS: 'rounded-3xl' --}}
-                    <x-checkbox id="rounded-3xl" wire:model.live="model3" rounded="3xl" label="3XL" value="3xl" xl />
+                {{-- CSS: 'rounded-full' - You can use |rounded| too - DEFAULT --}}
+                <x-checkbox id="rounded-full" wire:model="model3" rounded="full" label="Full" value="full" xl />
 
-                    {{-- CSS: 'rounded-full' - You can use |rounded| too - DEFAULT --}}
-                    <x-checkbox id="rounded-full" wire:model.live="model3" rounded="full" label="Full" value="full" xl />
-
-                    {{-- Or Custom --}}
-                    <x-checkbox id="rounded-custom" wire:model.live="model3" rounded="rounded-[0.4rem]" label="Custom" value="custom" xl />
-                </div>
+                {{-- Or Custom --}}
+                <x-checkbox id="rounded-custom" wire:model="model3" rounded="rounded-[0.4rem]" label="Custom" value="custom" xl />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -139,25 +121,19 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
-        <x-slot name="slot" class="flex flex-col space-y-6">
+        <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <p class="text-sm text-secondary-500 dark:text-secondary-400">
-                    Value: @json($model4)
-                </p>
+                <x-checkbox id="color-primary" wire:model="model4" label="Primary" primary value="primary" xl />
 
-                <div class="flex flex-wrap gap-8">
-                    <x-checkbox id="color-primary" wire:model.live="model4" label="Primary" primary value="primary" xl />
+                <x-checkbox id="color-secondary" wire:model="model4" label="Secondary" secondary value="secondary" xl />
 
-                    <x-checkbox id="color-secondary" wire:model.live="model4" label="Secondary" secondary value="secondary" xl />
+                <x-checkbox id="color-positive" wire:model="model4" label="Positive" positive value="positive" xl />
 
-                    <x-checkbox id="color-positive" wire:model.live="model4" label="Positive" positive value="positive" xl />
+                <x-checkbox id="color-negative" wire:model="model4" label="Negative" negative value="negative" xl />
 
-                    <x-checkbox id="color-negative" wire:model.live="model4" label="Negative" negative value="negative" xl />
+                <x-checkbox id="color-warning" wire:model="model4" label="Warning" warning value="warning" xl />
 
-                    <x-checkbox id="color-warning" wire:model.live="model4" label="Warning" warning value="warning" xl />
-
-                    <x-checkbox id="color-info" wire:model.live="model4" label="Info" info value="info" xl />
-                </div>
+                <x-checkbox id="color-info" wire:model="model4" label="Info" info value="info" xl />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
