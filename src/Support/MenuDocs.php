@@ -8,22 +8,13 @@ use Illuminate\Support\Str;
 
 class MenuDocs
 {
-    /**
-     * Reject this pages in previous and next links.
-     */
     private array $reject = ['Table'];
 
-    /**
-     * Get the menu.
-     */
     public function getMenu(): Collection
     {
         return Cache::sear('wireui::menu', fn () => $this->generateMenu());
     }
 
-    /**
-     * Generate the menu.
-     */
     private function generateMenu(): Collection
     {
         return collect([
@@ -87,9 +78,6 @@ class MenuDocs
         ]);
     }
 
-    /**
-     * Check if menu has the given section.
-     */
     public function getSection(string $section): ?array
     {
         return $this->getMenu()->mapWithKeys(function ($section, $key) {
@@ -97,9 +85,6 @@ class MenuDocs
         })->get($section);
     }
 
-    /**
-     * Get the default page for the given section.
-     */
     public function getDefaultPage(string $slug): ?string
     {
         return match ($slug) {
@@ -112,9 +97,6 @@ class MenuDocs
         };
     }
 
-    /**
-     * Check if menu has the given section.
-     */
     public function hasSection(string $section): bool
     {
         $sections = $this->getMenu()->keys()->transform(fn ($item) => Str::slug($item));
@@ -122,9 +104,6 @@ class MenuDocs
         return $sections->contains($section);
     }
 
-    /**
-     * Check if menu has the given page.
-     */
     public function hasPage(string $page, string $section): bool
     {
         $pages = collect($this->getSection($section))->collapse();
@@ -132,9 +111,6 @@ class MenuDocs
         return $pages->transform(fn ($item) => Str::slug($item))->contains($page);
     }
 
-    /**
-     * Get the previous link for the given page in cache.
-     */
     public function getPreviousLink(string $page): array
     {
         return Cache::sear("wireui::previous::{$page}", function () use ($page) {
@@ -142,9 +118,6 @@ class MenuDocs
         });
     }
 
-    /**
-     * Get the next link for the given page in cache.
-     */
     public function getNextLink(string $page): array
     {
         return Cache::sear("wireui::next::{$page}", function () use ($page) {
@@ -152,9 +125,6 @@ class MenuDocs
         });
     }
 
-    /**
-     * Get the position menu for the given page.
-     */
     private function getPositionMenu(string $page, callable $callback): array
     {
         $titles = $this->getMenu()->mapWithKeys(function ($section, $key) {

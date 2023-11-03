@@ -10,9 +10,6 @@ use WireUi\Docs\Facades\Menu;
 
 class CheckDocs
 {
-    /**
-     * Handle an incoming request.
-     */
     public function handle(Request $request, Closure $next): Response|RedirectResponse
     {
         $section = $request->section;

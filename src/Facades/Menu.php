@@ -16,9 +16,6 @@ use WireUi\Docs\Support\MenuDocs;
  */
 class Menu extends Facade
 {
-    /**
-     * Get the facade accessor.
-     */
     protected static function getFacadeAccessor(): string
     {
         return MenuDocs::class;

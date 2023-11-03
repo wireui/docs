@@ -9,17 +9,11 @@ use WireUi\Docs\View\Components\Code;
 
 class ServiceProvider extends Support\ServiceProvider
 {
-    /**
-     * Register services.
-     */
     public function register(): void
     {
         //
     }
 
-    /**
-     * Bootstrap services.
-     */
     public function boot(): void
     {
         $this->loadViews();
@@ -29,9 +23,6 @@ class ServiceProvider extends Support\ServiceProvider
         $this->registerMiddleware();
     }
 
-    /**
-     * Load the package's views.
-     */
     private function loadViews(): void
     {
         $this->loadViewComponentsAs('docs', [Code::class]);
@@ -39,9 +30,6 @@ class ServiceProvider extends Support\ServiceProvider
         $this->loadViewsFrom(__DIR__.'/resources/views', 'docs');
     }
 
-    /**
-     * Register the package's commands.
-     */
     private function registerCommands(): void
     {
         if ($this->app->runningInConsole()) {
@@ -51,9 +39,6 @@ class ServiceProvider extends Support\ServiceProvider
         }
     }
 
-    /**
-     * Register the package's middleware.
-     */
     private function registerMiddleware(): void
     {
         $router = $this->app->make(Router::class);

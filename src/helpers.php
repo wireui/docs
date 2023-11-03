@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Str;
 
-/**
- * Serialize a Slot.
- */
 if (! function_exists('serialize_slot')) {
     function serialize_slot(mixed $slot): string
     {

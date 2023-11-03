@@ -10,19 +10,10 @@ use Illuminate\Support\Str;
 
 class ClearCacheCommand extends Command
 {
-    /**
-     * The name and signature of the console command.
-     */
     protected $signature = 'wire-docs:clear-cache';
 
-    /**
-     * The console command description.
-     */
     protected $description = 'Clear the Menu Cache';
 
-    /**
-     * Execute the console command.
-     */
     public function handle(): void
     {
         $this->clearMenuCache();
@@ -34,9 +25,6 @@ class ClearCacheCommand extends Command
         $this->info('The cache has been cleared.');
     }
 
-    /**
-     * Clear the menu cache.
-     */
     private function clearMenuCache(): void
     {
         Cache::forget('wireui::menu');
@@ -51,9 +39,6 @@ class ClearCacheCommand extends Command
         });
     }
 
-    /**
-     * Remove the cache for the given page.
-     */
     private function removeCache(string $page): void
     {
         Cache::forget("wireui::next::{$page}");

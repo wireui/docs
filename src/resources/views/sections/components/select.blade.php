@@ -35,8 +35,13 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Search a User" wire:model.defer="selectAsyncSearchUser" placeholder="Select some user"
-                    :async-data="route('api.users.index')" option-label="name" option-value="id" />
+                <x-select
+                    label="Search a User"
+                    placeholder="Select some user"
+                    :async-data="route('api.users.index')"
+                    option-label="name"
+                    option-value="id"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -58,37 +63,31 @@
 
     <x-docs::list>
         <x-docs::list.item>
-            Create an API that returns an array in the response
+            Create an API that returns an array in the response.
         </x-docs::list.item>
 
         <x-docs::list.item>
-            Set the <x-docs::mark>option-label</x-docs::mark> and <x-docs::mark>option-value</x-docs::mark> attributes
-        </x-docs::list.item>
-
-        <x-docs::list.item>
-            Implement the
-            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L17" label="search" target="_blank" teal />
-            scope
+            Set the <x-docs::mark>option-label</x-docs::mark> and <x-docs::mark>option-value</x-docs::mark> attributes.
         </x-docs::list.item>
 
         <x-docs::list.item>
             Implement the
-            <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php#L23" label="selected" target="_blank" teal />
-            scope
+            <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php#L17" label="search" target="_blank" teal />
+            scope.
+        </x-docs::list.item>
+
+        <x-docs::list.item>
+            Implement the
+            <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php#L23" label="selected" target="_blank" teal />
+            scope.
         </x-docs::list.item>
     </x-docs::list>
 
     <x-alert title="Information!" class="my-6" info>
         See these files to read more about the <b>API</b> implementation.
         <br><br>
-        <x-link href="https://github.com/wireui/docs/tree/main/app/Http/Controllers/Api/Users/Index.php"
-            target="_blank" info sm>
-            Controller
-        </x-link>,
-        <x-link href="https://github.com/wireui/docs/tree/main/tests/Feature/Controllers/Api/Users/IndexTest.php"
-            target="_blank" info sm>
-            Test
-        </x-link>.
+        <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserController.php" label="Controller" target="_blank" info sm />,
+        <x-link href="https://github.com/wireui/docs/blob/main/src/Examples/UserControllerTest.php" label="Test" target="_blank" info sm />.
     </x-alert>
 
     <x-docs::text>
@@ -131,7 +130,7 @@
     <x-docs::subtitle id="simple-options" title="Simple Options" />
 
     <x-docs::text>
-        Text
+        One way to pass options in a simple way is by assigning an array of values, where the name and ID will be the same.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -159,19 +158,20 @@
     <x-docs::subtitle id="custom-options" title="Custom Options" />
 
     <x-docs::text>
-        Text
+        If you wish, you can pass an array specifying the name and ID independently.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Status" placeholder="Select one status" :options="[
-                    ['name' => 'Active', 'id' => 1],
-                    ['name' => 'Pending', 'id' => 2],
-                    ['name' => 'Stuck', 'id' => 3],
-                    ['name' => 'Done', 'id' => 4],
-                ]" option-label="name"
-                    option-value="id" />
+                <x-select label="Select Status" placeholder="Select one status"
+                    :options="[
+                        ['name' => 'Active', 'id' => 1],
+                        ['name' => 'Pending', 'id' => 2],
+                        ['name' => 'Stuck', 'id' => 3],
+                        ['name' => 'Done', 'id' => 4],
+                    ]" option-label="name" option-value="id"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -179,19 +179,20 @@
     <x-docs::subtitle id="option-with-description" title="Option With Description" />
 
     <x-docs::text>
-        Text
+        Another customization is to be able to assign the description field to a king in which it will be shown after the name.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Order Status" placeholder="Select one status" :options="[
-                    ['name' => 'Active', 'id' => 1, 'description' => 'The status is active'],
-                    ['name' => 'Pending', 'id' => 2, 'description' => 'The status is pending'],
-                    ['name' => 'Stuck', 'id' => 3, 'description' => 'The status is stuck'],
-                    ['name' => 'Done', 'id' => 4, 'description' => 'The status is done'],
-                ]" option-label="name"
-                    option-value="id" />
+                <x-select label="Order Status" placeholder="Select one status"
+                    :options="[
+                        ['name' => 'Active', 'id' => 1, 'description' => 'The status is active'],
+                        ['name' => 'Pending', 'id' => 2, 'description' => 'The status is pending'],
+                        ['name' => 'Stuck', 'id' => 3, 'description' => 'The status is stuck'],
+                        ['name' => 'Done', 'id' => 4, 'description' => 'The status is done'],
+                    ]" option-label="name" option-value="id"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -199,7 +200,7 @@
     <x-docs::subtitle id="slot-options" title="Slot Options" />
 
     <x-docs::text>
-        Text
+        If you need even greater customization, you can pass the options in the default slot in Native select
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -233,12 +234,12 @@
                         <x-select.user-option :src="Vite::docs('pedro.jpg')" label="Pedro Henrique" value="5" />
                     </x-select>
 
-                    <x-select label="Search a User" wire:model.defer="selectAsyncSearchRelator"
-                        placeholder="Select some user" :async-data="route('api.users.index')" :template="[
+                    <x-select label="Search a User" placeholder="Select some user"
+                        :async-data="route('api.users.index')" :template="[
                             'name' => 'user-option',
                             'config' => ['src' => 'profile_image'],
-                        ]" option-label="name"
-                        option-value="id" option-description="email" />
+                        ]" option-label="name" option-value="id" option-description="email"
+                    />
                 </div>
             @endverbatim
         </x-slot>
@@ -273,8 +274,10 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Search a User" wire:model.defer="asyncSearchUser" placeholder="Select some user"
-                    :async-data="route('api.users.index')" option-label="name" option-value="id" hide-empty-message>
+                <x-select label="Search a User" placeholder="Select some user"
+                    :async-data="route('api.users.index')" option-label="name"
+                    option-value="id" hide-empty-message
+                >
                     <x-slot name="afterOptions" class="flex justify-center p-2" x-show="displayOptions.length === 0">
                         <x-button
                             x-on:click="close; $wireui.notify({ title: 'Not implemented yet', icon: 'info' })"
