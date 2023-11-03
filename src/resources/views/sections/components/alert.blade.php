@@ -105,8 +105,8 @@
     <x-docs::subtitle id="alert-paddings" title="Alert Paddings" />
 
     <x-docs::text>
-        Regarding padding, we provide a range of diverse options to enhance your project, and you have the freedom to
-        customize these options to meet your specific needs.
+        Regarding padding, we provide a range of diverse options to enhance your project,
+        and you have the freedom to customize these options to meet your specific needs.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -153,8 +153,8 @@
     <x-docs::subtitle id="alert-rounders" title="Alert Rounders" />
 
     <x-docs::text>
-        The alert component now offers a wide range of rounding customizations. You have access to all Tailwind options
-        or the flexibility to create your own custom styles.
+        The alert component now offers a wide range of rounding customizations. You have access
+        to all Tailwind options or the flexibility to create your own custom styles.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -196,8 +196,8 @@
     <x-docs::subtitle id="alert-shadows" title="Alert Shadows" />
 
     <x-docs::text>
-        The same applies to shadows. You can utilize all Tailwind options, and we also welcome customizable shadow
-        values.
+        The same applies to shadows. You can utilize all Tailwind options,
+        and we also welcome customizable shadow values.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -233,8 +233,8 @@
     <x-docs::subtitle id="alert-icons" title="Alert Icons" />
 
     <x-docs::text>
-        The icons change based on the selected color. Below, you can see the icons displayed in their respective colors,
-        but you also have the option to customize them or even remove them entirely.
+        The icons change based on the selected color. Below, you can see the icons displayed in their
+        respective colors, but you also have the option to customize them or even remove them entirely.
     </x-docs::text>
 
     <x-docs::list>

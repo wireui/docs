@@ -34,8 +34,8 @@
     <x-docs::subtitle id="default-colors" title="Default Colors" />
 
     <x-docs::text>
-        Within the badge component, the default variant is solid, and you can access the full spectrum of Tailwind
-        colors for this component.
+        Within the badge component, the default variant is solid, and you can
+        access the full spectrum of Tailwind colors for this component.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -79,8 +79,8 @@
     <x-docs::subtitle id="outline-colors" title="Outline Colors" />
 
     <x-docs::text>
-        We also offer the outline variant for your project. Similar to our other variants, you can make use of the
-        complete palette of Tailwind colors.
+        We also offer the outline variant for your project. Similar to our other variants,
+        you can make use of the complete palette of Tailwind colors.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -124,8 +124,8 @@
     <x-docs::subtitle id="flat-colors" title="Flat Colors" />
 
     <x-docs::text>
-        We also provide the flat variant for your project. Like our other variants, you can access the full spectrum of
-        Tailwind colors for your customization needs.
+        We also provide the flat variant for your project. Like our other variants, you
+        can access the full spectrum of Tailwind colors for your customization needs.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -169,8 +169,8 @@
     <x-docs::subtitle id="rounders-badge" title="Rounders Badges" />
 
     <x-docs::text>
-        Badge rounding customization now offers access to the complete range of Tailwind options, along with the
-        flexibility for further customization as per your preferences.
+        Badge rounding customization now offers access to the complete range of Tailwind options,
+        along with the flexibility for further customization as per your preferences.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -282,8 +282,8 @@
     <x-docs::subtitle id="badge-slots" title="Badge Slots" />
 
     <x-docs::text>
-        Should you wish to tailor the elements on both sides of the label, we offer <b>append</b> and <b>prepend</b>
-        slots that provide a flexible solution for customization.
+        Should you wish to tailor the elements on both sides of the label, we offer <b>append</b>
+        and <b>prepend</b> slots that provide a flexible solution for customization.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

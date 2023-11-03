@@ -237,8 +237,8 @@ $confirmFull = fn() => $this->notification()->confirm([
     <x-docs::subtitle id="confirm-notification" title="Confirm Notification" />
 
     <x-docs::text>
-        You might also need to request user confirmation for a specific action. The Notifications API provides a
-        dedicated method for this purpose. Check out the example below.
+        You might also need to request user confirmation for a specific action. The Notifications
+        API provides a dedicated method for this purpose. Check out the example below.
         <br><br>
         You can create a confirmation notification using Blade.
     </x-docs::text>
@@ -350,16 +350,16 @@ $confirmFull = fn() => $this->notification()->confirm([
     <x-docs::subtitle id="notification-events" title="Notification Events" />
 
     <x-docs::text>
-        Notifications can come with three events: onClose, onDismiss, and onTimeout. Each event will trigger when its
-        corresponding action occurs.
+        Notifications can come with three events: onClose, onDismiss, and onTimeout.
+        Each event will trigger when its corresponding action occurs.
     </x-docs::text>
 
     <x-docs::text.title title="Events:" />
 
     <x-docs::list>
         <x-docs::list.item>
-            The <b>onClose</b> event will be triggered whenever the notification is removed, whether it's due to a timer
-            expiration, user-initiated closure, or clicking on an action.
+            The <b>onClose</b> event will be triggered whenever the notification is removed, whether
+            it's due to a timer expiration, user-initiated closure, or clicking on an action.
         </x-docs::list.item>
 
         <x-docs::list.item>
@@ -386,8 +386,8 @@ $confirmFull = fn() => $this->notification()->confirm([
     </x-docs::code.block>
 
     <x-docs::text>
-        Alternatively, you can utilize these events to trigger actions on the Livewire Component, and in this scenario,
-        having the component ID is essential.
+        Alternatively, you can utilize these events to trigger actions on the Livewire
+        Component, and in this scenario, having the component ID is essential.
     </x-docs::text>
 
     <x-docs::code.block language="js">

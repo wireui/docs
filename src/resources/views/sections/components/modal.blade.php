@@ -49,7 +49,6 @@ $save = function () {
     <x-docs::subtitle id="modal-simple" title="Modal Simple" />
 
     <x-docs::text>
-
         A straightforward method for utilizing the modal involves placing a card within it and incorporating a button
         that triggers the modal when clicked.
     </x-docs::text>

@@ -150,7 +150,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Status" placeholder="Select one status" :options="['Active', 'Pending', 'Stuck', 'Done']" />
+                <x-select
+                    label="Select Status"
+                    placeholder="Select one status"
+                    :options="['Active', 'Pending', 'Stuck', 'Done']"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -165,7 +169,12 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Select Statuses" placeholder="Select many statuses" multiselect :options="['Active', 'Pending', 'Stuck', 'Done']" />
+                <x-select
+                    label="Select Statuses"
+                    placeholder="Select many statuses"
+                    multiselect
+                    :options="['Active', 'Pending', 'Stuck', 'Done']"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -314,9 +323,13 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-select label="Search a User" placeholder="Select some user"
-                    :async-data="route('api.users.index')" option-label="name"
-                    option-value="id" hide-empty-message
+                <x-select
+                    label="Search a User"
+                    placeholder="Select some user"
+                    :async-data="route('api.users.index')"
+                    option-label="name"
+                    option-value="id"
+                    hide-empty-message
                 >
                     <x-slot name="afterOptions" class="flex justify-center p-2" x-show="displayOptions.length === 0">
                         <x-button

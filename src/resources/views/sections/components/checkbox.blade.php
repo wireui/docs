@@ -73,8 +73,8 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     <x-docs::subtitle id="checkbox-rounders" title="Checkbox Rounders" />
 
     <x-docs::text>
-        An exciting new feature in this updated version is the option to apply different styles of rounding to
-        checkboxes and customize them as needed.
+        An exciting new feature in this updated version is the option to apply
+        different styles of rounding to checkboxes and customize them as needed.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

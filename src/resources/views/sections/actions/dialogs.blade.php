@@ -113,8 +113,8 @@ $customDialog = fn() => $this->dialog()
     </x-docs::text>
 
     <x-alert title="Information!" class="my-4" info>
-        The <b>dialog</b> offers a comprehensive range of <b>modal</b> options, allowing you to define settings either
-        globally or for individual elements.
+        The <b>dialog</b> offers a comprehensive range of <b>modal</b> options, allowing
+        you to define settings either globally or for individual elements.
     </x-alert>
 
     <x-docs::code.block language="blade">
@@ -242,8 +242,8 @@ $customDialog = fn() => $this->dialog()
     <x-docs::subtitle id="confirm-dialog" title="Confirm Dialog" />
 
     <x-docs::text>
-        If you need to request user confirmation for a specific action, the dialog API provides a dedicated method for
-        this purpose. Refer to the example below for guidance.
+        If you need to request user confirmation for a specific action, the dialog API provides a
+        dedicated method for this purpose. Refer to the example below for guidance.
         <br><br>
         You can generate a confirmation notification using the Livewire Component.
     </x-docs::text>
@@ -354,8 +354,8 @@ $customDialog = fn() => $this->dialog()
     <x-docs::subtitle id="confirm-directive" title="Confirm Directive" />
 
     <x-docs::text>
-        Alternatively, you can employ an HTML directive to construct a confirmation dialog. Please note that Blade
-        components do not support <b>@bladeDirectives</b>.
+        Alternatively, you can employ an HTML directive to construct a confirmation dialog.
+        Please note that Blade components do not support <b>@bladeDirectives</b>.
         <br><br>
         Instead, you can implement them within an Alpine.js component.
     </x-docs::text>
@@ -397,16 +397,16 @@ $customDialog = fn() => $this->dialog()
     <x-docs::subtitle id="dialog-events" title="Dialog Events" />
 
     <x-docs::text>
-        Dialogs can feature three distinct events: onClose, onDismiss, and onTimeout. Each of these events will trigger
-        when their respective conditions are met.
+        Dialogs can feature three distinct events: onClose, onDismiss, and onTimeout.
+        Each of these events will trigger when their respective conditions are met.
     </x-docs::text>
 
     <x-docs::text.title title="Events:" />
 
     <x-docs::list>
         <x-docs::list.item>
-            The <b>onClose</b> event is triggered whenever the dialog is closed, whether it's due to a timeout,
-            user-initiated closure, or clicking an action.
+            The <b>onClose</b> event is triggered whenever the dialog is closed, whether
+            it's due to a timeout, user-initiated closure, or clicking an action.
         </x-docs::list.item>
 
         <x-docs::list.item>
@@ -433,8 +433,8 @@ $customDialog = fn() => $this->dialog()
     </x-docs::code.block>
 
     <x-docs::text>
-        Alternatively, you can employ these events to trigger actions on the Livewire Component, in which case the
-        component ID is essential.
+        Alternatively, you can employ these events to trigger actions on the
+        Livewire Component, in which case the component ID is essential.
     </x-docs::text>
 
     <x-docs::code.block language="js">
@@ -498,8 +498,8 @@ $customDialog = fn() => $this->dialog()
     <x-docs::subtitle id="custom-dialog" title="Custom Dialog" />
 
     <x-docs::text>
-        You have the flexibility to create dialogs with custom titles, descriptions, or include any code within the
-        designated slot.
+        You have the flexibility to create dialogs with custom titles,
+        descriptions, or include any code within the designated slot.
     </x-docs::text>
 
     <x-docs::code.block language="php">

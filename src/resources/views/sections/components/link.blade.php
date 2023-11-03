@@ -42,8 +42,8 @@
     <x-docs::subtitle id="link-sizes" title="Link Sizes" />
 
     <x-docs::text>
-        When it comes to sizing options for links, you can choose from the following: <b>sm</b>, <b>md</b>, and
-        <b>lg</b>.
+        When it comes to sizing options for links, you can choose from
+        the following: <b>sm</b>, <b>md</b>, and <b>lg</b>.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -62,8 +62,8 @@
     <x-docs::subtitle id="link-underlines" title="Link Underlines" />
 
     <x-docs::text>
-        Another customization option for links is the ability to control the underline, and if needed, it can be easily
-        removed.
+        Another customization option for links is the ability to control
+        the underline, and if needed, it can be easily removed.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

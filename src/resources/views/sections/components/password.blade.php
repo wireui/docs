@@ -16,9 +16,8 @@
     <x-docs::subtitle id="password-simple" title="Password Simple" />
 
     <x-docs::text>
-
-        This component will enhance your user interface by incorporating a toggle button for revealing or concealing the
-        password value.
+        This component will enhance your user interface by incorporating
+        a toggle button for revealing or concealing the password value.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

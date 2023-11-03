@@ -54,8 +54,8 @@
     <x-docs::subtitle id="avatar-label" title="Avatar Label" />
 
     <x-docs::text>
-        An alternative approach for using the avatar involves providing the <b>label</b> attribute, typically containing
-        initials or a state representation.
+        An alternative approach for using the avatar involves providing the <b>label</b>
+        attribute, typically containing initials or a state representation.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -83,8 +83,8 @@
     <x-docs::subtitle id="avatar-rounders" title="Avatar Rounders" />
 
     <x-docs::text>
-        The avatar now offers rounded customization options, giving you the flexibility to utilize either Tailwind's
-        default settings or apply your own custom values.
+        The avatar now offers rounded customization options, giving you the flexibility to
+        utilize either Tailwind's default settings or apply your own custom values.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -126,8 +126,8 @@
     <x-docs::subtitle id="avatar-sizes" title="Avatar Sizes" />
 
     <x-docs::text>
-        The <b>size</b> property offers a broad spectrum of options, coupled with the flexibility
-        for customization to suit your specific needs.
+        The <b>size</b> property offers a broad spectrum of options, coupled
+        with the flexibility for customization to suit your specific needs.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -198,8 +198,8 @@
     <x-docs::subtitle id="avatar-borders" title="Avatar Borders" />
 
     <x-docs::text>
-        You also have the ability to customize the border thickness of the avatar. You can stick with the default values
-        or tailor it to your preferences in any way you see fit.
+        You also have the ability to customize the border thickness of the avatar. You can stick
+        with the default values or tailor it to your preferences in any way you see fit.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -226,8 +226,8 @@
     <x-docs::subtitle id="avatar-placeholder" title="Avatar Placeholder" />
 
     <x-docs::text>
-        When neither text nor an image is provided, the avatar will present a default SVG placeholder. You have the
-        option to select your preferred icon for rendering, or it will default to a user icon.
+        When neither text nor an image is provided, the avatar will present a default SVG placeholder.
+        You have the option to select your preferred icon for rendering, or it will default to a user icon.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

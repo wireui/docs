@@ -42,7 +42,10 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input label="Name" placeholder="your name" />
+                <x-input
+                    label="Name"
+                    placeholder="your name"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -56,7 +59,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input label="Name" placeholder="your name" description="Inform your full name" />
+                <x-input
+                    label="Name"
+                    placeholder="your name"
+                    description="Inform your full name"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -70,7 +77,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input label="Name" placeholder="your name" corner="Ex: John" />
+                <x-input
+                    label="Name"
+                    placeholder="your name"
+                    corner="Ex: John"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -84,7 +95,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input icon="user" label="Name" placeholder="your name" />
+                <x-input
+                    icon="user"
+                    label="Name"
+                    placeholder="your name"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -98,7 +113,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input right-icon="user" label="Name" placeholder="your name" />
+                <x-input
+                    right-icon="user"
+                    label="Name"
+                    placeholder="your name"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -112,7 +131,12 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input icon="user" right-icon="pencil" label="Name" placeholder="your name" />
+                <x-input
+                    icon="user"
+                    right-icon="pencil"
+                    label="Name"
+                    placeholder="your name"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -126,7 +150,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input label="Website" placeholder="your-website.com" prefix="https://www." />
+                <x-input
+                    label="Website"
+                    placeholder="your-website.com"
+                    prefix="https://www."
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -140,7 +168,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-input label="Email" placeholder="your email" suffix="@mail.com" />
+                <x-input
+                    label="Email"
+                    placeholder="your email"
+                    suffix="@mail.com"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -156,7 +188,13 @@
             @verbatim
                 <x-input label="Name" placeholder="your name">
                     <x-slot name="prepend">
-                        <x-button class="h-full" icon="bars-arrow-up" rounded="rounded-l-md" primary flat />
+                        <x-button
+                            class="h-full"
+                            icon="bars-arrow-up"
+                            rounded="rounded-l-md"
+                            primary
+                            flat
+                        />
                     </x-slot>
                 </x-input>
             @endverbatim
@@ -174,7 +212,13 @@
             @verbatim
                 <x-input label="Name" placeholder="your name">
                     <x-slot name="append">
-                        <x-button class="h-full" icon="bars-arrow-up" rounded="rounded-r-md" primary flat />
+                        <x-button
+                            class="h-full"
+                            icon="bars-arrow-up"
+                            rounded="rounded-r-md"
+                            primary
+                            flat
+                        />
                     </x-slot>
                 </x-input>
             @endverbatim

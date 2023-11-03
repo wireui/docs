@@ -72,8 +72,8 @@ state(['model1' => null, 'model2' => null, 'model3' => null, 'model4' => null]);
     <x-docs::subtitle id="radio-rounders" title="Radio Rounders" />
 
     <x-docs::text>
-        A notable enhancement in this latest version is the ability to employ different rounding methods in the radio,
-        allowing for customization as needed.
+        A notable enhancement in this latest version is the ability to employ different
+        rounding methods in the radio, allowing for customization as needed.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

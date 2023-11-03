@@ -109,8 +109,8 @@
     <x-docs::subtitle id="card-paddings" title="Card Paddings" />
 
     <x-docs::text>
-        We offer a range of padding options to accommodate various scenarios, allowing you to customize them according
-        to your specific preferences.
+        We offer a range of padding options to accommodate various scenarios,
+        allowing you to customize them according to your specific preferences.
     </x-docs::text>
 
     <x-docs::code.preview language="blade" color>
@@ -152,8 +152,8 @@
     <x-docs::subtitle id="card-rounders" title="Card Rounders" />
 
     <x-docs::text>
-        The card component now offers a wide range of rounding customizations. You have access to all of Tailwind's
-        options or the flexibility to create your own custom styles.
+        The card component now offers a wide range of rounding customizations. You have access
+        to all of Tailwind's options or the flexibility to create your own custom styles.
     </x-docs::text>
 
     <x-docs::code.preview language="blade" color>
@@ -213,8 +213,8 @@
     <x-docs::subtitle id="card-shadows" title="Card Shadows" />
 
     <x-docs::text>
-        The same applies to shadows. You can utilize all Tailwind options, and we also welcome customizable shadow
-        values.
+        The same applies to shadows. You can utilize all Tailwind
+        options, and we also welcome customizable shadow values.
     </x-docs::text>
 
     <x-docs::code.preview language="blade" color>

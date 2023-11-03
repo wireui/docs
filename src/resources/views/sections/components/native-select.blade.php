@@ -31,7 +31,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-native-select label="Select Status" placeholder="Select one status" :options="['Active', 'Pending', 'Stuck', 'Done']" />
+                <x-native-select
+                    label="Select Status"
+                    placeholder="Select one status"
+                    :options="['Active', 'Pending', 'Stuck', 'Done']"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

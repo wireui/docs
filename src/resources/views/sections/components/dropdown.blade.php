@@ -36,8 +36,8 @@
     <x-docs::subtitle id="dropdown-simple" title="Dropdown Simple" />
 
     <x-docs::text>
-        The dropdown can be initially displayed with a default <b>ellipsis-vertical</b> icon, but it offers the
-        flexibility to customize it by replacing it with the icon of your choice.
+        The dropdown can be initially displayed with a default <b>ellipsis-vertical</b> icon, but
+        it offers the flexibility to customize it by replacing it with the icon of your choice.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -118,8 +118,8 @@
     <x-docs::subtitle id="dropdown-height" title="Dropdown Height" />
 
     <x-docs::text>
-        In this updated WireUI version, we offer a variety of height options that are fully customizable to suit your
-        preferences.
+        In this updated WireUI version, we offer a variety of height
+        options that are fully customizable to suit your preferences.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

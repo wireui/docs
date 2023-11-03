@@ -24,8 +24,8 @@
     <x-docs::subtitle id="textarea-simple" title="Textarea Simple" />
 
     <x-docs::text>
-        The textarea is an uncomplicated component that is easy to use and employs attributes similar to those used with
-        input elements.
+        The textarea is an uncomplicated component that is easy to use and
+        employs attributes similar to those used with input elements.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">

@@ -59,8 +59,8 @@ mount(function () {
     <x-docs::subtitle id="errors-filtered" title="Errors Filtered" />
 
     <x-docs::text>
-        The errors component provides the flexibility to filter the errors returned by the form. You can specify this
-        filter by using either an array or a string separated by slashes.
+        The errors component provides the flexibility to filter the errors returned by the form.
+        You can specify this filter by using either an array or a string separated by slashes.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -76,13 +76,13 @@ mount(function () {
     <x-docs::subtitle id="errors-title" title="Errors Title" />
 
     <x-docs::text>
-        You also possess the capability to modify the title that will be displayed in the header of the errors
-        component.
+        You also possess the capability to modify the title that
+        will be displayed in the header of the errors component.
     </x-docs::text>
 
     <x-alert title="Attention!" class="my-4" warning>
-        The key <b>{errors}</b> will be replaced with the number of error messages. But this replacement does not work
-        if you use the title slot.
+        The key <b>{errors}</b> will be replaced with the number of error messages.
+        But this replacement does not work if you use the title slot.
     </x-alert>
 
     <x-docs::code.preview language="blade">

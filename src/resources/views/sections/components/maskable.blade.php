@@ -92,7 +92,12 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-maskable id="simple-mask" label="Maskable Input" mask="(###) ###-####" placeholder="Phone number" />
+                <x-maskable
+                    id="simple-mask"
+                    label="Maskable Input"
+                    mask="(###) ###-####"
+                    placeholder="Phone number"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

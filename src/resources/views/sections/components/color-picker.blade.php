@@ -37,7 +37,10 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-color-picker label="Select a Color" placeholder="Select the car color" />
+                <x-color-picker
+                    label="Select a Color"
+                    placeholder="Select the car color"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -146,31 +149,39 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="grid grid-cols-1 gap-5 sm:grid-cols-2">
             @verbatim
-                <x-color-picker label="Select a Color" placeholder="Select the book color" :colors="[
-                    ['name' => 'White', 'value' => '#FFF'],
-                    ['name' => 'Black', 'value' => '#000'],
-                    ['name' => 'Teal', 'value' => '#14b8a6'],
-                    ['name' => 'Slate', 'value' => '#64748b'],
-                    ['name' => 'Red', 'value' => '#ef4444'],
-                    ['name' => 'Lime', 'value' => '#a3e635'],
-                    ['name' => 'Sky', 'value' => '#38bdf8'],
-                    ['name' => 'Violet', 'value' => '#8b5cf6'],
-                    ['name' => 'Pink', 'value' => '#8b5cf6'],
-                    ['name' => 'Indigo', 'value' => '#6366f1'],
-                ]" />
+                <x-color-picker
+                    label="Select a Color"
+                    placeholder="Select the book color"
+                    :colors="[
+                        ['name' => 'White', 'value' => '#FFF'],
+                        ['name' => 'Black', 'value' => '#000'],
+                        ['name' => 'Teal', 'value' => '#14b8a6'],
+                        ['name' => 'Slate', 'value' => '#64748b'],
+                        ['name' => 'Red', 'value' => '#ef4444'],
+                        ['name' => 'Lime', 'value' => '#a3e635'],
+                        ['name' => 'Sky', 'value' => '#38bdf8'],
+                        ['name' => 'Violet', 'value' => '#8b5cf6'],
+                        ['name' => 'Pink', 'value' => '#8b5cf6'],
+                        ['name' => 'Indigo', 'value' => '#6366f1'],
+                    ]"
+                />
 
-                <x-color-picker label="Select a Color" placeholder="Select the book color" :colors="[
-                    '#FFF',
-                    '#000',
-                    '#14b8a6',
-                    '#64748b',
-                    '#ef4444',
-                    '#a3e635',
-                    '#38bdf8',
-                    '#8b5cf6',
-                    '#8b5cf6',
-                    '#6366f1',
-                ]" />
+                <x-color-picker
+                    label="Select a Color"
+                    placeholder="Select the book color"
+                    :colors="[
+                        '#FFF',
+                        '#000',
+                        '#14b8a6',
+                        '#64748b',
+                        '#ef4444',
+                        '#a3e635',
+                        '#38bdf8',
+                        '#8b5cf6',
+                        '#8b5cf6',
+                        '#6366f1',
+                    ]"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -184,7 +195,11 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-color-picker label="Select a Color" placeholder="Select the book color" color-name-as-value />
+                <x-color-picker
+                    label="Select a Color"
+                    placeholder="Select the book color"
+                    color-name-as-value
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

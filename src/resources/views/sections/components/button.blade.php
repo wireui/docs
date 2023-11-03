@@ -89,8 +89,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="light-colors" title="Light Colors" />
 
     <x-docs::text>
-        In version 2, we've introduced a new <b>light</b> variant, which presents a unique model for rendering your
-        button, utilizing Tailwind's extensive color palette.
+        In version 2, we've introduced a new <b>light</b> variant, which presents a unique
+        model for rendering your button, utilizing Tailwind's extensive color palette.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -228,8 +228,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="state-colors" title="State Colors" />
 
     <x-docs::text>
-        One notable feature of WireUI within buttons is the ability to assign distinct colors and variants to various
-        states of the button. This empowers you with even more extensive customization options.
+        One notable feature of WireUI within buttons is the ability to assign distinct colors and variants
+        to various states of the button. This empowers you with even more extensive customization options.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -286,8 +286,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="rounders-button" title="Rounders Button" />
 
     <x-docs::text>
-        Customizing button rounding now grants you access to the full spectrum of Tailwind options, providing the
-        flexibility for additional personalization in accordance with your preferences.
+        Customizing button rounding now grants you access to the full spectrum of Tailwind options,
+        providing the flexibility for additional personalization in accordance with your preferences.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -359,8 +359,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="button-sizes" title="Button Sizes" />
 
     <x-docs::text>
-        When it comes to size, our button component offers a diverse range of options designed to accommodate various
-        scenarios.
+        When it comes to size, our button component offers a diverse
+        range of options designed to accommodate various scenarios.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -408,8 +408,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="button-link" title="Button Link" />
 
     <x-docs::text>
-        You can use the button as a link by simply including the <b>href</b> attribute, and it will automatically render
-        as a link.
+        You can use the button as a link by simply including the <b>href</b>
+        attribute, and it will automatically render as a link.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
@@ -429,8 +429,8 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="loading-spinner" title="Loading Spinner" />
 
     <x-docs::text>
-        Another notable advantage of our button is the ability to incorporate a loading indicator for specific actions,
-        giving you the flexibility to customize the delay and display duration.
+        Another notable advantage of our button is the ability to incorporate a loading indicator for
+        specific actions, giving you the flexibility to customize the delay and display duration.
     </x-docs::text>
 
     <x-alert title="Information!" class="my-4" info>

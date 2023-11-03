@@ -27,7 +27,10 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-currency label="Currency" placeholder="Currency" />
+                <x-currency
+                    label="Currency"
+                    placeholder="Currency"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -42,7 +45,13 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
-                <x-currency label="Currency" placeholder="Currency" thousands="." decimal="," precision="4" />
+                <x-currency
+                    label="Currency"
+                    placeholder="Currency"
+                    thousands="."
+                    decimal=","
+                    precision="4"
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
@@ -56,14 +65,32 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             @verbatim
-                <x-currency label="Currency" placeholder="Currency" icon="currency-dollar" thousands="." decimal=","
-                    precision="4" />
+                <x-currency
+                    label="Currency"
+                    placeholder="Currency"
+                    icon="currency-dollar"
+                    thousands="."
+                    decimal=","
+                    precision="4"
+                />
 
-                <x-currency label="Currency no Decimals" placeholder="Currency" precision="0" />
+                <x-currency
+                    label="Currency no Decimals"
+                    placeholder="Currency"
+                    precision="0"
+                />
 
-                <x-currency label="Currency" placeholder="Currency" />
+                <x-currency
+                    label="Currency"
+                    placeholder="Currency"
+                />
 
-                <x-currency label="Currency" prefix="R$" thousands="." decimal="," />
+                <x-currency
+                    label="Currency"
+                    prefix="R$"
+                    thousands="."
+                    decimal=","
+                />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

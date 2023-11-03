@@ -63,8 +63,8 @@
     <x-docs::subtitle id="toggle-rounders" title="Toggle Rounders" />
 
     <x-docs::text>
-        One of the exciting new features in this updated version is the ability to apply various rounding styles to
-        toggles and customize them according to your preferences.
+        One of the exciting new features in this updated version is the ability to apply various
+        rounding styles to toggles and customize them according to your preferences.
     </x-docs::text>
 
     <x-docs::code.preview language="blade">
