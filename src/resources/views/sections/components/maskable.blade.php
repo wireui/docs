@@ -18,7 +18,7 @@
     <x-docs::text>
         The maskable input component is a versatile and user-friendly element that you can seamlessly integrate into
         your projects. It allows you to create customized masks with different tokens, offering a wide range of
-        configurations. You can easily craft a personalized component using WireUi's BaseMaskable, defining the
+        configurations. You can easily craft a personalized component using WireUi's Maskable, defining the
         <b>getInputMask</b> function to specify the desired mask for the input. This component enables you to apply a
         variety of masks, enhancing its adaptability and utility in various applications.
     </x-docs::text>
@@ -114,7 +114,7 @@
                 <x-maskable
                     id="multiple-mask"
                     label="Multiple Maskable Input"
-                    mask="['(###) ###-####', '+# ### ###-####', '+## ## ####-####']"
+                    :mask="['(###) ###-####', '+# ### ###-####', '+## ## ####-####']"
                     placeholder="Phone number"
                 />
             @endverbatim
@@ -143,7 +143,7 @@
     <x-docs::subtitle id="create-custom-input" title="Create a Custom Input" />
 
     <x-docs::text>
-        Here's an example demonstrating how to create a custom component using WireUi's BaseMaskable. Simply define the
+        Here's an example demonstrating how to create a custom component using WireUi's Maskable. Simply define the
         <b>getInputMask</b> function, which should return a string specifying the desired mask for the component.
     </x-docs::text>
 
@@ -151,13 +151,13 @@
         @verbatim
             namespace App\View\Components;
 
-            use WireUi\View\Components\Inputs\BaseMaskable;
+            use WireUi\View\Components\Inputs\Maskable;
 
-            class CustomMaskableInput extends BaseMaskable
+            class CustomMaskable extends Maskable
             {
-                protected function getInputMask(): string
+                protected function getInputMask(): array
                 {
-                    return "['(##) ####-####', '(##) #####-####']";
+                    return ['(##) ####-####', '(##) #####-####'];
                 }
             }
         @endverbatim

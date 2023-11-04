@@ -14,7 +14,7 @@
     <x-docs::text>
         The phone input component offers a versatile and customizable feature in WireUI. It allows you to assign various
         masks, giving you multiple options for tailoring the input format to your specific needs. To create a custom
-        phone input component, you can leverage WireUI's BaseMaskable. By defining the <b>getInputMask</b> function, you can
+        phone input component, you can leverage WireUI's Maskable. By defining the <b>getInputMask</b> function, you can
         specify the desired mask for the component, enabling seamless integration of your chosen input format.
         Furthermore, for users who prefer a quick and easy setup, the phone input component comes readily equipped with
         WireUI's default masks, simplifying the process of working with phone input formatting.
@@ -48,7 +48,7 @@
                     wire:model="phone"
                     label="Phone"
                     placeholder="Phone"
-                    mask="['(###) ###-####', '+# ### ###-####', '+## ## ####-####']"
+                    :mask="['(###) ###-####', '+# ### ###-####', '+## ## ####-####']"
                 />
             @endverbatim
         </x-slot>
@@ -57,7 +57,7 @@
     <x-docs::subtitle id="create-custom-input" title="Create a Custom Input" />
 
     <x-docs::text>
-        Here, we present an example illustrating the creation of a custom component using WireUi's BaseMaskable. All you
+        Here, we present an example illustrating the creation of a custom component using WireUi's Maskable. All you
         need to do is define the <b>getInputMask</b> function, which should return a string containing the desired mask to be
         applied to the component.
     </x-docs::text>
@@ -66,13 +66,13 @@
         @verbatim
             namespace App\View\Components;
 
-            use WireUi\View\Components\Inputs\BaseMaskable;
+            use WireUi\View\Components\Inputs\Maskable;
 
-            class CustomMaskableInput extends BaseMaskable
+            class CustomPhone extends Maskable
             {
-                protected function getInputMask(): string
+                protected function getInputMask(): array
                 {
-                    return "['(##) ####-####', '(##) #####-####']";
+                    return ['(##) ####-####', '(##) #####-####'];
                 }
             }
         @endverbatim
