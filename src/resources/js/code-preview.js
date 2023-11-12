@@ -1,8 +1,9 @@
 import ClipboardJS from "clipboard";
 
-export default () => ({
+export default (params) => ({
     code: false,
     copy: false,
+    block: params?.block ?? true,
     init() {
         this.initClipboard();
     },
@@ -10,7 +11,7 @@ export default () => ({
         this.code = !this.code;
     },
     initClipboard() {
-        if(!this.$refs.copy) return;
+        if (!this.$refs.copy) return;
 
         this.setCodeBlockId();
 
@@ -29,7 +30,11 @@ export default () => ({
     setCodeBlockId() {
         const codeId = `code${Math.random().toString(36).slice(2)}`;
 
-        this.$refs.code.querySelector("code").setAttribute("id", codeId);
+        const element = this.block
+            ? this.$refs.code.querySelector("code")
+            : this.$refs.code;
+
+        element.setAttribute("id", codeId);
 
         this.$refs.copy.dataset.clipboardTarget = `#${codeId}`;
     },
