@@ -420,7 +420,7 @@ $sleeping = fn() => sleep(2);
 
                 <x-mini-button href="https://github.com/PH7-Jack?ref={{ config('app.url') }}" target="_blank" rounded
                     black>
-                    <x-icons.github class="w-4 h-4 fill-white" />
+                    <x-svg.github class="w-4 h-4 fill-white" />
                 </x-mini-button>
             @endverbatim
         </x-slot>
