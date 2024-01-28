@@ -450,11 +450,11 @@ $sleeping = fn() => sleep(2);
 
                 <x-button wire:click="sleeping" spinner="sleeping" primary label="With target" />
 
-                <x-button wire:click="sleeping" spinner.longest="sleeping" loading-delay="short" primary
+                <x-button wire:click="sleeping" spinner.longest="sleeping" primary
                     label="With target + delay modifier" />
 
-                <x-button wire:click="sleeping" spinner.longest="sleeping" loading-delay="short" primary
-                    label="With target + delay modifier" right-icon="x-mark" />
+                <x-button wire:click="sleeping" spinner.longest="sleeping" right-icon="x-mark" primary
+                    label="With target + delay modifier" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
