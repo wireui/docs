@@ -11,16 +11,22 @@
         "docs",
         "documentation"
     ],
+    "repositories": {
+        "torchlight/torchlight-laravel": {
+            "type": "github",
+            "url": "git@github.com:PH7-Jack/torchlight-laravel.git"
+        }
+    },
     "require": {
-        "php": "^8.2",
-        "laravel/framework": "^10.0",
-        "torchlight/torchlight-laravel": "^0.5"
+        "php": "^8.3",
+        "laravel/framework": "^11.0",
+        "torchlight/torchlight-laravel": "dev-main"
     },
     "require-dev": {
-        "laravel/pint": "^1.10",
-        "orchestra/testbench": "^8.6",
-        "pestphp/pest": "^2.13",
-        "pestphp/pest-plugin-laravel": "^2.0",
+        "laravel/pint": "^1.0",
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^2.24",
+        "pestphp/pest-plugin-laravel": "^2.2",
         "pestphp/pest-plugin-livewire": "^2.1"
     },
     "authors": [
