@@ -6,15 +6,15 @@ use function Livewire\Volt\{uses, state};
 uses([WireUiActions::class]);
 
 $agree = function () {
-    $this->closeModal('simpleModal');
+    $this->modal()->close('simpleModal');
 
-    $this->closeModal('persistentModal');
+    $this->modal()->close('persistentModal');
 
     $this->notification()->success('You agreed!');
 };
 
 $save = function () {
-    $this->closeModal('cardModal');
+    $this->modal()->close('cardModal');
 
     $this->notification()->success('You saved!');
 };
