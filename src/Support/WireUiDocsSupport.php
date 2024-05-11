@@ -6,13 +6,23 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 
-class MenuDocs
+class WireUiDocsSupport
 {
     private array $reject = ['Table'];
 
     public function getMenu(): Collection
     {
         return Cache::sear('wireui::menu', fn () => collect(config('docs.menu')));
+    }
+
+    public function hasSection(string $section): bool
+    {
+        return $this->getSections()->contains($section);
+    }
+
+    public function getSections(): Collection
+    {
+        return $this->getMenu()->keys()->transform(fn ($item) => Str::slug($item));
     }
 
     public function getSection(string $section): ?array
@@ -27,13 +37,6 @@ class MenuDocs
         $options = config('docs.default_pages');
 
         return data_get($options, $slug);
-    }
-
-    public function hasSection(string $section): bool
-    {
-        $sections = $this->getMenu()->keys()->transform(fn ($item) => Str::slug($item));
-
-        return $sections->contains($section);
     }
 
     public function hasPage(string $page, string $section): bool
@@ -71,9 +74,6 @@ class MenuDocs
 
         $section = $titles->search(fn ($item) => in_array($title, $item));
 
-        return [
-            'title' => $title,
-            'href' => "/{$section}/".Str::slug($title),
-        ];
+        return ['title' => $title, 'href' => "/{$section}/".Str::slug($title)];
     }
 }

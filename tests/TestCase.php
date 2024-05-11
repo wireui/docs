@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests;
+namespace WireUi\Docs\Tests;
 
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as TestbenchTestCase;
