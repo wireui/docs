@@ -10,9 +10,11 @@ return [
 
     'menu' => [
         'Getting Started' => [
-            'Installation',
-            'CSS Utilities',
-            'Troubleshooting',
+            'Getting Started' => [
+                'Installation',
+                'CSS Utilities',
+                'Troubleshooting',
+            ],
         ],
 
         'Components' => [
@@ -49,18 +51,24 @@ return [
         ],
 
         'Actions' => [
-            'Dialogs',
-            'Notifications',
+            'Actions' => [
+                'Dialogs',
+                'Notifications',
+            ],
         ],
 
         'Customize' => [
-            'Colors',
-            'Components',
-            'Contribution Guide',
+            'Customize' => [
+                'Colors',
+                'Components',
+                'Contribution Guide',
+            ],
         ],
 
         'Advanced' => [
-            'Hooks',
+            'Advanced' => [
+                'Hooks',
+            ],
         ],
     ],
 
@@ -71,15 +79,15 @@ return [
      */
 
     'default_pages' => [
-        'Getting Started' => 'Installation',
+        'advanced' => 'hooks',
 
-        'Components' => 'Alert',
+        'actions' => 'dialogs',
 
-        'Actions' => 'Dialogs',
+        'components' => 'alert',
 
-        'Customize' => 'Colors',
+        'customize' => 'colors',
 
-        'Advanced' => 'Hooks',
+        'getting-started' => 'installation',
     ],
 
 ];

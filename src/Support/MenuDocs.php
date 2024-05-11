@@ -12,70 +12,7 @@ class MenuDocs
 
     public function getMenu(): Collection
     {
-        return Cache::sear('wireui::menu', fn () => $this->generateMenu());
-    }
-
-    private function generateMenu(): Collection
-    {
-        return collect([
-            'Getting Started' => [
-                'Getting Started' => [
-                    'Installation',
-                    'CSS Utilities',
-                    'Troubleshooting',
-                ],
-            ],
-            'Components' => [
-                'UI Components' => [
-                    'Alert',
-                    'Avatar',
-                    'Badge',
-                    'Button',
-                    'Card',
-                    'Dropdown',
-                    'Icon',
-                    'Link',
-                    'Modal',
-                    'Table',
-                ],
-                'Form Components' => [
-                    'Checkbox',
-                    'Color Picker',
-                    'Currency',
-                    'Datetime Picker',
-                    'Errors',
-                    'Input',
-                    'Maskable',
-                    'Native Select',
-                    'Number',
-                    'Password',
-                    'Phone',
-                    'Radio',
-                    'Select',
-                    'Textarea',
-                    'Time Picker',
-                    'Toggle',
-                ],
-            ],
-            'Actions' => [
-                'Actions' => [
-                    'Dialogs',
-                    'Notifications',
-                ],
-            ],
-            'Customize' => [
-                'Customize' => [
-                    'Colors',
-                    'Components',
-                    'Contribution Guide',
-                ],
-            ],
-            'Advanced' => [
-                'Advanced' => [
-                    'Hooks',
-                ],
-            ],
-        ]);
+        return Cache::sear('wireui::menu', fn () => collect(config('docs.menu')));
     }
 
     public function getSection(string $section): ?array
@@ -87,14 +24,9 @@ class MenuDocs
 
     public function getDefaultPage(string $slug): ?string
     {
-        return match ($slug) {
-            'getting-started' => 'installation',
-            'components' => 'alert',
-            'actions' => 'dialogs',
-            'customize' => 'colors',
-            'advanced' => 'hooks',
-            default => null,
-        };
+        $options = config('docs.default_pages');
+
+        return data_get($options, $slug);
     }
 
     public function hasSection(string $section): bool
