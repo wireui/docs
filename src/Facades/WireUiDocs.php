@@ -12,6 +12,7 @@ use WireUi\Docs\Support\WireUiDocsSupport;
  * @method static Collection getSections()
  * @method static ?array getSection(string $section)
  * @method static ?string getDefaultPage(string $section)
+ * @method static mixed getComponentApi(string $component)
  * @method static bool hasPage(string $page, string $section)
  * @method static array getPreviousLink(string $page)
  * @method static array getNextLink(string $page)

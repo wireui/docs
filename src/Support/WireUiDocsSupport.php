@@ -39,6 +39,13 @@ class WireUiDocsSupport
         return data_get($options, $slug);
     }
 
+    public function getComponentApi(string $component): mixed
+    {
+        $apis = config('docs.components_api');
+
+        return data_get($apis, $component);
+    }
+
     public function hasPage(string $page, string $section): bool
     {
         $pages = collect($this->getSection($section))->collapse();

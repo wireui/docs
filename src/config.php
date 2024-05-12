@@ -1,5 +1,7 @@
 <?php
 
+use WireUi\Docs\Support\ComponentAPI;
+
 return [
 
     /*
@@ -88,6 +90,16 @@ return [
         'customize' => 'colors',
 
         'getting-started' => 'installation',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Components API
+    |--------------------------------------------------------------------------
+     */
+
+    'components_api' => [
+        'select' => ComponentAPI::select(),
     ],
 
 ];
