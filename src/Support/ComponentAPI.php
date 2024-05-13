@@ -7,7 +7,6 @@ class ComponentAPI
     public static function select(): array
     {
         return [
-            'title' => 'Select API',
             'props' => [
                 'shadow' => [
                     'type' => 'string',
