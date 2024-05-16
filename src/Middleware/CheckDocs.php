@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use WireUi\Docs\Facades\Menu;
+use WireUi\Docs\Facades\WireUiDocs;
 
 class CheckDocs
 {
@@ -14,11 +14,11 @@ class CheckDocs
     {
         $section = $request->section;
 
-        $page = $request->page ?? Menu::getDefaultPage($section);
+        $page = $request->page ?? WireUiDocs::getDefaultPage($section);
 
-        abort_unless(Menu::hasSection($section), Response::HTTP_NOT_FOUND);
+        abort_unless(WireUiDocs::hasSection($section), Response::HTTP_NOT_FOUND);
 
-        abort_unless(Menu::hasPage($page, $section), Response::HTTP_NOT_FOUND);
+        abort_unless(WireUiDocs::hasPage($page, $section), Response::HTTP_NOT_FOUND);
 
         return $next($request);
     }

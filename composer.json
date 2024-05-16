@@ -1,7 +1,7 @@
 {
     "name": "wireui/docs",
-    "description": "WireUi Documentation",
     "type": "library",
+    "description": "WireUi Documentation",
     "keywords": [
         "livewire components",
         "livewire-ui",
@@ -11,22 +11,17 @@
         "docs",
         "documentation"
     ],
-    "repositories": {
-        "torchlight/torchlight-laravel": {
-            "type": "github",
-            "url": "git@github.com:PH7-Jack/torchlight-laravel.git"
-        }
-    },
+    "license": "MIT",
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.0",
         "torchlight/torchlight-laravel": "dev-main"
     },
     "require-dev": {
-        "laravel/pint": "^1.0",
+        "laravel/pint": "^1.15",
         "orchestra/testbench": "^9.0",
-        "pestphp/pest": "^2.24",
-        "pestphp/pest-plugin-laravel": "^2.2",
+        "pestphp/pest": "^2.34",
+        "pestphp/pest-plugin-laravel": "^2.4",
         "pestphp/pest-plugin-livewire": "^2.1"
     },
     "authors": [
@@ -39,9 +34,12 @@
             "email": "joaopalopes24@gmail.com"
         }
     ],
-    "license": "MIT",
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "repositories": {
+        "torchlight/torchlight-laravel": {
+            "type": "github",
+            "url": "git@github.com:PH7-Jack/torchlight-laravel.git"
+        }
+    },
     "autoload": {
         "psr-4": {
             "WireUi\\Docs\\": "src/"
@@ -67,5 +65,7 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

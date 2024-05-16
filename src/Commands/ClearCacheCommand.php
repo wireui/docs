@@ -3,10 +3,8 @@
 namespace WireUi\Docs\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\File;
-use Illuminate\Support\Str;
+use WireUi\Docs\Facades\WireUiDocs;
 
 class ClearCacheCommand extends Command
 {
@@ -18,9 +16,9 @@ class ClearCacheCommand extends Command
     {
         $this->clearMenuCache();
 
-        $files = $this->getFilesName();
+        $sections = WireUiDocs::getSections();
 
-        $files->each(fn ($file) => $this->removeCache($file));
+        $sections->each(fn ($section) => $this->removeCache($section));
 
         $this->info('The cache has been cleared.');
     }
@@ -28,15 +26,6 @@ class ClearCacheCommand extends Command
     private function clearMenuCache(): void
     {
         Cache::forget('wireui::menu');
-    }
-
-    private function getFilesName(): Collection
-    {
-        $docs = File::allFiles(__DIR__.'/../resources/views/sections');
-
-        return collect($docs)->map(function ($file) {
-            return Str::remove('.blade.php', $file->getFilename());
-        });
     }
 
     private function removeCache(string $page): void

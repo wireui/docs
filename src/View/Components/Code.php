@@ -15,11 +15,11 @@ class Code extends CodeComponent
 
     public function __construct(
         string $language = 'text',
-        string $theme = null,
-        string $contents = null,
-        array $swap = null,
+        ?string $theme = null,
+        ?string $contents = null,
+        ?array $swap = null,
         array $postProcessors = [],
-        string $torchlightId = null,
+        ?string $torchlightId = null,
         bool $noCopy = false,
         bool $lineNumbers = true,
         array $options = []
