@@ -2,16 +2,22 @@
     "name": "wireui/docs",
     "type": "library",
     "description": "WireUi Documentation",
-    "keywords": [
-        "livewire components",
-        "livewire-ui",
-        "wireui",
-        "laravel components",
-        "blade components",
-        "docs",
-        "documentation"
-    ],
     "license": "MIT",
+    "keywords": [
+        "docs",
+        "wireui",
+        "livewire-ui",
+        "documentation",
+        "blade components",
+        "laravel components",
+        "livewire components"
+    ],
+    "authors": [
+        {
+            "name": "Pedro Oliveira",
+            "email": "pedro@wireui.dev"
+        }
+    ],
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.0",
@@ -24,16 +30,6 @@
         "pestphp/pest-plugin-laravel": "^2.4",
         "pestphp/pest-plugin-livewire": "^2.1"
     },
-    "authors": [
-        {
-            "name": "Pedro Oliveira",
-            "email": "pedro@wireui.dev"
-        },
-        {
-            "name": "João Pedro Lopes",
-            "email": "joao.lopes@wireui.dev"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "WireUi\\Docs\\": "src/"
