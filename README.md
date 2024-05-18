@@ -6,4 +6,4 @@ Visit at: [Documentation](https://wireui.dev)
 
 ## Contribution
 
-Contribute to branches according to version, example `2.x` for WireUi version `2`. The `main` branch is used to assemble the documentation for the future release.
+This documentation only refers to the new version of WireUi. If you want changes to the version 1 documentation, open an Issue and let us know what needs to be changed.

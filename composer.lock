@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cbf5de6be407ea597c8c4e599ecf6303",
+    "content-hash": "ddbf894a81804644380ff8c4047cabbc",
     "packages": [
         {
             "name": "brick/math",
@@ -5275,22 +5275,33 @@
         },
         {
             "name": "torchlight/torchlight-laravel",
-            "version": "dev-main",
+            "version": "v0.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/PH7-Jack/torchlight-laravel.git",
-                "reference": "3ebc5267fab80673a9dbf234f25dc812c1f3870b"
+                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
+                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PH7-Jack/torchlight-laravel/zipball/3ebc5267fab80673a9dbf234f25dc812c1f3870b",
-                "reference": "3ebc5267fab80673a9dbf234f25dc812c1f3870b",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/ecdabd33326f9b37da95032c971a340c4e3f4306",
+                "reference": "ecdabd33326f9b37da95032c971a340c4e3f4306",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.3"
+                "guzzlehttp/guzzle": "^7.2",
+                "illuminate/cache": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/console": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/http": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "illuminate/view": "^8.0|^9.0|^10.0|^11.0",
+                "php": "^7.3|^8.0",
+                "ramsey/uuid": "^3.7|^4.0"
             },
-            "default-branch": true,
+            "require-dev": {
+                "mockery/mockery": "^1.3.3",
+                "orchestra/testbench": "^5.0|^6.0|^7.0|^9.0",
+                "phpunit/phpunit": "^8.5.23|^9.5|^10.5"
+            },
             "type": "library",
             "extra": {
                 "laravel": {
@@ -5304,11 +5315,7 @@
                     "Torchlight\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Torchlight\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5321,14 +5328,15 @@
             "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
             "homepage": "https://torchlight.dev",
             "keywords": [
-                "code highlighting",
+                "Code highlighting",
                 "laravel",
                 "syntax highlighting"
             ],
             "support": {
-                "source": "https://github.com/PH7-Jack/torchlight-laravel/tree/main"
+                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.0"
             },
-            "time": "2024-03-28T02:35:41+00:00"
+            "time": "2024-05-16T18:16:31+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -10065,9 +10073,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "torchlight/torchlight-laravel": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

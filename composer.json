@@ -15,7 +15,7 @@
     "require": {
         "php": "^8.3",
         "laravel/framework": "^11.0",
-        "torchlight/torchlight-laravel": "dev-main"
+        "torchlight/torchlight-laravel": "^0.6.0"
     },
     "require-dev": {
         "laravel/pint": "^1.15",
@@ -27,19 +27,13 @@
     "authors": [
         {
             "name": "Pedro Oliveira",
-            "email": "pedrolivertwd@gmail.com"
+            "email": "pedro@wireui.dev"
         },
         {
             "name": "João Pedro Lopes",
-            "email": "joaopalopes24@gmail.com"
+            "email": "joao.lopes@wireui.dev"
         }
     ],
-    "repositories": {
-        "torchlight/torchlight-laravel": {
-            "type": "github",
-            "url": "git@github.com:PH7-Jack/torchlight-laravel.git"
-        }
-    },
     "autoload": {
         "psr-4": {
             "WireUi\\Docs\\": "src/"
