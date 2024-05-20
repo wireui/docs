@@ -21,7 +21,7 @@
 
             <x-docs::summary.header href="#after-options-slot" label="After Options Slot" />
 
-            {{-- <x-docs::summary.header href="#select-api" label="Select API" /> --}}
+            <x-docs::summary.header href="#select-api" label="Select API" />
         </x-docs::summary>
     </x-slot>
 
@@ -345,7 +345,7 @@
         </x-slot>
     </x-docs::code.preview>
 
-    {{-- <x-docs::subtitle id="select-api" title="Select API" />
+    <x-docs::subtitle id="select-api" title="Select API" />
 
-    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('select')]) --}}
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('select')])
 </div>
