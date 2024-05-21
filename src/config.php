@@ -54,6 +54,7 @@ return [
 
         'Actions' => [
             'Actions' => [
+                'Hooks',
                 'Dialogs',
                 'Notifications',
             ],
@@ -67,9 +68,12 @@ return [
             ],
         ],
 
-        'Advanced' => [
-            'Advanced' => [
-                'Hooks',
+        'Packages' => [
+            'Packages' => [
+                'AlpineJS Hold Directive',
+                'Breadcrumbs',
+                'Heroicons',
+                'Phosphor Icons',
             ],
         ],
     ],
@@ -81,15 +85,15 @@ return [
      */
 
     'default_pages' => [
-        'advanced' => 'hooks',
-
-        'actions' => 'dialogs',
+        'getting-started' => 'installation',
 
         'components' => 'alert',
 
+        'actions' => 'hooks',
+
         'customize' => 'colors',
 
-        'getting-started' => 'installation',
+        'packages' => 'alpinejs-hold-directive',
     ],
 
     /*

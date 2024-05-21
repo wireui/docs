@@ -31,15 +31,15 @@ $getVariant = function (string $tab) {
 
     <x-slot name="slot" class="flex overflow-auto soft-scrollbar">
         @if ($this->tab === 'props')
-            <x-docs::api.props :props="$this->getItems" />
+            <x-docs::tables.props :props="$this->getItems" />
         @endif
 
         @if ($this->tab === 'events')
-            <x-docs::api.events :events="$this->getItems" />
+            <x-docs::tables.events :events="$this->getItems" />
         @endif
 
         @if ($this->tab === 'slots')
-            <x-docs::api.slots :slots="$this->getItems" />
+            <x-docs::tables.slots :slots="$this->getItems" />
         @endif
     </x-slot>
 </x-card>
