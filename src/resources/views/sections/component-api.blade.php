@@ -18,11 +18,7 @@ $getVariant = function (string $tab) {
 
 ?>
 
-<x-card padding="small" class="mt-3 mb-6" :color="[
-    'root' => 'bg-white dark:bg-secondary-950',
-    'text' => 'text-secondary-700 dark:text-secondary-400',
-    'border' => 'border-secondary-200 dark:border-secondary-600',
-]">
+<x-docs::tables>
     <x-slot name="title" class="flex flex-row space-x-4">
         @foreach ($items as $key => $item)
             <x-button wire:click="setTab('{{ $key }}')" :label="Str::title($key)" :variant="$this->getVariant($key)" teal />
@@ -42,4 +38,4 @@ $getVariant = function (string $tab) {
             <x-docs::tables.slots :slots="$this->getItems" />
         @endif
     </x-slot>
-</x-card>
+</x-docs::tables>

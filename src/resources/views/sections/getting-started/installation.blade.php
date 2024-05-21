@@ -49,8 +49,7 @@
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://laravel-livewire.com" label="Livewire 3" target="_blank" underline="none"
-                teal />
+            <x-link href="https://livewire.laravel.com" label="Livewire 3" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
