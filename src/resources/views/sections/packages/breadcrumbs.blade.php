@@ -47,20 +47,18 @@
 
     <x-docs::list>
         <x-docs::list.item>
-            <x-link href="https://alpinejs.dev" label="Alpine.js 3.10 or higher" target="_blank" underline="none"
-                teal />
+            <x-link href="https://alpinejs.dev" label="Alpine.js 3.10 or higher" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://tailwindcss.com" label="Tailwindcss 3.1 or higher" target="_blank" underline="none"
-                teal />
+            <x-link href="https://tailwindcss.com" label="Tailwindcss 3.1 or higher" target="_blank" underline="none" teal />
         </x-docs::list.item>
     </x-docs::list>
 
     <x-docs::subtitle id="installation" title="Installation" />
 
     <x-docs::text>
-        First, you'll need to install the package via composer:
+        First, you need to install the package via Composer.
     </x-docs::text>
 
     <x-docs::code.block language="bash">
