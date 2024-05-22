@@ -10,6 +10,8 @@
             <x-docs::summary.header href="#mask-anything" label="Mask Anything" />
 
             <x-docs::summary.header href="#create-custom-input" label="Create a Custom Input" />
+
+            <x-docs::summary.header href="#maskable-api" label="Maskable API" />
         </x-docs::summary>
     </x-slot>
 
@@ -162,4 +164,8 @@
             }
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="maskable-api" title="Maskable API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('maskable')])
 </div>

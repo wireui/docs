@@ -8,6 +8,8 @@
             <x-docs::summary.header href="#option-with-description" label="Option With Description" />
 
             <x-docs::summary.header href="#slot-options" label="Slot Options" />
+
+            <x-docs::summary.header href="#native-select-api" label="Native Select API" />
         </x-docs::summary>
     </x-slot>
 
@@ -99,4 +101,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="native-select-api" title="Native Select API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('native-select')])
 </div>

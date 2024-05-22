@@ -26,6 +26,8 @@ $sleeping = fn() => sleep(2);
             <x-docs::summary.header href="#button-link" label="Button Link" />
 
             <x-docs::summary.header href="#loading-spinner" label="Loading Spinner" />
+
+            <x-docs::summary.header href="#button-api" label="Button API" />
         </x-docs::summary>
     </x-slot>
 
@@ -458,4 +460,8 @@ $sleeping = fn() => sleep(2);
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="button-api" title="Button API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('button')])
 </div>

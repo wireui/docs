@@ -23,6 +23,8 @@ mount(function () {
             <x-docs::summary.header href="#errors-icons" label="Errors Icons" />
 
             <x-docs::summary.header href="#errors-footer" label="Errors Footer" />
+
+            <x-docs::summary.header href="#errors-api" label="Errors API" />
         </x-docs::summary>
     </x-slot>
 
@@ -126,4 +128,8 @@ mount(function () {
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="errors-api" title="Errors API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('errors')])
 </div>

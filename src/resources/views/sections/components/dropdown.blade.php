@@ -18,6 +18,8 @@
             <x-docs::summary.header href="#trigger-slot" label="Trigger Slot" />
 
             <x-docs::summary.header href="#item-slot" label="Item Slot" />
+
+            <x-docs::summary.header href="#dropdown-api" label="Dropdown API" />
         </x-docs::summary>
     </x-slot>
 
@@ -514,4 +516,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="dropdown-api" title="Dropdown API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('dropdown')])
 </div>

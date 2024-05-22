@@ -2,6 +2,8 @@
     <x-slot name="summary">
         <x-docs::summary>
             <x-docs::summary.header href="#password-simple" label="Password Simple" />
+
+            <x-docs::summary.header href="#password-api" label="Password API" />
         </x-docs::summary>
     </x-slot>
 
@@ -27,4 +29,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="password-api" title="Password API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('password')])
 </div>

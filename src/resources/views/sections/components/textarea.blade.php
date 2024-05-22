@@ -2,6 +2,8 @@
     <x-slot name="summary">
         <x-docs::summary>
             <x-docs::summary.header href="#textarea-simple" label="Textarea Simple" />
+
+            <x-docs::summary.header href="#textarea-api" label="Textarea API" />
         </x-docs::summary>
     </x-slot>
 
@@ -35,4 +37,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="textarea-api" title="Textarea API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('textarea')])
 </div>

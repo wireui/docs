@@ -4,6 +4,111 @@ namespace WireUi\Docs\Support;
 
 class ComponentAPI
 {
+    public static function alert(): array
+    {
+        return [];
+    }
+
+    public static function avatar(): array
+    {
+        return [];
+    }
+
+    public static function badge(): array
+    {
+        return [];
+    }
+
+    public static function button(): array
+    {
+        return [];
+    }
+
+    public static function card(): array
+    {
+        return [];
+    }
+
+    public static function dropdown(): array
+    {
+        return [];
+    }
+
+    public static function icon(): array
+    {
+        return [];
+    }
+
+    public static function link(): array
+    {
+        return [];
+    }
+
+    public static function modal(): array
+    {
+        return [];
+    }
+
+    public static function checkbox(): array
+    {
+        return [];
+    }
+
+    public static function colorPicker(): array
+    {
+        return [];
+    }
+
+    public static function currency(): array
+    {
+        return [];
+    }
+
+    public static function datetimePicker(): array
+    {
+        return [];
+    }
+
+    public static function errors(): array
+    {
+        return [];
+    }
+
+    public static function input(): array
+    {
+        return [];
+    }
+
+    public static function maskable(): array
+    {
+        return [];
+    }
+
+    public static function nativeSelect(): array
+    {
+        return [];
+    }
+
+    public static function number(): array
+    {
+        return [];
+    }
+
+    public static function password(): array
+    {
+        return [];
+    }
+
+    public static function phone(): array
+    {
+        return [];
+    }
+
+    public static function radio(): array
+    {
+        return [];
+    }
+
     public static function select(): array
     {
         return [
@@ -127,5 +232,20 @@ class ComponentAPI
                 ],
             ],
         ];
+    }
+
+    public static function textarea(): array
+    {
+        return [];
+    }
+
+    public static function timePicker(): array
+    {
+        return [];
+    }
+
+    public static function toggle(): array
+    {
+        return [];
     }
 }

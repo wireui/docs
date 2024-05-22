@@ -12,6 +12,8 @@
             <x-docs::summary.header href="#custom-colors" label="Custom Colors" />
 
             <x-docs::summary.header href="#color-name-as-value" label="Color name as value" />
+
+            <x-docs::summary.header href="#color-picker-api" label="Color Picker API" />
         </x-docs::summary>
     </x-slot>
 
@@ -203,4 +205,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="color-picker-api" title="Color Picker API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('color-picker')])
 </div>

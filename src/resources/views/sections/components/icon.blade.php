@@ -1,5 +1,15 @@
 <div>
+    <x-slot name="summary">
+        <x-docs::summary>
+            <x-docs::summary.header href="#heroicons" label="Heroicons" />
+
+            <x-docs::summary.header href="#icon-api" label="Icon API" />
+        </x-docs::summary>
+    </x-slot>
+
     <x-docs::title id="icon" title="Icon" />
+
+    <x-docs::subtitle id="heroicons" title="Heroicons" />
 
     <x-docs::text>
         All
@@ -29,4 +39,8 @@
             php artisan vendor:publish --tag="wireui.config"
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="icon-api" title="Icon API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('icon')])
 </div>

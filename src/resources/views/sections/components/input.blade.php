@@ -20,6 +20,8 @@
             <x-docs::summary.header href="#input-prepend" label="Input Prepend" />
 
             <x-docs::summary.header href="#input-append" label="Input Append" />
+
+            <x-docs::summary.header href="#input-api" label="Input API" />
         </x-docs::summary>
     </x-slot>
 
@@ -224,4 +226,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="input-api" title="Input API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('input')])
 </div>

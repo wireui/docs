@@ -18,6 +18,8 @@ state([
             <x-docs::summary.header href="#24-hours" label="24H Time Picker" />
 
             <x-docs::summary.header href="#custom-interval" label="Custom Interval" />
+
+            <x-docs::summary.header href="#time-picker-api" label="Time Picker API" />
         </x-docs::summary>
     </x-slot>
 
@@ -100,4 +102,8 @@ state([
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="time-picker-api" title="Time Picker API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('time-picker')])
 </div>

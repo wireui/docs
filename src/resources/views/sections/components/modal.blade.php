@@ -33,6 +33,8 @@ $save = function () {
             <x-docs::summary.header href="#modal-card" label="Modal Card" />
 
             <x-docs::summary.header href="#modal-events" label="Modal Events" />
+
+            <x-docs::summary.header href="#modal-api" label="Modal API" />
         </x-docs::summary>
     </x-slot>
 
@@ -266,4 +268,8 @@ $save = function () {
             </x-modal>
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="modal-api" title="Modal API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('modal')])
 </div>

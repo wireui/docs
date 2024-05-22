@@ -16,6 +16,8 @@
             <x-docs::summary.header href="#badge-icons" label="Badge Icons" />
 
             <x-docs::summary.header href="#badge-slots" label="Badge Slots" />
+
+            <x-docs::summary.header href="#badge-api" label="Badge API" />
         </x-docs::summary>
     </x-slot>
 
@@ -317,4 +319,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="badge-api" title="Badge API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('badge')])
 </div>

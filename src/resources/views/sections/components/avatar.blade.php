@@ -16,6 +16,8 @@
             <x-docs::summary.header href="#avatar-placeholder" label="Avatar Placeholder" />
 
             <x-docs::summary.header href="#avatar-group" label="Avatar Group" />
+
+            <x-docs::summary.header href="#avatar-api" label="Avatar API" />
         </x-docs::summary>
     </x-slot>
 
@@ -271,4 +273,8 @@
             </div>
         @endverbatim
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="avatar-api" title="Avatar API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('avatar')])
 </div>
