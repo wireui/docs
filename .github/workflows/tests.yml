@@ -1,0 +1,36 @@
+name: WireUi Docs Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP, with composer and extensions
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          tools: composer:v2
+          coverage: none
+
+      - name: Install Composer Dependencies
+        run: |
+          composer install --no-scripts
+
+      - name: Code Style Check
+        run: |
+          ./vendor/bin/pint --test
+
+      - name: Run Pest PHP Tests
+        run: |
+          ./vendor/bin/pest --stop-on-failure

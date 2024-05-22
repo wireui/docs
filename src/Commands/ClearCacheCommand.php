@@ -4,6 +4,7 @@ namespace WireUi\Docs\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 use WireUi\Docs\Facades\WireUiDocs;
 
 class ClearCacheCommand extends Command
@@ -12,15 +13,17 @@ class ClearCacheCommand extends Command
 
     protected $description = 'Clear the Menu Cache';
 
-    public function handle(): void
+    public function handle(): int
     {
         $this->clearMenuCache();
 
-        $sections = WireUiDocs::getSections();
+        $menu = WireUiDocs::getMenu()->flatten();
 
-        $sections->each(fn ($section) => $this->removeCache($section));
+        $menu->each(fn ($page) => $this->removeCache($page));
 
         $this->info('The cache has been cleared.');
+
+        return self::SUCCESS;
     }
 
     private function clearMenuCache(): void
@@ -30,6 +33,8 @@ class ClearCacheCommand extends Command
 
     private function removeCache(string $page): void
     {
+        $page = Str::slug($page);
+
         Cache::forget("wireui::next::{$page}");
 
         Cache::forget("wireui::previous::{$page}");
