@@ -17,26 +17,22 @@ class WireUiDocsSupport
 
     public function hasSection(string $section): bool
     {
-        return $this->getMenu()->keys()->transform(function ($item) {
-            return Str::slug($item);
-        })->contains($section);
+        return $this->getMenu()->keys()->slugify()->contains($section);
     }
 
-    public function getSection(string $section): ?array
+    public function getSection(string $section): Collection
     {
-        return $this->getMenu()->mapWithKeys(function ($section, $key) {
-            return [Str::slug($key) => $section];
-        })->get($section);
+        return collect($this->getMenu()->first(fn ($item, $key) => Str::slug($key) === $section));
     }
 
-    public function getDefaultPage(string $slug): ?string
+    public function getDefaultPage(string $section): ?string
     {
         $options = config('docs.default_pages');
 
-        return data_get($options, $slug);
+        return data_get($options, $section);
     }
 
-    public function getComponentApi(string $component): mixed
+    public function getComponentApi(string $component): ?array
     {
         $apis = config('docs.components_api');
 
@@ -45,19 +41,19 @@ class WireUiDocsSupport
 
     public function hasPage(string $page, string $section): bool
     {
-        $pages = collect($this->getSection($section))->collapse();
+        $pages = $this->getSection($section)->flatten();
 
-        return $pages->transform(fn ($item) => Str::slug($item))->contains($page);
+        return $pages->slugify()->contains($page);
     }
 
-    public function getPreviousLink(string $page): array
+    public function getPreviousLink(string $page): ?array
     {
         return Cache::sear("wireui::previous::{$page}", function () use ($page) {
             return $this->getPositionMenu($page, fn ($position) => $position - 1);
         });
     }
 
-    public function getNextLink(string $page): array
+    public function getNextLink(string $page): ?array
     {
         return Cache::sear("wireui::next::{$page}", function () use ($page) {
             return $this->getPositionMenu($page, fn ($position) => $position + 1);
@@ -67,20 +63,30 @@ class WireUiDocsSupport
     /**
      * Generic method to get the previous or next link.
      */
-    private function getPositionMenu(string $page, callable $callback): array
+    private function getSectionByPage(string $page): ?string
     {
-        $titles = $this->getMenu()->mapWithKeys(function ($section, $key) {
-            return [Str::slug($key) => collect($section)->collapse()->toArray()];
+        return $this->getMenu()->search(function ($item) use ($page) {
+            return collect($item)->flatten()->slugify()->contains($page);
         });
+    }
 
-        $titles1 = $titles->collapse()->reject(fn ($item) => in_array($item, $this->reject))->values();
+    private function getPositionMenu(string $page, callable $callback): ?array
+    {
+        if (collect($this->reject)->slugify()->contains($page)) {
+            return null;
+        }
 
-        $titles2 = $titles1->map(fn ($item) => Str::slug($item));
+        $pages = $this->getMenu()->flatten()->reject(function ($item) {
+            return in_array($item, $this->reject);
+        })->values();
 
-        $title = $titles1->get($callback($titles2->search($page)));
+        $title = $pages->get($callback($pages->slugify()->search($page)));
 
-        $section = $titles->search(fn ($item) => in_array($title, $item));
+        $section = $this->getSectionByPage(Str::slug($title));
 
-        return ['title' => $title, 'href' => "/{$section}/".Str::slug($title)];
+        return blank($title) ? null : [
+            'title' => $title,
+            'href' => sprintf('/%s/%s', Str::slug($section), Str::slug($title)),
+        ];
     }
 }

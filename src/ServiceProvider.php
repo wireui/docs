@@ -4,6 +4,8 @@ namespace WireUi\Docs;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Str;
 use WireUi\Docs\Middleware\CheckDocs;
 use WireUi\Docs\View\Components\Code;
 
@@ -14,6 +16,8 @@ class ServiceProvider extends Support\ServiceProvider
         $this->bootViews();
 
         $this->bootConfig();
+
+        $this->bootMacros();
 
         $this->bootCommands();
 
@@ -30,6 +34,14 @@ class ServiceProvider extends Support\ServiceProvider
         $this->loadViewComponentsAs('docs', [Code::class]);
 
         $this->loadViewsFrom(__DIR__.'/resources/views', 'docs');
+    }
+
+    private function bootMacros(): void
+    {
+        Collection::macro('slugify', function () {
+            /** @var Collection $this */
+            return $this->map(fn ($value) => Str::slug($value));
+        });
     }
 
     private function bootCommands(): void
