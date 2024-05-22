@@ -17,12 +17,9 @@ class WireUiDocsSupport
 
     public function hasSection(string $section): bool
     {
-        return $this->getSections()->contains($section);
-    }
-
-    public function getSections(): Collection
-    {
-        return $this->getMenu()->keys()->transform(fn ($item) => Str::slug($item));
+        return $this->getMenu()->keys()->transform(function ($item) {
+            return Str::slug($item);
+        })->contains($section);
     }
 
     public function getSection(string $section): ?array
@@ -67,6 +64,9 @@ class WireUiDocsSupport
         });
     }
 
+    /**
+     * Generic method to get the previous or next link.
+     */
     private function getPositionMenu(string $page, callable $callback): array
     {
         $titles = $this->getMenu()->mapWithKeys(function ($section, $key) {

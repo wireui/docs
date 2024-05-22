@@ -218,15 +218,11 @@
         particularly with regards to rounding. In version 1, the only available option was the <b>badge.circle</b>.
     </x-docs::text>
 
-    <x-alert title="Attention!" class="my-4" warning>
-        The attributes [full, right-icon, prepend, append] are not supported in <b>mini-badge</b> component.
-    </x-alert>
-
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-3">
             @verbatim
                 <x-mini-badge icon="home" rounded />
-                <x-mini-badge primary icon="pencil" />
+                <x-mini-badge primary icon="pencil" squared />
                 <x-mini-badge secondary icon="clipboard-document-list" />
                 <x-mini-badge positive icon="check" />
                 <x-mini-badge negative icon="x-mark" />
@@ -321,6 +317,10 @@
     </x-docs::code.preview>
 
     <x-docs::subtitle id="badge-api" title="Badge API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The props [full, right-icon] and slots [prepend, append] are not supported in <b>mini-badge</b> component.
+    </x-alert>
 
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('badge')])
 </div>

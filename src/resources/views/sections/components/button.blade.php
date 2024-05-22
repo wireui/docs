@@ -336,16 +336,12 @@ $sleeping = fn() => sleep(2);
         <b>button.circle</b>.
     </x-docs::text>
 
-    <x-alert title="Attention!" class="my-4" warning>
-        The attributes [full, right-icon, prepend, append] are not supported in <b>mini-button</b> component.
-    </x-alert>
-
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-3">
             @verbatim
                 <x-mini-button rounded icon="home" />
-                <x-mini-button rounded primary icon="pencil" />
-                <x-mini-button rounded secondary icon="clipboard" />
+                <x-mini-button squared primary icon="pencil" />
+                <x-mini-button secondary icon="clipboard" />
                 <x-mini-button rounded positive icon="check" />
                 <x-mini-button rounded negative icon="x-mark" />
                 <x-mini-button rounded warning icon="exclamation-triangle" />
@@ -462,6 +458,10 @@ $sleeping = fn() => sleep(2);
     </x-docs::code.preview>
 
     <x-docs::subtitle id="button-api" title="Button API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The props [full, right-icon] and slot [prepend, append] are not supported in <b>mini-button</b> component.
+    </x-alert>
 
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('button')])
 </div>

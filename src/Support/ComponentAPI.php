@@ -6,22 +6,278 @@ class ComponentAPI
 {
     public static function alert(): array
     {
-        return [];
+        return [
+            'props' => [
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'color' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'title' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'shadow' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'padding' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'rounded' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'variant' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'iconless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'shadowless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'header' => [
+                    'description' => 'Slot to add content to the header.',
+                ],
+                'title' => [
+                    'description' => 'Slot to add content to the title.',
+                ],
+                'action' => [
+                    'description' => 'Slot to add content to the actions.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+                'footer' => [
+                    'description' => 'Slot to add content to the footer.',
+                ],
+            ],
+        ];
     }
 
     public static function avatar(): array
     {
-        return [];
+        return [
+            'props' => [
+                'alt' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'src' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'color' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'border' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'rounded' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'icon-size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'borderless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'label' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+            ],
+        ];
     }
 
     public static function badge(): array
     {
-        return [];
+        return [
+            'props' => [
+                'size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'full' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'color' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'rounded' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'variant' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'icon-size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'right-icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'prepend' => [
+                    'description' => 'Slot to add content before the label.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+                'append' => [
+                    'description' => 'Slot to add content after the label.',
+                ],
+            ],
+        ];
     }
 
     public static function button(): array
     {
-        return [];
+        return [
+            'props' => [
+                'full' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'href' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'color' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'rounded' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'variant' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'icon-size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'right-icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'wire-load-enabled' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'use-validation-colors' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'prepend' => [
+                    'description' => 'Slot to add content before the label.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+                'append' => [
+                    'description' => 'Slot to add content after the label.',
+                ],
+            ],
+        ];
     }
 
     public static function card(): array
