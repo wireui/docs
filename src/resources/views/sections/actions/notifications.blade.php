@@ -70,6 +70,8 @@ $confirmFull = fn() => $this->notification()->confirm([
             <x-docs::summary.header href="#confirm-notification" label="Confirm Notification" />
 
             <x-docs::summary.header href="#notification-events" label="Notification Events" />
+
+            <x-docs::summary.header href="#notifications-api" label="Notifications API" />
         </x-docs::summary>
     </x-slot>
 
@@ -447,4 +449,8 @@ $confirmFull = fn() => $this->notification()->confirm([
             }
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="notifications-api" title="Notifications API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('notifications')])
 </div>

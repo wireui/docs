@@ -335,247 +335,6 @@ class ComponentAPI
         ];
     }
 
-    public static function dropdown(): array
-    {
-        return [
-            'props' => [
-                'icon' => [
-                    'type' => 'string',
-                    'default' => 'ellipsis-vertical',
-                    'required' => 'false',
-                ],
-                'width' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'height' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'position' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'persistent' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-            'slots' => [
-                'trigger' => [
-                    'description' => 'Slot to add content to the trigger.',
-                ],
-                'slot' => [
-                    'description' => 'Slot to add content to the body.',
-                ],
-            ],
-        ];
-    }
-
-    public static function dropdownItem(): array
-    {
-        return [
-            'props' => [
-                'icon' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'label' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'separator' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-            'slots' => [
-                'label' => [
-                    'description' => 'Slot to add content to the label.',
-                ],
-                'slot' => [
-                    'description' => 'Slot to add content to the body.',
-                ],
-            ],
-        ];
-    }
-
-    public static function dropdownHeader(): array
-    {
-        return [
-            'props' => [
-                'label' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'separator' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-            'slots' => [
-                'label' => [
-                    'description' => 'Slot to add content to the label.',
-                ],
-                'slot' => [
-                    'description' => 'Slot to add content to the body.',
-                ],
-            ],
-        ];
-    }
-
-    public static function icon(): array
-    {
-        return [
-            'props' => [
-                'name' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'true',
-                ],
-                'variant' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-            ],
-        ];
-    }
-
-    public static function link(): array
-    {
-        return [
-            'props' => [
-                'href' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'size' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'color' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'label' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'underline' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-            'slots' => [
-                'label' => [
-                    'description' => 'Slot to add content to the label.',
-                ],
-                'slot' => [
-                    'description' => 'Slot to add content to the body.',
-                ],
-            ],
-        ];
-    }
-
-    public static function modal(): array
-    {
-        return [
-            'props' => [
-                'blur' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'name' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'show' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-                'type' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'align' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'width' => [
-                    'type' => 'string',
-                    'default' => 'CONFIG',
-                    'required' => 'false',
-                ],
-                'spacing' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'z-index' => [
-                    'type' => 'string',
-                    'default' => 'null',
-                    'required' => 'false',
-                ],
-                'blurless' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-                'persistent' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-            'slots' => [
-                'slot' => [
-                    'description' => 'Slot to add content to the body.',
-                ],
-            ],
-            'events' => [
-                'open' => [
-                    'description' => 'Event emitted when the modal is opened.',
-                ],
-                'close' => [
-                    'description' => 'Event emitted when the modal is closed.',
-                ],
-            ],
-        ];
-    }
-
-    public static function modalCard(): array
-    {
-        return [
-            'props' => [
-                'hide-close' => [
-                    'type' => 'boolean',
-                    'default' => 'false',
-                    'required' => 'false',
-                ],
-            ],
-        ];
-    }
-
     public static function checkbox(): array
     {
         return [
@@ -792,6 +551,109 @@ class ComponentAPI
         ];
     }
 
+    public static function dialogs(): array
+    {
+        return [];
+    }
+
+    public static function dropdown(): array
+    {
+        return [
+            'props' => [
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'ellipsis-vertical',
+                    'required' => 'false',
+                ],
+                'width' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'height' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'position' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'persistent' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'trigger' => [
+                    'description' => 'Slot to add content to the trigger.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+            ],
+        ];
+    }
+
+    public static function dropdownItem(): array
+    {
+        return [
+            'props' => [
+                'icon' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'separator' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'label' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+            ],
+        ];
+    }
+
+    public static function dropdownHeader(): array
+    {
+        return [
+            'props' => [
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'separator' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'label' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+            ],
+        ];
+    }
+
     public static function errors(): array
     {
         return [
@@ -804,6 +666,24 @@ class ComponentAPI
                 'title' => [
                     'type' => 'string',
                     'default' => "trans('wireui::messages.errors.title')",
+                    'required' => 'false',
+                ],
+            ],
+        ];
+    }
+
+    public static function icon(): array
+    {
+        return [
+            'props' => [
+                'name' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'true',
+                ],
+                'variant' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
                     'required' => 'false',
                 ],
             ],
@@ -944,6 +824,47 @@ class ComponentAPI
         ];
     }
 
+    public static function link(): array
+    {
+        return [
+            'props' => [
+                'href' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'size' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'color' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'underline' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'label' => [
+                    'description' => 'Slot to add content to the label.',
+                ],
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+            ],
+        ];
+    }
+
     public static function maskable(): array
     {
         return [
@@ -954,6 +875,90 @@ class ComponentAPI
                     'required' => 'true',
                 ],
                 'emit-formatted' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+        ];
+    }
+
+    public static function modal(): array
+    {
+        return [
+            'props' => [
+                'blur' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'name' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'show' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'type' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'align' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'width' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'spacing' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'z-index' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'blurless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'persistent' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+            ],
+            'slots' => [
+                'slot' => [
+                    'description' => 'Slot to add content to the body.',
+                ],
+            ],
+            'events' => [
+                'open' => [
+                    'description' => 'Event emitted when the modal is opened.',
+                ],
+                'close' => [
+                    'description' => 'Event emitted when the modal is closed.',
+                ],
+            ],
+        ];
+    }
+
+    public static function modalCard(): array
+    {
+        return [
+            'props' => [
+                'hide-close' => [
                     'type' => 'boolean',
                     'default' => 'false',
                     'required' => 'false',
@@ -1013,6 +1018,11 @@ class ComponentAPI
                 ],
             ],
         ];
+    }
+
+    public static function notifications(): array
+    {
+        return [];
     }
 
     public static function number(): array

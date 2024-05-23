@@ -85,6 +85,8 @@ $customDialog = fn() => $this->dialog()
             <x-docs::summary.header href="#dialog-events" label="Dialog Events" />
 
             <x-docs::summary.header href="#custom-dialog" label="Custom Dialog" />
+
+            <x-docs::summary.header href="#dialogs-api" label="Dialogs API" />
         </x-docs::summary>
     </x-slot>
 
@@ -561,4 +563,8 @@ $customDialog = fn() => $this->dialog()
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="dialogs-api" title="Dialogs API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('dialogs')])
 </div>

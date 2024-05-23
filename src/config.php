@@ -121,7 +121,7 @@ return [
 
         'datetime-picker' => ComponentAPI::datetimePicker(),
 
-        // 'dialog' => ComponentAPI::dialog(),
+        'dialogs' => ComponentAPI::dialogs(),
 
         'dropdown' => ComponentAPI::dropdown(),
 
@@ -145,7 +145,7 @@ return [
 
         'native-select' => ComponentAPI::nativeSelect(),
 
-        // 'notifications' => ComponentAPI::notifications(),
+        'notifications' => ComponentAPI::notifications(),
 
         'number' => ComponentAPI::number(),
 
