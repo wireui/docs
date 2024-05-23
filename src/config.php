@@ -113,14 +113,6 @@ return [
 
         'card' => ComponentAPI::card(),
 
-        'dropdown' => ComponentAPI::dropdown(),
-
-        'icon' => ComponentAPI::icon(),
-
-        'link' => ComponentAPI::link(),
-
-        'modal' => ComponentAPI::modal(),
-
         'checkbox' => ComponentAPI::checkbox(),
 
         'color-picker' => ComponentAPI::colorPicker(),
@@ -129,23 +121,43 @@ return [
 
         'datetime-picker' => ComponentAPI::datetimePicker(),
 
+        // 'dialog' => ComponentAPI::dialog(),
+
+        'dropdown' => ComponentAPI::dropdown(),
+
+        'dropdown-item' => ComponentAPI::dropdownItem(),
+
+        'dropdown-header' => ComponentAPI::dropdownHeader(),
+
         'errors' => ComponentAPI::errors(),
+
+        'icon' => ComponentAPI::icon(),
 
         'input' => ComponentAPI::input(),
 
+        'link' => ComponentAPI::link(),
+
         'maskable' => ComponentAPI::maskable(),
+
+        'modal' => ComponentAPI::modal(),
+
+        'modal-card' => ComponentAPI::modalCard(),
 
         'native-select' => ComponentAPI::nativeSelect(),
 
-        'number' => ComponentAPI::number(),
+        // 'notifications' => ComponentAPI::notifications(),
 
-        'password' => ComponentAPI::password(),
+        'number' => ComponentAPI::number(),
 
         'phone' => ComponentAPI::phone(),
 
         'radio' => ComponentAPI::radio(),
 
         'select' => ComponentAPI::select(),
+
+        'select-option' => ComponentAPI::selectOption(),
+
+        'select-user-option' => ComponentAPI::selectUserOption(),
 
         'textarea' => ComponentAPI::textarea(),
 

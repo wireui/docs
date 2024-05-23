@@ -460,7 +460,7 @@ $sleeping = fn() => sleep(2);
     <x-docs::subtitle id="button-api" title="Button API" />
 
     <x-alert title="Attention!" class="my-4" warning>
-        The props [full, right-icon] and slot [prepend, append] are not supported in <b>mini-button</b> component.
+        The props [full, right-icon] and slots [prepend, append] are not supported in <b>mini-button</b> component.
     </x-alert>
 
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('button')])

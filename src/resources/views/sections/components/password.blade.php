@@ -32,5 +32,9 @@
 
     <x-docs::subtitle id="password-api" title="Password API" />
 
-    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('password')])
+    <x-alert title="Attention!" class="my-4" warning>
+        The Maskable component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>,
+        except the slot [append].
+    </x-alert>
 </div>

@@ -105,5 +105,10 @@ state([
 
     <x-docs::subtitle id="time-picker-api" title="Time Picker API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Time Picker component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('time-picker')])
 </div>

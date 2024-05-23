@@ -131,5 +131,10 @@ mount(function () {
 
     <x-docs::subtitle id="errors-api" title="Errors API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Errors component receives all options from
+        <x-link href="/components/alert#alert-api" warning sm>Alert Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('errors')])
 </div>

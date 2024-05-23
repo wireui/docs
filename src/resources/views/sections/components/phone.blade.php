@@ -82,5 +82,10 @@
 
     <x-docs::subtitle id="phone-api" title="Phone API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Phone component receives all options from
+        <x-link href="/components/maskable#maskable-api" warning sm>Maskable Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('phone')])
 </div>

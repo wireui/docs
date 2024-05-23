@@ -40,5 +40,10 @@
 
     <x-docs::subtitle id="textarea-api" title="Textarea API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Textarea component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('textarea')])
 </div>

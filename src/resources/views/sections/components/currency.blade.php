@@ -99,5 +99,10 @@
 
     <x-docs::subtitle id="currency-api" title="Currency API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Currency component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('currency')])
 </div>

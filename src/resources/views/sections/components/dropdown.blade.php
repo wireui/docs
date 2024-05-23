@@ -20,6 +20,10 @@
             <x-docs::summary.header href="#item-slot" label="Item Slot" />
 
             <x-docs::summary.header href="#dropdown-api" label="Dropdown API" />
+
+            <x-docs::summary.header href="#dropdown-item-api" label="Dropdown Item API" />
+
+            <x-docs::summary.header href="#dropdown-header-api" label="Dropdown Header API" />
         </x-docs::summary>
     </x-slot>
 
@@ -520,4 +524,12 @@
     <x-docs::subtitle id="dropdown-api" title="Dropdown API" />
 
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('dropdown')])
+
+    <x-docs::subtitle id="dropdown-item-api" title="Dropdown Item API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('dropdown-item')])
+
+    <x-docs::subtitle id="dropdown-header-api" title="Dropdown Header API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('dropdown-header')])
 </div>

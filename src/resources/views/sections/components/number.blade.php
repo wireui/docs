@@ -55,5 +55,10 @@
 
     <x-docs::subtitle id="number-api" title="Number API" />
 
+    <x-alert title="Attention!" class="my-4" warning>
+        The Number component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
     @livewire("component-api", ['items' => WireUiDocs::getComponentApi('number')])
 </div>
