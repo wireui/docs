@@ -3,8 +3,8 @@
 <h2><p align="center">WireUi Docs</p></h2>
 
 <p align="center">
-<a href="https://github.com/wireui/docs/actions"><img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg?branch=main" alt="Tests"></a>
-<a href="https://x.com/Wire_Ui"><img alt="Twitter" src="https://img.shields.io/twitter/url?url=https://x.com/Wire_Ui"></a>
+<a href="https://github.com/wireui/docs/actions"><img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg" alt="Tests"></a>
+<a href="https://x.com/Wire_Ui"><img src="https://img.shields.io/twitter/url?url=https://x.com/Wire_Ui" alt="Twitter"></a>
 </p>
 
 ### 🚀 Introduction
