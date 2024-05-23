@@ -1,6 +1,6 @@
 <p align="center"><img src="https://wireui.dev/wireui/wireui-circle.png" height="100"></p>
 
-<h2><p align="center"> WireUi Docs </p></h2>
+<h2><p align="center">WireUi Docs</p></h2>
 
 <p align="center">
 <a href="https://github.com/wireui/docs/actions"><img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg?branch=main" alt="Tests"></a>
@@ -31,4 +31,4 @@ WireUI is and will always be FREE to anyone who would like to use it. This proje
 
 ### 📝 License
 
-WireUi is open-sourced software licensed under the [MIT license](LICENSE.md).
+WireUi is open-sourced software licensed under the [MIT license](license.md).
