@@ -1,4 +1,6 @@
-<h2 style="display: flex; align-items: center; justify-content: center;"><img src="https://wireui.dev/wireui/wireui-circle.png" height="100"><p style="margin: 0px 16px;">WireUi Docs</p></h2>
+<p align="center"><img src="https://wireui.dev/wireui/wireui-circle.png" height="100"></p>
+
+<h2><p align="center"> WireUi Docs </p></h2>
 
 <p align="center">
 <a href="https://github.com/wireui/docs/actions"><img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg?branch=main" alt="Tests"></a>
