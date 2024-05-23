@@ -553,7 +553,60 @@ class ComponentAPI
 
     public static function dialogs(): array
     {
-        return [];
+        return [
+            'props' => [
+                'id' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'blur' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'type' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'align' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'title' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'width' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'spacing' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'z-index' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+                'blurless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'description' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
+            ],
+        ];
     }
 
     public static function dropdown(): array
@@ -1022,7 +1075,20 @@ class ComponentAPI
 
     public static function notifications(): array
     {
-        return [];
+        return [
+            'props' => [
+                'z-index' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+                'position' => [
+                    'type' => 'string',
+                    'default' => 'CONFIG',
+                    'required' => 'false',
+                ],
+            ],
+        ];
     }
 
     public static function number(): array
