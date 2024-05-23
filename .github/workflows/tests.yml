@@ -1,4 +1,4 @@
-name: WireUi Docs Tests
+name: Tests
 
 on:
   push:
