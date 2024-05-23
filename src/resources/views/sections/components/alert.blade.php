@@ -14,6 +14,8 @@
             <x-docs::summary.header href="#alert-shadows" label="Alert Shadows" />
 
             <x-docs::summary.header href="#alert-icons" label="Alert Icons" />
+
+            <x-docs::summary.header href="#alert-api" label="Alert API" />
         </x-docs::summary>
     </x-slot>
 
@@ -277,4 +279,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="alert-api" title="Alert API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('alert')])
 </div>

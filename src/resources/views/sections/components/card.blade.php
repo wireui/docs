@@ -10,6 +10,8 @@
             <x-docs::summary.header href="#card-rounders" label="Card Rounders" />
 
             <x-docs::summary.header href="#card-shadows" label="Card Shadows" />
+
+            <x-docs::summary.header href="#card-api" label="Card API" />
         </x-docs::summary>
     </x-slot>
 
@@ -270,4 +272,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="card-api" title="Card API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('card')])
 </div>

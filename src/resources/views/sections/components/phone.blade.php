@@ -6,6 +6,8 @@
             <x-docs::summary.header href="#custom-phone-mask" label="Custom Phone Mask" />
 
             <x-docs::summary.header href="#create-custom-input" label="Create a Custom Input" />
+
+            <x-docs::summary.header href="#phone-api" label="Phone API" />
         </x-docs::summary>
     </x-slot>
 
@@ -77,4 +79,13 @@
             }
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="phone-api" title="Phone API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Phone component receives all options from
+        <x-link href="/components/maskable#maskable-api" warning sm>Maskable Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('phone')])
 </div>

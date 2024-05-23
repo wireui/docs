@@ -16,6 +16,8 @@ state(['model1' => null, 'model2' => null, 'model3' => null, 'model4' => null]);
             <x-docs::summary.header href="#radio-rounders" label="Radio Rounders" />
 
             <x-docs::summary.header href="#radio-colors" label="Radio Colors" />
+
+            <x-docs::summary.header href="#radio-api" label="Radio API" />
         </x-docs::summary>
     </x-slot>
 
@@ -136,4 +138,8 @@ state(['model1' => null, 'model2' => null, 'model3' => null, 'model4' => null]);
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="radio-api" title="Radio API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('radio')])
 </div>

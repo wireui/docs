@@ -16,6 +16,8 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
             <x-docs::summary.header href="#checkbox-rounders" label="Checkbox Rounders" />
 
             <x-docs::summary.header href="#checkbox-colors" label="Checkbox Colors" />
+
+            <x-docs::summary.header href="#checkbox-api" label="Checkbox API" />
         </x-docs::summary>
     </x-slot>
 
@@ -137,4 +139,8 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="checkbox-api" title="Checkbox API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('checkbox')])
 </div>

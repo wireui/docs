@@ -3,11 +3,11 @@
 namespace WireUi\Docs\Tests;
 
 use Livewire\LivewireServiceProvider;
-use Orchestra\Testbench\TestCase as TestbenchTestCase;
+use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use ReflectionClass;
 use WireUi\Docs\ServiceProvider;
 
-class TestCase extends TestbenchTestCase
+class TestCase extends OrchestraTestCase
 {
     /**
      * Load package service provider.
@@ -18,6 +18,14 @@ class TestCase extends TestbenchTestCase
             ServiceProvider::class,
             LivewireServiceProvider::class,
         ];
+    }
+
+    /**
+     * Define routes setup.
+     */
+    protected function defineRoutes($router)
+    {
+        $router->get('/{section}/{page}', fn () => 'Page exists')->middleware('check.docs');
     }
 
     /**

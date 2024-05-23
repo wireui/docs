@@ -9,7 +9,6 @@ use WireUi\Docs\Support\WireUiDocsSupport;
 /**
  * @method static Collection getMenu()
  * @method static bool hasSection(string $section)
- * @method static Collection getSections()
  * @method static ?array getSection(string $section)
  * @method static ?string getDefaultPage(string $section)
  * @method static mixed getComponentApi(string $component)

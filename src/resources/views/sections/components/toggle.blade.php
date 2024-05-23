@@ -8,6 +8,8 @@
             <x-docs::summary.header href="#toggle-rounders" label="Toggle Rounders" />
 
             <x-docs::summary.header href="#toggle-colors" label="Toggle Colors" />
+
+            <x-docs::summary.header href="#toggle-api" label="Toggle API" />
         </x-docs::summary>
     </x-slot>
 
@@ -127,4 +129,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="toggle-api" title="Toggle API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('toggle')])
 </div>

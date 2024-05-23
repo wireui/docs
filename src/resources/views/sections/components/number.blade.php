@@ -4,6 +4,8 @@
             <x-docs::summary.header href="#number-simple" label="Number Simple" />
 
             <x-docs::summary.header href="#hold-directive" label="Hold Directive" />
+
+            <x-docs::summary.header href="#number-api" label="Number API" />
         </x-docs::summary>
     </x-slot>
 
@@ -50,4 +52,13 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="number-api" title="Number API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Number component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('number')])
 </div>

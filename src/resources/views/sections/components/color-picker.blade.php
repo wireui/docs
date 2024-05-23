@@ -12,6 +12,8 @@
             <x-docs::summary.header href="#custom-colors" label="Custom Colors" />
 
             <x-docs::summary.header href="#color-name-as-value" label="Color name as value" />
+
+            <x-docs::summary.header href="#color-picker-api" label="Color Picker API" />
         </x-docs::summary>
     </x-slot>
 
@@ -203,4 +205,14 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="color-picker-api" title="Color Picker API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Color Picker component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>,
+        except the props [icon, prefix] and slots [prepend and append].
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('color-picker')])
 </div>

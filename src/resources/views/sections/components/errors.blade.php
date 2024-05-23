@@ -23,6 +23,8 @@ mount(function () {
             <x-docs::summary.header href="#errors-icons" label="Errors Icons" />
 
             <x-docs::summary.header href="#errors-footer" label="Errors Footer" />
+
+            <x-docs::summary.header href="#errors-api" label="Errors API" />
         </x-docs::summary>
     </x-slot>
 
@@ -126,4 +128,13 @@ mount(function () {
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="errors-api" title="Errors API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Errors component receives all options from
+        <x-link href="/components/alert#alert-api" warning sm>Alert Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('errors')])
 </div>

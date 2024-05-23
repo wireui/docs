@@ -27,6 +27,8 @@ state([
             <x-docs::summary.header href="#min-max-dates" label="Min & Max dates" />
 
             <x-docs::summary.header href="#min-max-times" label="Min & Max times" />
+
+            <x-docs::summary.header href="#datetime-picker-api" label="Datetime Picker API" />
         </x-docs::summary>
     </x-slot>
 
@@ -196,4 +198,13 @@ state([
         <x-link href="https://day.js.org/docs/en/display/format" label="day.js" target="_blank" teal sm />
         formats.
     </x-docs::text>
+
+    <x-docs::subtitle id="datetime-picker-api" title="Datetime Picker API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Datetime Picker component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('datetime-picker')])
 </div>

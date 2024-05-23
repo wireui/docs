@@ -6,6 +6,8 @@
             <x-docs::summary.header href="#currency-custom" label="Currency Custom" />
 
             <x-docs::summary.header href="#examples" label="Examples" />
+
+            <x-docs::summary.header href="#currency-api" label="Currency API" />
         </x-docs::summary>
     </x-slot>
 
@@ -94,4 +96,13 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="currency-api" title="Currency API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Currency component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('currency')])
 </div>

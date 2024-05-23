@@ -1,5 +1,15 @@
 <div>
+    <x-slot name="summary">
+        <x-docs::summary>
+            <x-docs::summary.header href="#wireui" label="WireUi" />
+
+            <x-docs::summary.header href="#packages" label="Packages" />
+        </x-docs::summary>
+    </x-slot>
+
     <x-docs::title id="contribution-guide" title="Contribution Guide" />
+
+    <x-docs::subtitle id="wireui" title="WireUi" />
 
     <x-docs::text>
         You can contribute to the project by making a pull request on GitHub. This guide will help you get started with
@@ -62,4 +72,10 @@
             composer require wireui/wireui
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="packages" title="Packages" />
+
+    <x-docs::text class="mb-4">
+        For the other packages developed by the WireUi team, you can follow the same installation process.
+    </x-docs::text>
 </div>

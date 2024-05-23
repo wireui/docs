@@ -54,6 +54,7 @@ return [
 
         'Actions' => [
             'Actions' => [
+                'Hooks',
                 'Dialogs',
                 'Notifications',
             ],
@@ -67,9 +68,12 @@ return [
             ],
         ],
 
-        'Advanced' => [
-            'Advanced' => [
-                'Hooks',
+        'Packages' => [
+            'Packages' => [
+                'AlpineJS Hold Directive',
+                'Breadcrumbs',
+                'Heroicons',
+                'Phosphor Icons',
             ],
         ],
     ],
@@ -81,15 +85,15 @@ return [
      */
 
     'default_pages' => [
-        'advanced' => 'hooks',
-
-        'actions' => 'dialogs',
+        'getting-started' => 'installation',
 
         'components' => 'alert',
 
+        'actions' => 'hooks',
+
         'customize' => 'colors',
 
-        'getting-started' => 'installation',
+        'packages' => 'alpinejs-hold-directive',
     ],
 
     /*
@@ -99,7 +103,67 @@ return [
      */
 
     'components_api' => [
+        'alert' => ComponentAPI::alert(),
+
+        'avatar' => ComponentAPI::avatar(),
+
+        'badge' => ComponentAPI::badge(),
+
+        'button' => ComponentAPI::button(),
+
+        'card' => ComponentAPI::card(),
+
+        'checkbox' => ComponentAPI::checkbox(),
+
+        'color-picker' => ComponentAPI::colorPicker(),
+
+        'currency' => ComponentAPI::currency(),
+
+        'datetime-picker' => ComponentAPI::datetimePicker(),
+
+        'dialogs' => ComponentAPI::dialogs(),
+
+        'dropdown' => ComponentAPI::dropdown(),
+
+        'dropdown-item' => ComponentAPI::dropdownItem(),
+
+        'dropdown-header' => ComponentAPI::dropdownHeader(),
+
+        'errors' => ComponentAPI::errors(),
+
+        'icon' => ComponentAPI::icon(),
+
+        'input' => ComponentAPI::input(),
+
+        'link' => ComponentAPI::link(),
+
+        'maskable' => ComponentAPI::maskable(),
+
+        'modal' => ComponentAPI::modal(),
+
+        'modal-card' => ComponentAPI::modalCard(),
+
+        'native-select' => ComponentAPI::nativeSelect(),
+
+        'notifications' => ComponentAPI::notifications(),
+
+        'number' => ComponentAPI::number(),
+
+        'phone' => ComponentAPI::phone(),
+
+        'radio' => ComponentAPI::radio(),
+
         'select' => ComponentAPI::select(),
+
+        'select-option' => ComponentAPI::selectOption(),
+
+        'select-user-option' => ComponentAPI::selectUserOption(),
+
+        'textarea' => ComponentAPI::textarea(),
+
+        'time-picker' => ComponentAPI::timePicker(),
+
+        'toggle' => ComponentAPI::toggle(),
     ],
 
 ];

@@ -1,4 +1,4 @@
-@props(['language', 'clean' => false, 'noCopy' => false, 'lineNumbers' => true, 'color' => false])
+@props(['language', 'clean' => false, 'noCopy' => false, 'lineNumbers' => true, 'color' => false, 'tab' => null])
 
 <div x-cloak x-data="codePreview()"
     {{ $attributes->class([
@@ -20,7 +20,7 @@
     </div>
 
     <div x-ref="code" x-show="code" wire:ignore>
-        <x-docs-code :language="$language" :contents="serialize_slot($slot)" :line-numbers="$lineNumbers" />
+        <x-docs-code :language="$language" :contents="serialize_slot($slot, $tab)" :line-numbers="$lineNumbers" />
     </div>
 
     <div class="absolute top-0 right-0 p-1">

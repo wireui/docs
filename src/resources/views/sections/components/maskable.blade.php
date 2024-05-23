@@ -10,6 +10,8 @@
             <x-docs::summary.header href="#mask-anything" label="Mask Anything" />
 
             <x-docs::summary.header href="#create-custom-input" label="Create a Custom Input" />
+
+            <x-docs::summary.header href="#maskable-api" label="Maskable API" />
         </x-docs::summary>
     </x-slot>
 
@@ -162,4 +164,13 @@
             }
         @endverbatim
     </x-docs::code.block>
+
+    <x-docs::subtitle id="maskable-api" title="Maskable API" />
+
+    <x-alert title="Attention!" class="my-4" warning>
+        The Maskable component receives all options from
+        <x-link href="/components/input#input-api" warning sm>Input Component</x-link>.
+    </x-alert>
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('maskable')])
 </div>

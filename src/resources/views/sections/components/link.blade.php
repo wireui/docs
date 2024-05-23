@@ -6,6 +6,8 @@
             <x-docs::summary.header href="#link-sizes" label="Link Sizes" />
 
             <x-docs::summary.header href="#link-underlines" label="Link Underlines" />
+
+            <x-docs::summary.header href="#link-api" label="Link API" />
         </x-docs::summary>
     </x-slot>
 
@@ -78,4 +80,8 @@
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
+
+    <x-docs::subtitle id="link-api" title="Link API" />
+
+    @livewire("component-api", ['items' => WireUiDocs::getComponentApi('link')])
 </div>
