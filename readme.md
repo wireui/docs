@@ -1,16 +1,8 @@
-<h2 style="display: flex; align-items: center; justify-content: center;">
-<img src="https://wireui.dev/wireui/wireui-circle.png" height="100">
-<p style="margin: 0px 16px;">WireUi Docs</p>
-</h2>
+<h2 style="display: flex; align-items: center; justify-content: center;"><img src="https://wireui.dev/wireui/wireui-circle.png" height="100"><p style="margin: 0px 16px;">WireUi Docs</p></h2>
 
 <p align="center">
-<a href="https://github.com/wireui/docs/actions">
-<img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg?branch=main" alt="Tests">
-</a>
-
-<a href="https://x.com/Wire_Ui">
-<img alt="Twitter" src="https://img.shields.io/twitter/url?url=https://x.com/Wire_Ui">
-</a>
+<a href="https://github.com/wireui/docs/actions"><img src="https://github.com/wireui/docs/actions/workflows/tests.yml/badge.svg?branch=main" alt="Tests"></a>
+<a href="https://x.com/Wire_Ui"><img alt="Twitter" src="https://img.shields.io/twitter/url?url=https://x.com/Wire_Ui"></a>
 </p>
 
 ### 🚀 Introduction
