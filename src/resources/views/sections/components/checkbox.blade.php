@@ -43,9 +43,9 @@ state(['model1' => [], 'model2' => [], 'model3' => [], 'model4' => []]);
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <x-checkbox id="label" label="Label in Left" wire:model="model1" value="label" />
+                <x-checkbox id="left-label" left-label="Label in Left" wire:model="model1" value="left-label" />
 
-                <x-checkbox id="right-label" right-label="Label in Right" wire:model="model1" value="right-label" />
+                <x-checkbox id="label" label="Label in Right" wire:model="model1" value="label" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

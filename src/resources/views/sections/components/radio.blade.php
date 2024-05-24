@@ -42,9 +42,9 @@ state(['model1' => null, 'model2' => null, 'model3' => null, 'model4' => null]);
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <x-radio id="label" label="Label in Left" wire:model="model1" value="label" />
+                <x-radio id="left-label" left-label="Label in Left" wire:model="model1" value="left-label" />
 
-                <x-radio id="right-label" right-label="Label in Right" wire:model="model1" value="right-label" />
+                <x-radio id="label" label="Label in Right" wire:model="model1" value="label" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>

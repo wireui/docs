@@ -379,6 +379,11 @@ class ComponentAPI
                     'default' => 'false',
                     'required' => 'false',
                 ],
+                'left-label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
                 'description' => [
                     'type' => 'string',
                     'default' => 'null',
@@ -387,11 +392,6 @@ class ComponentAPI
                 'invalidated' => [
                     'type' => 'boolean',
                     'default' => 'false',
-                    'required' => 'false',
-                ],
-                'right-label' => [
-                    'type' => 'string',
-                    'default' => 'null',
                     'required' => 'false',
                 ],
                 'with-validation-colors' => [
@@ -407,7 +407,7 @@ class ComponentAPI
                 'slot' => [
                     'description' => 'Slot to add content to the body.',
                 ],
-                'right-label' => [
+                'left-label' => [
                     'description' => 'Slot to add content to the right label.',
                 ],
                 'description' => [
@@ -1166,6 +1166,11 @@ class ComponentAPI
                     'default' => 'false',
                     'required' => 'false',
                 ],
+                'left-label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
                 'description' => [
                     'type' => 'string',
                     'default' => 'null',
@@ -1174,11 +1179,6 @@ class ComponentAPI
                 'invalidated' => [
                     'type' => 'boolean',
                     'default' => 'false',
-                    'required' => 'false',
-                ],
-                'right-label' => [
-                    'type' => 'string',
-                    'default' => 'null',
                     'required' => 'false',
                 ],
                 'with-validation-colors' => [
@@ -1194,7 +1194,7 @@ class ComponentAPI
                 'slot' => [
                     'description' => 'Slot to add content to the body.',
                 ],
-                'right-label' => [
+                'left-label' => [
                     'description' => 'Slot to add content to the right label.',
                 ],
                 'description' => [
@@ -1495,6 +1495,11 @@ class ComponentAPI
                     'default' => 'false',
                     'required' => 'false',
                 ],
+                'left-label' => [
+                    'type' => 'string',
+                    'default' => 'null',
+                    'required' => 'false',
+                ],
                 'description' => [
                     'type' => 'string',
                     'default' => 'null',
@@ -1503,11 +1508,6 @@ class ComponentAPI
                 'invalidated' => [
                     'type' => 'boolean',
                     'default' => 'false',
-                    'required' => 'false',
-                ],
-                'right-label' => [
-                    'type' => 'string',
-                    'default' => 'null',
                     'required' => 'false',
                 ],
                 'with-validation-colors' => [
@@ -1523,7 +1523,7 @@ class ComponentAPI
                 'slot' => [
                     'description' => 'Slot to add content to the body.',
                 ],
-                'right-label' => [
+                'left-label' => [
                     'description' => 'Slot to add content to the right label.',
                 ],
                 'description' => [

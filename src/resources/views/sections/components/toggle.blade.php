@@ -33,9 +33,9 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <x-toggle id="label" label="Label in Left" name="toggle" />
+                <x-toggle id="left-label" left-label="Label in Left" name="toggle" />
 
-                <x-toggle id="right-label" right-label="Label in Right" name="toggle" />
+                <x-toggle id="label" label="Label in Right" name="toggle" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
