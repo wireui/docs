@@ -24,7 +24,7 @@ pre code.torchlight .line {
     @apply px-3 md:px-6;
 }
 
-// Line separator
+/*Line separator*/
 pre code.torchlight {
     @apply space-y-2;
 }
