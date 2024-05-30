@@ -68,7 +68,7 @@
         @verbatim
             namespace App\View\Components;
 
-            use WireUi\View\Components\Inputs\Maskable;
+            use WireUi\Components\TextField\Maskable;
 
             class CustomPhone extends Maskable
             {

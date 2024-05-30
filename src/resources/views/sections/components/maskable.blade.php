@@ -153,7 +153,7 @@
         @verbatim
             namespace App\View\Components;
 
-            use WireUi\View\Components\Inputs\Maskable;
+            use WireUi\Components\TextField\Maskable;
 
             class CustomMaskable extends Maskable
             {
