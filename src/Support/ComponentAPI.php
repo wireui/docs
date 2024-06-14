@@ -497,6 +497,11 @@ class ComponentAPI
                     'default' => '0',
                     'required' => 'false',
                 ],
+                'multiple' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
                 'timezone' => [
                     'type' => 'string',
                     'default' => 'null',
@@ -512,9 +517,19 @@ class ComponentAPI
                     'default' => 'calendar',
                     'required' => 'false',
                 ],
+                'shadowless' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
                 'time-format' => [
                     'type' => 'string',
                     'default' => '12',
+                    'required' => 'false',
+                ],
+                'multiple-max' => [
+                    'type' => 'number',
+                    'default' => '0',
                     'required' => 'false',
                 ],
                 'parse-format' => [
@@ -532,9 +547,29 @@ class ComponentAPI
                     'default' => 'false',
                     'required' => 'false',
                 ],
+                'allowed-dates' => [
+                    'type' => 'array',
+                    'default' => '[]',
+                    'required' => 'false',
+                ],
+                'start-of-week' => [
+                    'type' => 'number',
+                    'default' => 'Carbon::SUNDAY',
+                    'required' => 'false',
+                ],
                 'user-timezone' => [
                     'type' => 'string',
                     'default' => 'real user timezone',
+                    'required' => 'false',
+                ],
+                'disabled-dates' => [
+                    'type' => 'array',
+                    'default' => '[]',
+                    'required' => 'false',
+                ],
+                'disabled-years' => [
+                    'type' => 'array',
+                    'default' => '[]',
                     'required' => 'false',
                 ],
                 'display-format' => [
@@ -542,7 +577,32 @@ class ComponentAPI
                     'default' => 'localeFormat',
                     'required' => 'false',
                 ],
+                'disabled-months' => [
+                    'type' => 'array',
+                    'default' => '[]',
+                    'required' => 'false',
+                ],
                 'without-timezone' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'disabled-weekdays' => [
+                    'type' => 'array',
+                    'default' => '[]',
+                    'required' => 'false',
+                ],
+                'disable-past-dates' => [
+                    'type' => 'string|boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'without-time-seconds' => [
+                    'type' => 'boolean',
+                    'default' => 'false',
+                    'required' => 'false',
+                ],
+                'requires-confirmation' => [
                     'type' => 'boolean',
                     'default' => 'false',
                     'required' => 'false',
