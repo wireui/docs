@@ -6,13 +6,9 @@
         'mt-3 mb-6',
     ]) }}>
     @if ($render)
-        @if (WireUi::checkSlot($slot))
-            <div {{ $slot->attributes }}>
-                {!! Blade::render(serialize_slot($slot), $this->all()) !!}
-            </div>
-        @else
+        <div {{ WireUi::extractAttributes($slot) }}>
             {!! Blade::render(serialize_slot($slot), $this->all()) !!}
-        @endif
+        </div>
     @endif
 
     <div x-ref="code" wire:ignore>

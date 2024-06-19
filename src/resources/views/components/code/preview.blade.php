@@ -10,13 +10,9 @@
         'bg-white dark:bg-secondary-950' => !$color && !$clean,
         'p-6 rounded-lg' => !$clean,
     ])>
-        @if (WireUi::checkSlot($slot))
-            <div {{ $slot->attributes }}>
-                {!! Blade::render(serialize_slot($slot), $this->all()) !!}
-            </div>
-        @else
+        <div {{ WireUi::extractAttributes($slot) }}>
             {!! Blade::render(serialize_slot($slot), $this->all()) !!}
-        @endif
+        </div>
     </div>
 
     <div x-ref="code" x-show="code" wire:ignore>
