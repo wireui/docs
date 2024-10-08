@@ -3,6 +3,8 @@
         <x-docs::summary>
             <x-docs::summary.header href="#number-simple" label="Number Simple" />
 
+            <x-docs::summary.header href="#number-options" label="Number Options" />
+
             <x-docs::summary.header href="#hold-directive" label="Hold Directive" />
 
             <x-docs::summary.header href="#number-api" label="Number API" />
@@ -27,6 +29,22 @@
         <x-slot name="slot" class="max-w-sm mx-auto">
             @verbatim
                 <x-number label="How many Burgers?" placeholder="0" />
+            @endverbatim
+        </x-slot>
+    </x-docs::code.preview>
+
+    <x-docs::subtitle id="number-options" title="Number Options" />
+
+    <x-docs::text>
+        The number input accepts the html number input attributes, such as <x-docs::mark>min</x-docs::mark>,
+        <x-docs::mark>max</x-docs::mark>, and <x-docs::mark>step</x-docs::mark>. These attributes allow you to set the
+        minimum and maximum values, as well as the step value for the number input.
+    </x-docs::text>
+
+    <x-docs::code.preview language="blade">
+        <x-slot name="slot" class="max-w-sm mx-auto">
+            @verbatim
+                <x-number min="5" max="10" step="0.2" label="How many Burgers?" value="6" />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
