@@ -19,16 +19,16 @@
         }
     ],
     "require": {
-        "php": "^8.3",
-        "laravel/framework": "^11.0",
-        "torchlight/torchlight-laravel": "^0.6.0"
+        "php": "^8.4",
+        "laravel/framework": "^12.0",
+        "torchlight/torchlight-laravel": "dev-l12-compatibility"
     },
     "require-dev": {
         "laravel/pint": "^1.15",
-        "orchestra/testbench": "^9.0",
-        "pestphp/pest": "^2.34",
-        "pestphp/pest-plugin-laravel": "^2.4",
-        "pestphp/pest-plugin-livewire": "^2.1"
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.04",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "pestphp/pest-plugin-livewire": "^3.0"
     },
     "autoload": {
         "psr-4": {
@@ -57,5 +57,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/laravel-shift/torchlight-laravel.git"
+        }
+    ]
 }
