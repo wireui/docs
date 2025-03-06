@@ -41,11 +41,11 @@
 
     <x-docs::list>
         <x-docs::list.item>
-            <x-link href="https://www.php.net" label="PHP 8.2" target="_blank" underline="none" teal />
+            <x-link href="https://www.php.net" label="PHP 8.2|8.3|8.4" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://laravel.com" label="Laravel 10.x" target="_blank" underline="none" teal />
+            <x-link href="https://laravel.com" label="Laravel 10.x|11.x|12.x" target="_blank" underline="none" teal />
         </x-docs::list.item>
 
         <x-docs::list.item>
@@ -57,7 +57,7 @@
         </x-docs::list.item>
 
         <x-docs::list.item>
-            <x-link href="https://tailwindcss.com" label="Tailwindcss 3.x" target="_blank" underline="none" teal />
+            <x-link href="https://tailwindcss.com" label="Tailwindcss 3.x|4.x" target="_blank" underline="none" teal />
         </x-docs::list.item>
     </x-docs::list>
 
