@@ -113,8 +113,12 @@
         <x-docs::mark>tailwind.config.js</x-docs::mark> file:
     </x-docs::text>
 
+    <b>Tailwind v3</b>
+
     <x-docs::code.block language="js">
         @verbatim
+            // tailwind.config.js
+
             module.exports = {
                 ...
                 presets: [
@@ -130,6 +134,16 @@
                 ],
                 ...
             }
+        @endverbatim
+    </x-docs::code.block>
+
+    <b>Tailwind v4</b>
+
+    <x-docs::code.block language="js">
+        @verbatim
+            // app.css
+
+            @source '../../vendor/wireui/wireui';
         @endverbatim
     </x-docs::code.block>
 
