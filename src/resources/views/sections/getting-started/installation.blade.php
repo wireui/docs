@@ -143,6 +143,7 @@
         @verbatim
             // app.css
 
+            @import '../../vendor/wireui/wireui/ts/global.css';
             @source '../../vendor/wireui/wireui';
         @endverbatim
     </x-docs::code.block>
