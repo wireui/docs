@@ -1,7 +1,7 @@
 @props(['props' => []])
 
 <table class="w-full text-left border-collapse">
-    <thead class="border-b-2 dark:border-secondary-700">
+    <thead class="border-b-2 border-gray-200 dark:border-secondary-700">
         <tr>
             <th class="w-1/4 text-sm font-semibold text-gray-600 dark:text-gray-400 p-2">
                 Prop
