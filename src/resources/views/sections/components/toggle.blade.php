@@ -115,17 +115,17 @@
     <x-docs::code.preview language="blade">
         <x-slot name="slot" class="flex flex-wrap gap-8">
             @verbatim
-                <x-toggle id="color-primary" name="toggle" label="Primary" primary xl />
+                <x-toggle id="color-primary" name="toggle" label="Primary" primary xl checked />
 
-                <x-toggle id="color-secondary" name="toggle" label="Secondary" secondary xl />
+                <x-toggle id="color-secondary" name="toggle" label="Secondary" secondary xl checked />
 
-                <x-toggle id="color-positive" name="toggle" label="Positive" positive xl />
+                <x-toggle id="color-positive" name="toggle" label="Positive" positive xl checked />
 
-                <x-toggle id="color-negative" name="toggle" label="Negative" negative xl />
+                <x-toggle id="color-negative" name="toggle" label="Negative" negative xl checked />
 
-                <x-toggle id="color-warning" name="toggle" label="Warning" warning xl />
+                <x-toggle id="color-warning" name="toggle" label="Warning" warning xl checked />
 
-                <x-toggle id="color-info" name="toggle" label="Info" info xl />
+                <x-toggle id="color-info" name="toggle" label="Info" info xl checked />
             @endverbatim
         </x-slot>
     </x-docs::code.preview>
