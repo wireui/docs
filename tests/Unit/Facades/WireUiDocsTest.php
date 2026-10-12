@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
 use WireUi\Docs\Facades\WireUiDocs;
 
@@ -155,4 +156,23 @@ test('it should check links', function () {
         'href' => '/packages/heroicons',
     ]);
     expect(WireUiDocs::getNextLink('phosphor-icons'))->toBeNull();
+});
+
+test('it should read the cached menu when cache class unserialization is disabled', function () {
+    config(['cache.default' => 'file', 'cache.serializable_classes' => false]);
+    Cache::flush();
+
+    WireUiDocs::getMenu();
+
+    expect(WireUiDocs::hasSection('components'))->toBeTrue();
+});
+
+test('it should have a view for every menu page', function () {
+    WireUiDocs::getMenu()->each(function ($pages, $section) {
+        collect($pages)->flatten()->each(function ($page) use ($section) {
+            $view = sprintf('docs::sections.%s.%s', Str::slug($section), Str::slug($page));
+
+            expect(view()->exists($view))->toBeTrue($view);
+        });
+    });
 });
