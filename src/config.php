@@ -30,7 +30,6 @@ return [
                 'Icon',
                 'Link',
                 'Modal',
-                'Table',
             ],
             'Form Components' => [
                 'Checkbox',

@@ -166,3 +166,13 @@ test('it should read the cached menu when cache class unserialization is disable
 
     expect(WireUiDocs::hasSection('components'))->toBeTrue();
 });
+
+test('it should have a view for every menu page', function () {
+    WireUiDocs::getMenu()->each(function ($pages, $section) {
+        collect($pages)->flatten()->each(function ($page) use ($section) {
+            $view = sprintf('docs::sections.%s.%s', Str::slug($section), Str::slug($page));
+
+            expect(view()->exists($view))->toBeTrue($view);
+        });
+    });
+});

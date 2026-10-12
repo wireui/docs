@@ -8,8 +8,6 @@ use Illuminate\Support\Str;
 
 class WireUiDocsSupport
 {
-    private array $reject = ['Table'];
-
     public function getMenu(): Collection
     {
         return collect(Cache::sear('wireui::menu', fn () => config('docs.menu')));
@@ -72,15 +70,15 @@ class WireUiDocsSupport
 
     private function getPositionMenu(string $page, callable $callback): ?array
     {
-        if (collect($this->reject)->slugify()->contains($page)) {
+        $pages = $this->getMenu()->flatten()->values();
+
+        $position = $pages->slugify()->search($page);
+
+        if ($position === false) {
             return null;
         }
 
-        $pages = $this->getMenu()->flatten()->reject(function ($item) {
-            return in_array($item, $this->reject);
-        })->values();
-
-        $title = $pages->get($callback($pages->slugify()->search($page)));
+        $title = $pages->get($callback($position));
 
         $section = $this->getSectionByPage(Str::slug($title));
 
