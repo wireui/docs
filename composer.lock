@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ca81d3a8c6c8f419dadcea663461a77",
+    "content-hash": "5224b96de96ec5e6a8b3b2e2748c197b",
     "packages": [
         {
             "name": "brick/math",
@@ -5647,16 +5647,16 @@
         },
         {
             "name": "torchlight/torchlight-laravel",
-            "version": "dev-l13-compatibility",
+            "version": "v0.6.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel-shift/torchlight-laravel.git",
-                "reference": "202f8421f82376b486a93a250d8eed02805a4a9f"
+                "url": "https://github.com/torchlight-api/torchlight-laravel.git",
+                "reference": "cdda237839a2a4053f186ae50cdcc691d76cb626"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-shift/torchlight-laravel/zipball/202f8421f82376b486a93a250d8eed02805a4a9f",
-                "reference": "202f8421f82376b486a93a250d8eed02805a4a9f",
+                "url": "https://api.github.com/repos/torchlight-api/torchlight-laravel/zipball/cdda237839a2a4053f186ae50cdcc691d76cb626",
+                "reference": "cdda237839a2a4053f186ae50cdcc691d76cb626",
                 "shasum": ""
             },
             "require": {
@@ -5687,11 +5687,7 @@
                     "Torchlight\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Torchlight\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5704,14 +5700,15 @@
             "description": "A Laravel Client for Torchlight, the syntax highlighting API.",
             "homepage": "https://torchlight.dev",
             "keywords": [
-                "code highlighting",
+                "Code highlighting",
                 "laravel",
                 "syntax highlighting"
             ],
             "support": {
-                "source": "https://github.com/laravel-shift/torchlight-laravel/tree/l13-compatibility"
+                "issues": "https://github.com/torchlight-api/torchlight-laravel/issues",
+                "source": "https://github.com/torchlight-api/torchlight-laravel/tree/v0.6.2"
             },
-            "time": "2026-03-14T19:10:43+00:00"
+            "time": "2026-03-15T20:45:02+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -10344,9 +10341,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "torchlight/torchlight-laravel": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

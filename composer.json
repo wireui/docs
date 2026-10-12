@@ -21,7 +21,7 @@
     "require": {
         "php": "^8.4",
         "laravel/framework": "^12.0|^13.0",
-        "torchlight/torchlight-laravel": "dev-l13-compatibility"
+        "torchlight/torchlight-laravel": "^0.6.2"
     },
     "require-dev": {
         "laravel/pint": "^1.32",
@@ -57,11 +57,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/laravel-shift/torchlight-laravel.git"
-        }
-    ]
+    "prefer-stable": true
 }

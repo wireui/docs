@@ -12,7 +12,7 @@ class WireUiDocsSupport
 
     public function getMenu(): Collection
     {
-        return Cache::sear('wireui::menu', fn () => collect(config('docs.menu')));
+        return collect(Cache::sear('wireui::menu', fn () => config('docs.menu')));
     }
 
     public function hasSection(string $section): bool
